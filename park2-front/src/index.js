@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Header from './components/commons/header/Header'
 import Home from './components/pages/home/Home'
+import Footer from './components/commons/footer/footer'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.Fragment>
     <Header />
     <Home />
+    <Footer />
   </React.Fragment>
 );
 

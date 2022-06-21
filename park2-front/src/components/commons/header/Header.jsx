@@ -68,7 +68,7 @@ class Header extends Component {
         );
     }
     componentDidMount() {
-        console.log('did')
+        console.log('headerdid')
         let dropdown = document.querySelector('.custom-container');
         let height = dropdown.offsetHeight;
         dropdown.style.height = '0px';
