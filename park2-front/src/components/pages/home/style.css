@@ -868,10 +868,11 @@
 .marquee-block{
     width: 80%;
     background-color: #000;
-    border-radius: 3px;
+    border-radius: 5px;
     font-family: 'Noto Sans TC', sans-serif;
     margin-bottom: 10px;
   }
+  
   .marquee-block .marquee{
     position: relative;
     padding: 10px 20px;
@@ -880,15 +881,17 @@
     display: flex;
     align-items: center;
   }
+
   .marquee-block p{
-    font-size: 13px;
+    font-size: 15px;
     letter-spacing: 2px;
     color: #fff;
     margin: 0;
     position: absolute;
     white-space: nowrap;
-    font-weight: 500;
+    font-weight: 700;
   }
+
 
 
 

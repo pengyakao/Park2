@@ -1,0 +1,30 @@
+.title-block{
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+  }
+  .title-block .title-shadow{
+    position: absolute;
+    font-weight: 900;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #000;
+    -webkit-text-stroke: 5px #000;
+    transform: translate(2px, 2px);
+  }
+  .title-block .custom-title{
+    font-size: 28px;
+    -webkit-text-stroke: 1px #000;
+    color: #fff;
+    letter-spacing: 2px;
+    position: relative;
+  }
+  .title-block .title-bg{
+    font-weight: 900;
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: #000;
+    -webkit-text-stroke: 5px #000;
+    letter-spacing: 2px;
+    position: absolute;
+  }

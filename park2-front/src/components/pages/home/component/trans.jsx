@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import Marquee from './marquee';
 
 class trans extends Component {
     state = {}
@@ -15,11 +16,7 @@ class trans extends Component {
                             交通資訊
                         </div>
                     </div>
-                    <div className="marquee-block">
-                        <div className="marquee">
-                            <p>// PARK2，一座大人系非典型公園，探索公園與城市生活的更多可能！ </p>
-                        </div>
-                    </div>
+                    <Marquee />
                     <div id="home_trans">
                         <div id="home_transMap">
                             <div id="home_transMapT">
