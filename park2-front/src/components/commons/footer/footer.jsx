@@ -9,12 +9,12 @@ class footer extends Component {
         return (
             <div className='footerWrapper'>
                 <footer>
-                    <img className="top" src="./img/footer.svg" alt="" />
+                    <img className="top" src={process.env.PUBLIC_URL + '/img/footer.svg'} alt="" />
                     <div className="footer-container">
                         <div className="footer-left">
                             <div className="left-top">
-                                <a className="footer-brand" href="#">
-                                    <img src="./img/logo.svg" alt="Park2_logo" />
+                                <a className="footer-brand" href="/Park2/Index">
+                                    <img src={process.env.PUBLIC_URL +"/img/logo.svg"} alt="Park2_logo" />
                                     <div className="brand-name">
                                         <h4>
                                             <span>草悟</span>
@@ -30,16 +30,16 @@ class footer extends Component {
                             <div className="center-top">
                                 <ul>
                                     <li>
-                                        <a href="#">近期活動</a>
+                                        <a href="/Park2/Activities">近期活動</a>
                                     </li>
                                     <li>
-                                        <a href="#">場區地圖</a>
+                                        <a href="/Park2/Map">場區地圖</a>
                                     </li>
                                     <li>
-                                        <a href="#">店家介紹</a>
+                                        <a href="/Park2/Store">店家介紹</a>
                                     </li>
                                     <li>
-                                        <a href="#">進駐申請</a>
+                                        <a href="/Park2/Stationed">進駐申請</a>
                                     </li>
                                 </ul>
                             </div>
@@ -78,8 +78,8 @@ class footer extends Component {
                         </div>
                         <div className="footer-right"></div>
                     </div>
-                    <img className="rectangle1" src="./img/rectangle1.svg" alt="" />
-                    <img className="rectangle2" src="./img/rectangle2.svg" alt="" />
+                    <img className="rectangle1" src={process.env.PUBLIC_URL + "/img/rectangle1.svg"} alt="" />
+                    <img className="rectangle2" src={process.env.PUBLIC_URL + "/img/rectangle2.svg"} alt="" />
                 </footer>
             </div>
         );

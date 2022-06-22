@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import "bootstrap/dist/css/bootstrap.css";
 import './style.css';
+import Home from '../../pages/home/Home';
+
+
+
 class Header extends Component {
     state = {  } 
     render() { 
         return (
             <div className="header">
                 <nav className="navbar navbar-expand-lg">
-                <a className="navbar-brand" href="#">
-                    <img src="./img/logo.svg" alt="Park2_logo" />
+                <a className="navbar-brand" href="/Park2/Index">
+                    <img src={process.env.PUBLIC_URL + "/img/logo.svg"} alt="Park2_logo" />
                 </a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon">
@@ -20,18 +24,16 @@ class Header extends Component {
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav">
                     <li className="nav-item active">
-                        <a className="nav-link" href="#">近期活動<span className="sr-only">(current)</span></a>
+                        <a className="nav-link" href="/Park2/Activities">近期活動<span className="sr-only">(current)</span></a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">場區地圖</a>
+                        <a className="nav-link" href="/Park2/Map">場區地圖</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">店家介紹</a>
+                        <a className="nav-link" href="/Park2/Store">店家介紹</a>
                     </li>
                     <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle" href="#">
-                        進駐申請
-                        </a>
+                        <a className="nav-link dropdown-toggle" href="/Park2/Stationed">進駐申請</a>
                         <div className="custom-dropdown">
                         <div className="custom-container">
                             <div className="space"></div>
@@ -44,7 +46,7 @@ class Header extends Component {
                 </div>
                 <div className="right-bar">
                     <div className="weather-block">
-                    <img className="w-icon" src="./img/weather1.svg" alt="" />
+                    <img className="w-icon" src={process.env.PUBLIC_URL + "/img/weather1.svg"} alt="" />
                     <div className="temperature">17°C</div>
                     </div>
                     <div className="social-block">

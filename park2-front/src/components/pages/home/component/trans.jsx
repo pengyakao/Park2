@@ -31,7 +31,7 @@ class trans extends Component {
                                         style={{ width: '100%', height: '100%', border: '0' }} allowFullScreen="" loading="lazy"
                                         referrerPolicy="no-referrer-when-downgrade"></iframe></div>
                                     <div id="home_transMapArrow">
-                                        <img src="./icon/arrow.gif" alt="" />
+                                        <img src={process.env.PUBLIC_URL + "/icon/arrow.gif"} alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -43,12 +43,12 @@ class trans extends Component {
                                 <div className="home_transTitle">
                                     <p>大眾運輸</p>
                                 </div>
-                                <div className="flip8"><span className="1">高鐵烏日站</span><img src="./icon/arrow_G.gif" /></div>
+                                <div className="flip8"><span className="1">高鐵烏日站</span><img src={process.env.PUBLIC_URL + "/icon/arrow_G.gif"} /></div>
                                 <div className="panel8">
                                     <p className="home_transCont">1.捷運市政府站➔轉公車300/304/307/310至中正國小➔步行約7分鐘<br />
                                         2.公車151至新光遠百➔轉BRT 300/304/307/310至中正國小➔步行約7分鐘</p>
                                 </div>
-                                <div className="flip9"><span className="1">台中火車站</span><img src="./icon/arrow_G.gif" /></div>
+                                <div className="flip9"><span className="1">台中火車站</span><img src={process.env.PUBLIC_URL + "/icon/arrow_G.gif"} /></div>
                                 <div className="panel9">
                                     <p className="home_transCont">轉公車27至英才向上北路口➔步行約1分鐘</p>
                                 </div>
@@ -57,7 +57,7 @@ class trans extends Component {
                                 <div className="home_transTitle">
                                     <p>自行開車</p>
                                 </div>
-                                <div className="flip10"><span className="1">停車資訊</span><img src="./icon/arrow_G.gif" /></div>
+                                <div className="flip10"><span className="1">停車資訊</span><img src={process.env.PUBLIC_URL + "/icon/arrow_G.gif"} /></div>
                                 <div className="panel10">
                                     <p className="home_transCont">至草悟廣場(台中市西區英才路534號)<br />
                                         可停至草悟廣場附設24小時地下停車場</p>

@@ -18,24 +18,24 @@ class FAQ extends Component {
                     </div>
                     <div id="home_FAQ">
                         <div id="home_FAQContent">
-                            <div className="flip4"><span>Q1</span><img src="./icon/arrow_G.gif" /></div>
+                            <div className="flip4"><span>Q1</span><img src={process.env.PUBLIC_URL + "/icon/arrow_G.gif"} /></div>
                             <div className="panel4">
                                 <p>A1</p>
                             </div>
-                            <div className="flip5"><span>Q2</span><img src="./icon/arrow_G.gif" /></div>
+                            <div className="flip5"><span>Q2</span><img src={process.env.PUBLIC_URL + "/icon/arrow_G.gif"} /></div>
                             <div className="panel5">
                                 <p>A2</p>
                             </div>
-                            <div className="flip6"><span>Q3</span><img src="./icon/arrow_G.gif" /></div>
+                            <div className="flip6"><span>Q3</span><img src={process.env.PUBLIC_URL + "/icon/arrow_G.gif"} /></div>
                             <div className="panel6">
                                 <p>A3</p>
                             </div>
-                            <div className="flip7"><span>Q4</span><img src="./icon/arrow_G.gif" /></div>
+                            <div className="flip7"><span>Q4</span><img src={process.env.PUBLIC_URL + "/icon/arrow_G.gif"} /></div>
                             <div className="panel7">
                                 <p>A4</p>
                             </div>
                         </div>
-                        <img src="./img/cactus_R3.svg" id="home_FAQ_R" alt="" />
+                        <img src={process.env.PUBLIC_URL + "/img/cactus_R3.svg"} id="home_FAQ_R" alt="" />
                     </div>
                 </div>
             </div>
