@@ -58,8 +58,8 @@ class Slider extends Component {
         <div className="space"></div>
             </div>
         </div>
-        <div class="home_buttom">
-            <img class="home_buttom" src={process.env.PUBLIC_URL + "/img/slider_bottom.svg"} />
+        <div className="home_buttom">
+            <img className="home_buttom" src={process.env.PUBLIC_URL + "/img/slider_bottom.svg"} />
         </div>
         </div>
     );

@@ -1,0 +1,307 @@
+/* title style */
+/* .title-block {
+    position: relative;
+    display: inline-block;
+}
+
+.title-block .custom-title {
+    position: absolute;
+    text-align: center;
+    font-weight: 900;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: #000;
+    -webkit-text-stroke: 5px #000;
+    letter-spacing: 2px;
+    top: 0;
+    left: 0;
+    transform: translate(-2px, -2px);
+}
+
+.title-block .custom-title::before {
+    content: '酉5PM TWCAUDEX';
+    font-size: 28px;
+    position: absolute;
+    -webkit-text-stroke: 1px #000;
+    letter-spacing: 2px;
+    z-index: 2;
+    color: #fff;
+}
+
+.title-block .title-bg {
+    text-align: center;
+    font-weight: 900;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: #000;
+    -webkit-text-stroke: 5px #000;
+    letter-spacing: 2px;
+} */
+
+/* -----切版----- */
+
+/* 全域 */
+.container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1440px !important;
+    padding: 0px 2.5vw;
+}
+.store-each{
+    padding: 60px 2.5vw;
+}
+
+/* 撐高header距離 */
+.headerHight {
+    min-height: 56px;
+}
+
+/* -----Left----- */
+
+/* Left 全域 */
+.leftInfoArea {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* 資訊欄 */
+#leftInfo {
+    padding: 20px 65px;
+    background-color: #F2F2F3;
+    border-radius: 15px;
+    /* height: calc(70% - 50px); */
+    height: 100%;
+    width: 30vw;
+    /* left: 2.5vw; */
+    width: 300px;
+    margin-right: 20px;
+}
+
+/* 文字區域 */
+.leftInfo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* 綠字 */
+.titleName div p {
+    font-size: 22px;
+    font-weight: 900;
+    font-family: 'Noto Sans TC', sans-serif;
+    letter-spacing: 1px;
+    color: #BCFD55;
+    text-shadow: 2px 2px #000;
+    -webkit-text-stroke: 1.5px #000;
+}
+
+.titleName div:nth-child(2) {
+    margin-bottom: 10px;
+}
+
+/* icon */
+.icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+/* 店家logo */
+.circleImg {
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: flex-start; */
+    /* align-items: center; */
+    margin: 20px 0;
+}
+
+.circleImg img {
+    height: 175px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+/* phone */
+.leftInfoPhoneright {
+    margin: 0;
+}
+
+
+
+/* -----Right----- */
+
+/* Right 切版 */
+.rightContentArea {
+    display: block;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: calc(97.5% - 300px);
+}
+
+/* 大首圖外框容器 */
+.bigImg {
+    display: flex;
+    border: 5px solid #000000;
+    box-shadow: 4px 4px 0px 4px #0E0E0D;
+    border-radius: 20px;
+    max-width: 720px;
+    margin: 20px 0 20px 20px;
+}
+
+.bigImg img {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    object-fit: cover;
+}
+/* 店家介紹內容 */
+.storeIntro {
+    margin: 20px;
+    max-width: 720px;
+}
+
+/* tag標籤 */
+.tags {
+    float: right;
+    right: 0;
+    border-radius: 14px;
+    text-align: center;
+    margin: 10px 0 0 10px;
+    padding: 5px 28px;
+}
+
+/* 標籤背景色_藝術設計 */
+#art {
+    background-color: #F2F2F3;
+}
+
+/* 標籤背景色_景觀設計 */
+#landscape {
+    background-color: rgba(188, 253, 85, 0.6);
+}
+
+/* 店家介紹文字區域 */
+#storeContent {
+    max-width: 720px;
+}
+
+/* 照片區域與底部 */
+.storeImg div {
+    padding-bottom: 30px;
+}
+
+/* 照片容器 */
+.storeImgGroup {
+    max-width: 720px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-auto-flow: dense;
+}
+
+/* 店家照片 */
+.storeImgGroup img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* overflow: hidden;
+    border-radius: 15px;
+    object-fit: cover; */
+}
+
+.height {
+    grid-row: span 2;
+}
+
+.width {
+    grid-column: span 2;
+}
+
+.big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* 桌機隱藏 */
+.pcHidden {
+    display: none;
+}
+
+@media (max-width: 670px) {
+
+    /* 全域 */
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 店家圓形logo */
+    .circleImg img {
+        width: 100%;
+        height: 240px;
+        overflow: hidden;
+        align-items: center;
+    }
+
+    /* 標題字體 */
+    .title-block .custom-title::before {
+        text-align: center;
+        display: block;
+    }
+
+    .title-block .title-bg {
+        text-align: center;
+    }
+
+    /*  標籤 */
+    .tags {
+        float: none;
+    }
+
+    /* 大首圖外框容器 */
+    .bigImg {
+        margin: 30px 50px;
+    }
+
+    /* 資訊欄 */
+    #leftInfo {
+        width: 100vw;
+        position: relative;
+        /* display: flex; */
+        border-radius: 0;
+        margin: 0;
+    }
+
+    /* 商店簡介 */
+    .rightContentArea {
+        width: 100%;
+        display: flex;
+    }
+
+    /* 手機版顯現 */
+    .pcHidden {
+        display: flex;
+        display: block;
+    }
+
+    /* 桌機版顯現 */
+    .phoneHidden {
+        display: none;
+    }
+
+    /* 輪播圖 */
+    .carousel {
+        padding-bottom: 30px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        margin: 100px;
+    }
+}

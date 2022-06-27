@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import Title from '../../../commons/title/Title'
 
 
 class FAQ extends Component {
@@ -8,14 +9,15 @@ class FAQ extends Component {
         return (
             <div className='FAQWrapper'>
                 <div id="home_FAQArea">
-                    <div className="home_titleBlock2">
+                    <Title title="FAQ" isDark="true"></Title>
+                    {/* <div className="home_titleBlock2">
                         <div className="home_titleBg2">
                             FAQ
                         </div>
                         <div className="home_customTitle2" id="home_title3">
                             FAQ
                         </div>
-                    </div>
+                    </div> */}
                     <div id="home_FAQ">
                         <div id="home_FAQContent">
                             <div className="flip4"><span>Q1</span><img src={process.env.PUBLIC_URL + "/icon/arrow_G.gif"} /></div>

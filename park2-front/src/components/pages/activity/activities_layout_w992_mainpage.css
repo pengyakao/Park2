@@ -1,0 +1,26 @@
+@media (max-width: 992px) {
+    aside {
+        width: 80%;
+        margin: 0 10%;
+        padding: 76px 0 10px 0; /* '20px'改'20px 0 10px 0'*/
+        position: relative;
+        /* overflow: auto; */
+        float: none;
+    }
+    /* aside #calendar-picker{
+        height: 0;
+        visibility: hidden;
+    }
+    aside #month-picker{
+        width: 100%;
+        height: 100px;
+        margin: 7px auto;
+        visibility: visible;
+        text-align: center;
+    } */
+    article {
+        width: 80%;
+        margin: 0 10%;
+        float: none;
+    }
+}

@@ -1,0 +1,25 @@
+aside {
+    width: 16%;
+    height: 400px;
+    margin-top: 56px;
+    margin-left: 10%;
+    padding: 20px 0 100px 0;
+    float: left;
+}
+article {
+    width: 64%;
+    height: inherit;
+    margin-top: 56px;
+    margin-right: 10%;
+    padding: 10px 3% 70px 3%;
+    float: right;
+    /* border: 1px solid #000; */
+}
+footer {
+    clear: both;
+}
+/* 活動分頁 */
+.pcHidden{
+    height: 0;
+    visibility: hidden;
+}

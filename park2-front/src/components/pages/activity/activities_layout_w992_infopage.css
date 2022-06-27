@@ -1,0 +1,27 @@
+@media (max-width: 992px) {
+    aside {
+        display: none;
+    }
+    article {
+        width: 80%;
+        height: inherit;
+        margin: 56px 10% 0 10%;
+        padding: 10px 3% 70px 3%; /* 修改寬3% */
+        float: none;
+        place-items: center;
+    }
+    #activeImg{
+        width: 90%;
+        height:auto;
+        margin-top: 0px;
+    }
+    .mobileHidden{
+        height: 0;
+        visibility: hidden;
+        
+    }
+    .pcHidden{
+        height: inherit;
+        visibility: visible;
+    }
+}

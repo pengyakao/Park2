@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import Title from '../../../commons/title/Title'
 import $ from 'jquery';
-import Marquee from './marquee';
+import Marquee from '../../../commons/marquee/Marquee';
 
 class trans extends Component {
     state = {}
@@ -8,14 +9,15 @@ class trans extends Component {
         return (
             <div className='transWrapper'>
                 <div id="home_transArea">
-                    <div className="home_titleBlock">
+                    <Title title="交通資訊"/>
+                    {/* <div className="home_titleBlock">
                         <div className="home_titleBg">
                             交通資訊
                         </div>
                         <div className="home_customTitle" id="home_title5">
                             交通資訊
                         </div>
-                    </div>
+                    </div> */}
                     <Marquee />
                     <div id="home_trans">
                         <div id="home_transMap">

@@ -1,0 +1,33 @@
+.custom-btn{
+  position: relative;
+  display: inline-flex;
+  font-weight: 700;
+  margin: 10px 20px;
+}
+.front-btn{
+  font-size: 16px;
+  letter-spacing: 1px;
+  border: solid 3px #fff;
+  padding: 7px 25px;
+  border-radius: 30px;
+  margin: 0;
+  background-color: #000;
+  transition-duration: .5s;
+  transform: translate(-5px, -6px);
+  color: #fff;
+  width: auto;
+  text-decoration: none;
+}
+.custom-btn .bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  bottom: 0px;
+  border-radius: 30px;
+}
+.custom-btn:hover .front-btn{
+  transform: translate(0px, 0px);
+  text-decoration: none;
+  color: #fff;
+}

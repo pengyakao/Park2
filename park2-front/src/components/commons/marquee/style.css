@@ -1,0 +1,23 @@
+.marquee-block{
+  width: 78%;
+  background-color: #000;
+  border-radius: 5px;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.marquee-block .marquee{
+  position: relative;
+  padding: 10px 20px;
+  height: 35px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.marquee-block p{
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #fff;
+  margin: 0;
+  position: absolute;
+  white-space: nowrap;
+  font-weight: 700;
+}

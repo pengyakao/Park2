@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Title from '../../../commons/title/Title'
 import $ from 'jquery';
 
 
@@ -9,17 +10,19 @@ class news extends Component {
         return (
             <div className='newsWrapper'>
                 <div id="home_newsArea">
-                    <div className="home_titleBlock">
+                    <Title title="官方公告"/>
+                    {/* <div className="home_titleBlock">
                         <div className="home_titleBg">
                             官方公告
                         </div>
                         <div className="home_customTitle" id="home_title2">
                             官方公告
                         </div>
-                    </div>
+                    </div> */}
                     <div id="home_news">
                         <div id="home_newsImg">
                             <img src={process.env.PUBLIC_URL + "/img/news1.jpeg"} />
+                            {/* <img src="/img/news1.jpeg" /> */}
                         </div>
                         <div id="home_newsContent">
                             <div className="flip"><span>標題+公告時間</span><img src={process.env.PUBLIC_URL + "/icon/arrow_B.gif"} />
