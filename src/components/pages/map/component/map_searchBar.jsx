@@ -15,7 +15,7 @@ class SearchBar extends Component {
         <button id="searchBtn">搜尋</button>
 
         <datalist id="searchShop">
-          <option id="abc" value={"泱茶"} />
+          <option value={"泱茶"} />
           <option value={"MISATO"} />
           <option value={"12AM"} />
           <option value={"每果發光"} />
@@ -25,7 +25,7 @@ class SearchBar extends Component {
           <option value={"酉 5pm.twcaude"} />
         </datalist>
 
-        <datalist id="searchInit"></datalist>
+        {/* <datalist id="searchInit"></datalist> */}
       </div>
     );
   }
