@@ -5,12 +5,12 @@ class Footer extends Component {
   render() {
     return (
       <footer>
-        <img className="top" src="/img/footer.svg" alt="" />
+        <img className="top" src="/home/footer.svg" alt="" />
         <div className="footer-container">
           <div className="footer-left">
             <div className="left-top">
               <a className="footer-brand" href="#">
-                <img src="/img/logo.svg" alt="Park2_logo" />
+                <img src="/home/logo.svg" alt="Park2_logo" />
                 <div className="brand-name">
                   <h4>
                     <span>草悟</span>
@@ -64,8 +64,8 @@ class Footer extends Component {
           </div>
           <div className="footer-right"></div>
         </div>
-        <img className="rectangle1" src="/img/rectangle1.svg" alt="" />
-        <img className="rectangle2" src="/img/rectangle2.svg" alt="" />
+        <img className="rectangle1" src="/home/rectangle1.svg" alt="" />
+        <img className="rectangle2" src="/home/rectangle2.svg" alt="" />
       </footer>
     );
   }

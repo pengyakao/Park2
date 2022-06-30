@@ -9,7 +9,7 @@ class Header extends Component {
       <div className="header">
         <nav className="navbar navbar-expand-lg">
           <a className="navbar-brand" href="/">
-            <img src="/img/logo.svg" alt="Park2_logo" />
+            <img src="/home/logo.svg" alt="Park2_logo" />
           </a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon">
@@ -43,7 +43,7 @@ class Header extends Component {
           </div>
           <div className="right-bar">
             <div className="weather-block">
-              <img className="w-icon" src="/img/weather1.svg" alt="" />
+              <img className="w-icon" src="/home/weather1.svg" alt="" />
               <div className="temperature">17°C</div>
             </div>
             <div className="social-block">

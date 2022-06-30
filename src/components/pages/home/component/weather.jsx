@@ -9,7 +9,7 @@ class weather extends Component {
             <div className='weatherWrapper'>
                 <div id="home_weatherArea">
                     <div>
-                        <img className="home_buttom" src={process.env.PUBLIC_URL + "/img/FAQ_bottom.svg"} />
+                        <img className="home_buttom" src={process.env.PUBLIC_URL + "/home/FAQ_bottom.svg"} />
                     </div>
                     <Title title="即時天氣"/>
                     {/* <div className="home_titleBlock">
@@ -178,7 +178,7 @@ class weather extends Component {
 
                     </div>
                     <div>
-                        <img className="home_buttom" src={process.env.PUBLIC_URL + "/img/weather_bottom.svg"} />
+                        <img className="home_buttom" src={process.env.PUBLIC_URL + "/home/weather_bottom.svg"} />
                     </div>
                 </div>
             </div>

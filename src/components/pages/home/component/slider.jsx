@@ -7,21 +7,21 @@ class Slider extends Component {
   state = { 
     slides: [
       {
-        img: '/img/slides/bg-1.jpeg',
+        img: '/home/slides/bg-1.jpeg',
         text: '我出去一下',
         date: '2022.06.18 Sat ~ 06.19 Sun',
         time: '14:00-21:00',
         href: 'link1'
       },
       {
-        img: '/img/slides/bg-2.jpeg',
+        img: '/home/slides/bg-2.jpeg',
         text: '植日森',
         date: '每月第二個星期四',
         time: '',
         href: 'link2'
       },
       {
-        img: '/img/slides/bg-3.jpeg',
+        img: '/home/slides/bg-3.jpeg',
         text: '台中！好像哪裡怪怪的！',
         date: '2022.05.06 Fri',
         time: '19:00-21:30',
@@ -45,7 +45,7 @@ class Slider extends Component {
         </div>
         <div className="info-card">
           <div className="bg">
-            <img src={process.env.PUBLIC_URL + "/img/info-card.svg"} alt="" />
+            <img src={process.env.PUBLIC_URL + "/home/info-card.svg"} alt="" />
           </div>
           <div className="info">
             <div className="name"></div>
@@ -59,7 +59,7 @@ class Slider extends Component {
             </div>
         </div>
         <div className="home_buttom">
-            <img className="home_buttom" src={process.env.PUBLIC_URL + "/img/slider_bottom.svg"} />
+            <img className="home_buttom" src={process.env.PUBLIC_URL + "/home/slider_bottom.svg"} />
         </div>
         </div>
     );

@@ -32,131 +32,9 @@
     width: 100vw;
 }
 
-/* 標題 */
-/* .home_title {
-    color: rgb(255, 255, 255);
-    font-size: 28px;
-    font-weight: 700;
-    -webkit-text-stroke: 1px black;
-    text-shadow: 2px 2px 0px #000000;
-}
-
-.home_title2 {
-    color: rgb(0, 0, 0);
-    font-size: 28px;
-    font-weight: 700;
-    -webkit-text-stroke: 1px rgb(255, 255, 255);
-    text-shadow: 2px 2px 0px #ffffff;
-}
-.home_titleBlock{
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
-  }
-.home_titleBlock .home_customTitle{
-    position: absolute;
-    text-align: center;
-    font-weight: 900;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 28px;
-    letter-spacing: 1px;
-    color: #000;
-    -webkit-text-stroke: 5px #000;
-    letter-spacing: 2px;
-    top: 0;
-    left: 0;
-    transform: translate(-2px, -2px);
-  }
-
-.home_titleBlock .home_titleBg{
-    text-align: center;
-    font-weight: 900;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 28px;
-    letter-spacing: 1px;
-    color: #000;
-    -webkit-text-stroke: 5px #000;
-    letter-spacing: 2px;
-}
-.home_titleBlock2{
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
-  }
-.home_titleBlock2 .home_customTitle2{
-    position: absolute;
-    text-align: center;
-    font-weight: 900;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 28px;
-    letter-spacing: 1px;
-    color: rgb(255, 255, 255);
-    -webkit-text-stroke: 5px rgb(255, 255, 255);
-    letter-spacing: 2px;
-    top: 0;
-    left: 0;
-    transform: translate(-2px, -2px);
-  }
-
-.home_titleBlock2 .home_titleBg2{
-    text-align: center;
-    font-weight: 900;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 28px;
-    letter-spacing: 1px;
-    color: rgb(255, 255, 255);
-    -webkit-text-stroke: 5px rgb(255, 255, 255);
-    letter-spacing: 2px;
-}
-#home_title1::before{
-    content: '關於Park2';
-    font-size: 28px;
-    position: absolute;
-    -webkit-text-stroke: 1px #000;
-    color: #fff;
-    letter-spacing: 2px;
-    z-index: 2;
-}
-#home_title2::before{
-    content: '官方公告';
-    font-size: 28px;
-    position: absolute;
-    -webkit-text-stroke: 1px #000;
-    color: #fff;
-    letter-spacing: 2px;
-    z-index: 2;
-}
-#home_title3::before{
-    content: 'FAQ';
-    font-size: 28px;
-    position: absolute;
-    -webkit-text-stroke: 1px rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    letter-spacing: 2px;
-    z-index: 2;
-}
-#home_title4::before{
-    content: '即時天氣';
-    font-size: 28px;
-    position: absolute;
-    -webkit-text-stroke: 1px #000;
-    color: #fff;
-    letter-spacing: 2px;
-    z-index: 2;
-}
-#home_title5::before{
-    content: '交通資訊';
-    font-size: 28px;
-    position: absolute;
-    -webkit-text-stroke: 1px #000;
-    color: #fff;
-    letter-spacing: 2px;
-    z-index: 2;
-} */
-
 /* 關於park2 */
 #home_aboutArea {
-    background-color: #ABFF1D;
+    background-color: #B3E24D;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -298,17 +176,17 @@
 #home_FAQContent {
     width: 70%;
     padding-left: 15%;
-    /* border: 2px solid #ABFF1D; */
+    /* border: 2px solid #B3E24D; */
 }
 
 #home_FAQContent img {
     width: 25px;
     height: 25px;
-    /* border: 1px solid #ABFF1D; */
+    /* border: 1px solid #B3E24D; */
 }
 
 #home_FAQContent div:nth-child(odd) {
-    border-bottom: 1.5px solid #ABFF1D;
+    border-bottom: 1.5px solid #B3E24D;
     display: flex;
     justify-content: space-between;
 }
@@ -317,7 +195,7 @@
     color: white;
     font-size: 18px;
     font-weight: 400;
-    /* border: 1px solid #ABFF1D; */
+    /* border: 1px solid #B3E24D; */
 }
 
 #home_FAQContent p {
@@ -452,7 +330,7 @@
 /* 交通資訊 */
 #home_transArea {
     width: 100%;
-    background-color: #ABFF1D;
+    background-color: #B3E24D;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -492,7 +370,7 @@
 .home_transTitle {
     width: 100px;
     height: 28px;
-    background-color: #ABFF1D;
+    background-color: #B3E24D;
     font-size: 15px;
     font-weight: 500;
     transform: skew(-20deg);
@@ -523,7 +401,7 @@
 
 #home_transInfoPub div:nth-child(even),
 #home_transInfoCar div:nth-child(even) {
-    border-bottom: 1.5px solid #ABFF1D;
+    border-bottom: 1.5px solid #B3E24D;
     display: flex;
     justify-content: space-between;
 }
@@ -576,7 +454,7 @@
     flex-wrap: wrap;
     justify-content:center;
     align-content: flex-start;
-    /* background-color: #ABFF1D; */
+    /* background-color: #B3E24D; */
 }
 
 #home_transMapT {
@@ -621,7 +499,7 @@
     border-style: solid;
     border-width: 4px 4px 0px 0px;
     background-color: #000000;
-    /* background-color: #ABFF1D; */
+    /* background-color: #B3E24D; */
     overflow: hidden;
 }
 

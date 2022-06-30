@@ -37,7 +37,7 @@ class FAQ extends Component {
                                 <p>A4</p>
                             </div>
                         </div>
-                        <img src={process.env.PUBLIC_URL + "/img/cactus_R3.svg"} id="home_FAQ_R" alt="" />
+                        <img src={process.env.PUBLIC_URL + "/home/cactus_R3.svg"} id="home_FAQ_R" alt="" />
                     </div>
                 </div>
             </div>
