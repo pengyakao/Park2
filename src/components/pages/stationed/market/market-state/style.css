@@ -91,6 +91,7 @@ label{
 }
 .inner-block .current-state .step-info{
   font-size: 16px;
+  margin-bottom: 15px;
 }
 .step .step-info{
   text-align: center;
@@ -155,6 +156,45 @@ label{
 }
 .other{
   font-size: 16px;
+}
+
+.state .transfer-info{
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+.state .transfer-info .unit{
+  background-color: #000;
+  color: #fff;
+  border-radius: 3px;
+  margin: 5px 0px;
+}
+.state .transfer-info .group{
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0px;
+  align-items: center;
+}
+.state .transfer-info .group .group-title{
+  display: flex;
+}
+.state .transfer-info .group .group-title .separate{
+  /* width: 3px;
+  background-color: #000;
+  margin-left: 10px; */
+}
+.state .transfer-info .res{
+  margin: 15px 0px;
+  border-top: solid 2px #000;
+  border-bottom: solid 2px #000;
+  padding: 5px 0px;
+}
+.state .transfer-info .input-group{
+  display: flex;
+  flex-direction: column;
+}
+.state .transfer-info .column-group input{
+  width: 100%;
 }
 @media (max-width: 890px){
   .state .state-block .inner-block{

@@ -53,8 +53,8 @@ class Store extends Component {
                         <div class="StoreCard_01">
                             <section class="hotcard">
                                 <button class="pre-btn">
-                                    <img src="/store/image/icon/left_s.svg" alt=""/></button>
-                                <button class="nxt-btn"><img src="../store/image/icon/right_s.svg" alt=""/></button>
+                                    <img src="/store/icon/right_s.svg" alt=""/></button>
+                                <button class="nxt-btn"><img src="/store/icon/right_s.svg" alt=""/></button>
                                 <div class="hotcard-container">
                                     <div class="hotcard-card card">
                                         <img src="/store/store/米弎豆Misato.jpeg" class="card-img-top" alt=""/>
@@ -207,11 +207,11 @@ class Store extends Component {
     }
 
     componentDidMount = () => {
-        const hotcardContainers = [...document.querySelectorAll('hotcard-container')];
-		const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
-		const preBtn = [...document.querySelectorAll('.pre-btn')];
+        const HotcardContainers = document.querySelectorAll('.hotcard-container');
+		const nxtBtn = document.querySelectorAll('.nxt-btn');
+		const preBtn = document.querySelectorAll('.pre-btn');
 
-		hotcardContainers.forEach((item, i) => {
+		HotcardContainers.forEach((item, i) => {
 			let containerDimensions = item.getBoundingClientRect();
 			let containerWidth = containerDimensions.width;
 

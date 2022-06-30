@@ -13,7 +13,9 @@ class Btn extends Component {
     );
   }
   routerHandler = () => {
-    if(!this.state.shouldCheck && this.props.link){
+    if(this.props.transferMoney){
+      this.props.onHandleTransfer()
+    }else if(!this.state.shouldCheck && this.props.link){
       window.location.href = this.props.link
     }else if(this.state.shouldCheck && !this.props.isFull && this.props.link){
       window.location.href = this.props.link

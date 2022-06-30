@@ -104,12 +104,13 @@
     position: absolute;
     left: 2%;
     top: 25vh;
-    width: 34vh;
-    /* height: 50vh; */
+    width: 33vh;
+    height: 50vh;
     background-color: whitesmoke;
     border-radius: 30px;
     display: none;
-    /* border: solid 3px red; */
+    border: solid 3px #000;
+    overflow: hidden;
 }
 
 #cardImg {
@@ -121,15 +122,16 @@
 
 #cardText {
     /* border: solid 3px green; */
-    /* position: absolute; */
+    position: absolute;
     position: relative;
     bottom: 5vh;
-    /* height: 20vh; */
-    width: 34vh;
+    height: 20vh;
+    width: 33vh;
     padding: 2vh 2vh 5vh 2vh;
     z-index: 2;
     background-color: whitesmoke;
     font-weight: 600;
+    font-size: small;
     /* border: 1px solid red; */
     text-align: center;
 }

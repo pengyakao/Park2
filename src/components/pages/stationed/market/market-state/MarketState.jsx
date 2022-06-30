@@ -5,8 +5,10 @@ import Title from '../../../../commons/title/Title'
 
 class MarketState extends Component {
   state = { 
-    currentStep: 1,
-    hasError: true
+    currentStep: 2,
+    hasError: true,
+    moneyNotYet: true,
+    transferMoneyBtn: false
   } 
   render() { 
     return (
@@ -16,7 +18,7 @@ class MarketState extends Component {
             <img src="/stationed/sad.svg" alt="" className="face" />
             <div className="msg">
             </div>
-            <Btn name="確定" />
+            <Btn name="確定" transferMoney={this.state.transferMoneyBtn} onHandleTransfer={this.removeTransferPopUp}/>
           </div>
         </div>
         <div className="state-container">
@@ -37,8 +39,8 @@ class MarketState extends Component {
                 <div className="step-info">
                   STEP2<br/>
                   感謝您的報名，審核已通過，請於期限內完成繳費<br/>
-                  下載 <a href="">繳費單</a>
                 </div>
+                <Btn name="匯款資訊" onHandle={this.showTransferPopUp} />
               </div>
               <div className="right-line"></div>
               <div className="step step3">
@@ -55,8 +57,51 @@ class MarketState extends Component {
       </div>
     );
   }
+  showTransferPopUp = () => {
+    if(this.state.moneyNotYet && this.state.currentStep === 2) {
+      this.showPopup_step2();
+    }
+  }
+  removeTransferPopUp = () => {
+    document.querySelector('.popup').classList.remove('show-popup');
+  }
+  showPopup_step2 = () => {
+    document.querySelector('.popup').classList.add('show-popup');
+    document.querySelector('.msg').innerHTML = `
+      <div class="transfer-info">
+        <div class="unit">NT$800 / 攤位</div>
+        <div class="group">
+          <div class="group-title">總計費用 : 
+            <div class="separate"></div>
+          </div>
+          <div class="price">NT$ 1600</div>
+        </div>
+        <div class="group">
+          <div class="group-title">匯款帳號 : </div>
+          <div class="account">(700) 0090491745</div>
+        </div>
+        <div class="group">
+          <div class="group-title">繳費期限 : </div>
+          <div class="deadline">至 2022/07/24 為止</div>
+        </div>
+        
+        <div class="res">如匯款完成，請填寫帳號後5碼</div>
+
+        <div class="column-group">
+          <label for="exampleInputPassword1">帳號後5碼*</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" />
+        </div>
+      </div>
+    `;
+  }
   componentDidMount = () => {
     // let currentStep = 3;
+    if(this.state.currentStep === 2 && this.state.moneyNotYet === true){
+      this.setState({
+        transferMoneyBtn: true
+      })
+      console.log( this.state.transferMoneyBtn)
+    }
     let steps = document.querySelectorAll('.step');
     steps.forEach((e, i)=>{
       if(i+1 === this.state.currentStep){
@@ -74,9 +119,9 @@ class MarketState extends Component {
     // let hasError = false;
 
     if(this.state.hasError && this.state.currentStep === 1) {
-      showPopup();
+      showPopup_step1();
     }
-    function showPopup() {
+    function showPopup_step1() {
       document.querySelector('.popup').classList.add('show-popup');
       document.querySelector('.msg').innerHTML = '<div>企劃書內容不符，請修改上傳</div>';
     }

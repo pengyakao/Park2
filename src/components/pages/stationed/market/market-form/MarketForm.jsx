@@ -18,7 +18,7 @@ class MarketForm extends Component {
           </div>
         </div>
         <div className="form-container">
-        <Title title="我出去一下》風格品牌出店計畫報名表" />
+        <Title title="《我出去一下》風格品牌出店計畫報名表" />
         <div className="intro-block">
           <p>
             PARK2，一座大人系非典型公園，探索公園與城市生活的更多可能！
@@ -43,7 +43,7 @@ class MarketForm extends Component {
             <div className="form-group">
               <label for="inputState">請選擇欲報名的場次*</label>
               <select id="inputState" className="form-control">
-                <option selected>6/11-12 城市裡的戶外生活篇</option>
+                <option selected>5/30-31 生活裝飾篇</option>
                 <option>6/11-12 城市裡的戶外生活篇</option>
               </select>
             </div>
@@ -54,7 +54,7 @@ class MarketForm extends Component {
           </div>
           <div className="form-row">
             <div className="form-group">
-              <label for="exampleInputPassword1">品牌粉專名稱*</label>
+              <label for="exampleInputPassword1">品牌粉專連結（FB 或 IG）</label>
               <input type="text" className="form-control" id="exampleInputPassword1" />
             </div>
             <div className="form-group">
