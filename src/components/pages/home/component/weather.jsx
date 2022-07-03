@@ -12,14 +12,6 @@ class weather extends Component {
                         <img className="home_buttom" src={process.env.PUBLIC_URL + "/home/FAQ_bottom.svg"} />
                     </div>
                     <Title title="即時天氣"/>
-                    {/* <div className="home_titleBlock">
-                        <div className="home_titleBg">
-                            即時天氣
-                        </div>
-                        <div className="home_customTitle" id="home_title4">
-                            即時天氣
-                        </div>
-                    </div> */}
                     <div id="home_weather">
                         <div id="home_weatherNow">
                             <span id="home_weatherLoc">台中市西區</span>
