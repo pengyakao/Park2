@@ -97,13 +97,18 @@
 
 #home_newsContent span {
     /* color: red; */
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 700;
 }
 
+/* .home_newsDate {
+    color: gray!important;
+    font-size: 10px!important;
+} */
+
 
 #home_newsContent p {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     margin-bottom: 5px;
     margin-top: 5px;
@@ -120,11 +125,11 @@
     display: flex;
     justify-content: space-between;
 }
-#home_newsContent .home_newsDateTitle,
+/* #home_newsContent .home_newsDateTitle,
 #home_newsContent .home_newsDate {
     color: gray;
     font-size: 10px;
-}
+} */
 
 @media (max-width: 750px) {
     #home_news {
@@ -194,14 +199,14 @@
 
 #home_FAQContent span {
     color: white;
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 700;
     /* border: 1px solid #B3E24D; */
 }
 
 #home_FAQContent p {
     color: white;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
 }
 
@@ -369,10 +374,10 @@
 }
 
 .home_transTitle {
-    width: 150px;
-    height: 38px;
+    width: 130px;
+    height: 35px;
     background-color: #B3E24D;
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 700;
     transform: skew(-20deg);
 }
@@ -386,14 +391,14 @@
 #home_transInfoCar span {
     color: #ffffff;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
     margin-top: 15px;
 }
 
 .home_transCont {
     color: #ffffff;
-    font-size: 18px;
-    font-weight: 200;
+    font-size: 16px;
+    font-weight: 500;
     padding: 0px;
 }
 

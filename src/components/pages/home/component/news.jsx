@@ -86,16 +86,16 @@ class news extends Component {
         ];
 
         // 帶入arr資料
-        $(".flip>span").html(`${newdata[0].title}<p className="home_newsDateTitle">公告時間 | <span className="home_newsDate">${newdata[0].date}</span></p>
+        $(".flip>span").html(`${newdata[0].title}<p className="home_newsDateTitle"><span className="home_newsDate">公告時間 | ${newdata[0].date}</span></p>
         `);
         $(".panel>p").html(`${newdata[0].text}`);
-        $(".flip1>span").html(`${newdata[1].title}<p className="home_newsDateTitle">公告時間 | <span className="home_newsDate">${newdata[1].date}</span></p>
+        $(".flip1>span").html(`${newdata[1].title}<p className="home_newsDateTitle"><span className="home_newsDate">公告時間 | ${newdata[1].date}</span></p>
         `);
         $(".panel1>p").html(`${newdata[1].text}`);
-        $(".flip2>span").html(`${newdata[2].title}<p className="home_newsDateTitle">公告時間 | <span className="home_newsDate">${newdata[2].date}</span></p>
+        $(".flip2>span").html(`${newdata[2].title}<p className="home_newsDateTitle"><span className="home_newsDate">公告時間 | ${newdata[2].date}</span></p>
         `);
         $(".panel2>p").html(`${newdata[2].text}`);
-        $(".flip3>span").html(`${newdata[3].title}<p className="home_newsDateTitle">公告時間 | <span className="home_newsDate">${newdata[3].date}</span></p>
+        $(".flip3>span").html(`${newdata[3].title}<p className="home_newsDateTitle"><span className="home_newsDate">公告時間 | ${newdata[3].date}</span></p>
         `);
         $(".panel3>p").html(`${newdata[3].text}`);
 
