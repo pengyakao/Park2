@@ -21,14 +21,19 @@ const StoreAll = ({ listData }) => {
     }, [])
 
     console.log('listData', listData)
-    // state = {}
-    // render() {
     return (
         <div class="StoreCardAllArea">
             <Title title="所有店家" />
             <div class="StoreCard_02">
                 {list.map((item, index) => {
-                    return <StoreCard img={item.sto_img} name={item.sto_name} info={item.sto_info} />
+                    return (
+                        <StoreCard
+                            id={item.sto_id}
+                            img={item.sto_img}
+                            name={item.sto_name}
+                            info={item.sto_info.replace(/<[^>]+>/g, '')}
+                        />
+                    )
                 })}
             </div>
         </div>

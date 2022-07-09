@@ -2,19 +2,69 @@ import React, { Component } from 'react'
 import './style.css'
 import { useState, useEffect } from 'react'
 // import { Pagination, Navigation } from 'swiper'
-import StoreInfo from './component/StoreInfo'
+import EachInfo from './component/EachInfo'
+import { getStore } from '../../../../api/storeApi'
+import EachContent from './component/EachContent'
 
-class StoreEach extends Component {
-    state = {}
-    render() {
-        return (
-            <div class="container store-each">
-                <StoreInfo />
-            </div>
-        )
+export default function StoreEach(props) {
+    const [list, setList] = useState([])
+    const preDataHandle = () => {
+        getStore().then((result) => {
+            setList(result)
+        })
     }
 
-    // componentDidMount() {}
+    useEffect(() => {
+        preDataHandle()
+    }, [])
+
+    return (
+        <div className="container store-each">
+            <div>
+                {list.map((item, index) => {
+                    if (item.sto_id == props.match.params.storeId) {
+                        return (
+                            <EachInfo
+                                id={item.sto_id}
+                                img={item.sto_img}
+                                name={item.sto_name}
+                                tag={item.sto_class}
+                                location={item.sto_location}
+                                fri={item.sto_fri}
+                                sat={item.sto_sat}
+                                tel={item.sto_tel}
+                            />
+                        )
+                    }
+                })}
+            </div>
+
+            <div>
+                {list.map((item, index) => {
+                    if (item.sto_id == props.match.params.storeId) {
+                        return (
+                            <EachContent
+                                id={item.sto_id}
+                                name={item.sto_name}
+                                info={item.sto_info}
+                                tag={item.sto_tag}
+                                img={item.sto_img}
+                                img01={item.sto_img01}
+                                img02={item.sto_img02}
+                                img03={item.sto_img03}
+                                img04={item.sto_img04}
+                                img05={item.sto_img05}
+                                img06={item.sto_img06}
+                                img07={item.sto_img07}
+                            />
+                        )
+                    }
+                })}
+            </div>
+        </div>
+    )
 }
 
-export default StoreEach
+// componentDidMount() {}
+
+// export default StoreEach
