@@ -581,6 +581,15 @@
     display: none;
 }
 
+.panel0 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #e5eecc; */
+    /* border: solid 1px #ff0000; */
+    display: none;
+}
+
 .flip1 {
     margin: 0px;
     padding: 0px;
@@ -632,7 +641,8 @@
     display: none;
 }
 
-.flip4 {
+
+.flipF {
     margin: 0px;
     padding: 5px;
     text-align: left;
@@ -640,7 +650,7 @@
     cursor: pointer;
 }
 
-.panel4 {
+.panelF0 {
     margin: 0px;
     padding: 5px;
     text-align: left;
@@ -649,15 +659,7 @@
     display: none;
 }
 
-.flip5 {
-    margin: 0px;
-    padding: 5px;
-    text-align: left;
-    /* background: #E09697; */
-    cursor: pointer;
-}
-
-.panel5 {
+.panelF1 {
     margin: 0px;
     padding: 5px;
     text-align: left;
@@ -666,15 +668,8 @@
     display: none;
 }
 
-.flip6 {
-    margin: 0px;
-    padding: 5px;
-    text-align: left;
-    /* background: #E09697; */
-    cursor: pointer;
-}
 
-.panel6 {
+.panelF2 {
     margin: 0px;
     padding: 5px;
     text-align: left;
@@ -683,15 +678,7 @@
     display: none;
 }
 
-.flip7 {
-    margin: 0px;
-    padding: 5px;
-    text-align: left;
-    /* background: #E09697; */
-    cursor: pointer;
-}
-
-.panel7 {
+.panelF3 {
     margin: 0px;
     padding: 5px;
     text-align: left;
@@ -699,6 +686,35 @@
     /* border: solid 1px #c3c3c3; */
     display: none;
 }
+.panelF4 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #e5eecc; */
+    /* border: solid 1px #c3c3c3; */
+    display: none;
+}
+.panelF5 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #e5eecc; */
+    /* border: solid 1px #c3c3c3; */
+    display: none;
+}
+.panelF6 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #e5eecc; */
+    /* border: solid 1px #c3c3c3; */
+    display: none;
+}
+
+
+
+
+
 
 .flip8 {
     margin: 0px;

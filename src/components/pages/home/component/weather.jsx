@@ -9,14 +9,14 @@ class weather extends Component {
             <div className='weatherWrapper'>
                 <div id="home_weatherArea">
                     <div>
-                        <img className="home_buttom" src={process.env.PUBLIC_URL + "/home/FAQ_bottom.svg"} />
+                        <img className="home_buttom" src={process.env.PUBLIC_URL + "/home/FAQ_bottom.svg"} alt=""/>
                     </div>
                     <Title title="即時天氣"/>
                     <div id="home_weather">
                         <div id="home_weatherNow">
                             <span id="home_weatherLoc">台中市西區</span>
                             <span id="home_weatherNowTem">00°C</span>
-                            <span id="home_weatherNowIcon"><img src='' /></span>
+                            <span id="home_weatherNowIcon"><img src='' alt=""/></span>
                             <span id="home_weatherNowRain">70%</span>
                         </div>
                         <div id="home_weather72">
@@ -30,139 +30,139 @@ class weather extends Component {
                                 <div id="home_weatherDrop1" className="home_weatherDrop changeDay1">
                                     <span className="home_weatherTime">上午6時</span>
                                     <span className="home_weatherTem">17°C</span>
-                                    <span className="home_weatherIcon"><img src='' /></span>
+                                    <span className="home_weatherIcon"><img src=''alt="" /></span>
                                     <span className="home_weatherRain">70%</span>
                                 </div>
                                 <div id="home_weatherDrop2" className="home_weatherDrop">
                                     <span className="home_weatherTime">上午9時</span>
                                     <span className="home_weatherTem">17°C</span>
-                                    <span className="home_weatherIcon"><img src='' /></span>
+                                    <span className="home_weatherIcon"><img src='' alt=""/></span>
                                     <span className="home_weatherRain">70%</span>
                                 </div>
                                 <div id="home_weatherDrop3" className="home_weatherDrop">
                                     <span className="home_weatherTime">下午12時</span>
                                     <span className="home_weatherTem">17°C</span>
-                                    <span className="home_weatherIcon"><img src='' /></span>
+                                    <span className="home_weatherIcon"><img src='' alt="" /></span>
                                     <span className="home_weatherRain">70%</span>
                                 </div>
                                 <div id="home_weatherDrop4" className="home_weatherDrop">
                                     <span className="home_weatherTime">下午3時</span>
                                     <span className="home_weatherTem">17°C</span>
-                                    <span className="home_weatherIcon"><img src='' /></span>
+                                    <span className="home_weatherIcon"><img src='' alt="" /></span>
                                     <span className="home_weatherRain">70%</span>
                                 </div>
                                 <div id="home_weatherDrop5" className="home_weatherDrop">
                                     <span className="home_weatherTime">下午6時</span>
                                     <span className="home_weatherTem">17°C</span>
-                                    <span className="home_weatherIcon"><img src='' /></span>
+                                    <span className="home_weatherIcon"><img src='' alt="" /></span>
                                     <span className="home_weatherRain">70%</span>
                                 </div>
                                 <div id="home_weatherDrop6" className="home_weatherDrop">
                                     <span className="home_weatherTime">晚上9時</span>
                                     <span className="home_weatherTem">17°C</span>
-                                    <span className="home_weatherIcon"><img src='' /></span>
+                                    <span className="home_weatherIcon"><img src='' alt="" /></span>
                                     <span className="home_weatherRain">70%</span>
                                 </div>
                                 <div id="home_weatherDrop7" className="home_weatherDrop">
                                     <span className="home_weatherTime">上午12時</span>
                                     <span className="home_weatherTem">17°C</span>
-                                    <span className="home_weatherIcon"><img src='' /></span>
+                                    <span className="home_weatherIcon"><img src='' alt="" /></span>
                                     <span className="home_weatherRain">70%</span>
                                 </div>
                                 <div id="home_weatherDrop8" className="home_weatherDrop">
                                     <span className="home_weatherTime">上午3時</span>
                                     <span className="home_weatherTem">17°C</span>
-                                    <span className="home_weatherIcon"><img src=''/></span>
+                                    <span className="home_weatherIcon"><img src='' alt=""/></span>
                                     <span className="home_weatherRain">70%</span>
                                 </div>
                                 <div id="home_weatherDrop9" className="home_weatherDrop">
                                     <span className="home_weatherTime">上午6時</span>
                                     <span className="home_weatherTem">17°C</span>
-                                    <span className="home_weatherIcon"><img src='' /></span>
+                                    <span className="home_weatherIcon"><img src='' alt="" /></span>
                                     <span className="home_weatherRain">70%</span>
                                 </div>
                                 <div id="home_weatherDrop10" className="home_weatherDrop">
                                     <span className="home_weatherTime">上午9時</span>
                                     <span className="home_weatherTem">17°C</span>
-                                    <span className="home_weatherIcon"><img src="" /></span>
+                                    <span className="home_weatherIcon"><img src="" alt="" /></span>
                                     <span className="home_weatherRain">70%</span>
                                 </div>
                                 <div id="home_weatherDrop11" className="home_weatherDrop">
                                     <span className="home_weatherTime">下午12時</span>
                                     <span className="home_weatherTem">17°C</span>
-                                    <span className="home_weatherIcon"><img src="" /></span>
+                                    <span className="home_weatherIcon"><img src="" alt="" /></span>
                                     <span className="home_weatherRain">70%</span>
                                 </div>
                                 <div id="home_weatherDrop12" className="home_weatherDrop">
                                     <span className="home_weatherTime">下午3時</span>
                                     <span className="home_weatherTem">17°C</span>
-                                    <span className="home_weatherIcon"><img src="" /></span>
+                                    <span className="home_weatherIcon"><img src="" alt="" /></span>
                                     <span className="home_weatherRain">70%</span>
                                 </div>
                                 <div id="home_weatherDrop13" className="home_weatherDrop">
                                     <span className="home_weatherTime">下午6時</span>
                                     <span className="home_weatherTem">17°C</span>
-                                    <span className="home_weatherIcon"><img src="" /></span>
+                                    <span className="home_weatherIcon"><img src="" alt="" /></span>
                                     <span className="home_weatherRain">70%</span>
                                 </div>
                                 <div id="home_weatherDrop14" className="home_weatherDrop">
                                     <span className="home_weatherTime">晚上9時</span>
                                     <span className="home_weatherTem">17°C</span>
-                                    <span className="home_weatherIcon"><img src="" /></span>
+                                    <span className="home_weatherIcon"><img src="" alt="" /></span>
                                     <span className="home_weatherRain">70%</span>
                                 </div>
                                 <div id="home_weatherDrop15" className="home_weatherDrop">
                                     <span className="home_weatherTime">晚上9時</span>
                                     <span className="home_weatherTem">17°C</span>
-                                    <span className="home_weatherIcon"><img src="" /></span>
+                                    <span className="home_weatherIcon"><img src="" alt="" /></span>
                                     <span className="home_weatherRain">70%</span>
                                 </div>
                                 <div id="home_weatherDrop16" className="home_weatherDrop">
                                     <span className="home_weatherTime">晚上9時</span>
                                     <span className="home_weatherTem">17°C</span>
-                                    <span className="home_weatherIcon"><img src="" /></span>
+                                    <span className="home_weatherIcon"><img src="" alt="" /></span>
                                     <span className="home_weatherRain">70%</span>
                                 </div>
                                 <div id="home_weatherDrop17" className="home_weatherDrop">
                                     <span className="home_weatherTime">晚上9時</span>
                                     <span className="home_weatherTem">17°C</span>
-                                    <span className="home_weatherIcon"><img src="" /></span>
+                                    <span className="home_weatherIcon"><img src="" alt="" /></span>
                                     <span className="home_weatherRain">70%</span>
                                 </div>
                                 <div id="home_weatherDrop18" className="home_weatherDrop">
                                     <span className="home_weatherTime">晚上9時</span>
                                     <span className="home_weatherTem">17°C</span>
-                                    <span className="home_weatherIcon"><img src="" /></span>
+                                    <span className="home_weatherIcon"><img src="" alt="" /></span>
                                     <span className="home_weatherRain">70%</span>
                                 </div>
                                 <div id="home_weatherDrop19" className="home_weatherDrop">
                                     <span className="home_weatherTime">晚上9時</span>
                                     <span className="home_weatherTem">17°C</span>
-                                    <span className="home_weatherIcon"><img src="" /></span>
+                                    <span className="home_weatherIcon"><img src="" alt=""  /></span>
                                     <span className="home_weatherRain">70%</span>
                                 </div>
                                 <div id="home_weatherDrop20" className="home_weatherDrop">
                                     <span className="home_weatherTime">晚上9時</span>
                                     <span className="home_weatherTem">17°C</span>
-                                    <span className="home_weatherIcon"><img src="" /></span>
+                                    <span className="home_weatherIcon"><img src="" alt="" /></span>
                                     <span className="home_weatherRain">70%</span>
                                 </div>
                                 <div id="home_weatherDrop21" className="home_weatherDrop">
                                     <span className="home_weatherTime">晚上9時</span>
                                     <span className="home_weatherTem">17°C</span>
-                                    <span className="home_weatherIcon"><img src="" /></span>
+                                    <span className="home_weatherIcon"><img src="" alt="" /></span>
                                     <span className="home_weatherRain">70%</span>
                                 </div>
                                 <div id="home_weatherDrop22" className="home_weatherDrop">
                                     <span className="home_weatherTime">晚上9時</span>
                                     <span className="home_weatherTem">17°C</span>
-                                    <span className="home_weatherIcon"><img src="" /></span>
+                                    <span className="home_weatherIcon"><img src="" alt="" /></span>
                                     <span className="home_weatherRain">70%</span>
                                 </div>
                                 <div id="home_weatherDrop23" className="home_weatherDrop">
                                     <span className="home_weatherTime">晚上9時</span>
                                     <span className="home_weatherTem">17°C</span>
-                                    <span className="home_weatherIcon"><img src="" /></span>
+                                    <span className="home_weatherIcon"><img src="" alt="" /></span>
                                     <span className="home_weatherRain">70%</span>
                                 </div>
                             </div>
@@ -170,7 +170,7 @@ class weather extends Component {
 
                     </div>
                     <div>
-                        <img className="home_buttom" src={process.env.PUBLIC_URL + "/home/weather_bottom.svg"} />
+                        <img className="home_buttom" src={process.env.PUBLIC_URL + "/home/weather_bottom.svg"} alt="" />
                     </div>
                 </div>
             </div>

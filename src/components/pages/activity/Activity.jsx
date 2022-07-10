@@ -3,6 +3,7 @@ import './activities_components.css';
 import './activities_layout_w992_mainpage.css'
 import './activities_layout.css'
 import Title from '../../commons/title/Title';
+
 class Activity extends Component {
     state = {}
     render() {
@@ -54,22 +55,11 @@ class Activity extends Component {
                     </div> */}
                     <div id="active-card">
                         <div className="card">
-                            <a href="/activity/activity1" target="_blank">
-                                <img src="/activity/img/activities/我出去一下_城市裡的戶外生活篇.jpeg" className="card-img-top"/>
-                                <div className="card-info">
-                                    <div className="card-title">我出去一下_城市裡的戶外生活篇</div>
-                                    <div className="card-text">6/18 Sat.~6/19 Sun.</div>
-                                    <div className="triangle-market"></div>
-                                    <div className="card-label-market">商家市集</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div className="card">
                             <a href="#" target="_blank">
-                                <img src="/activity/img/activities/我出去一下_城市裡的戶外生活篇.jpeg" className="card-img-top"/>
+                                <img src="/activity/img/activities/id1.jpeg" className="card-img-top"/>
                                 <div className="card-info">
-                                    <div className="card-title">我出去一下_城市裡的戶外生活篇</div>
-                                    <div className="card-text">6/18 Sat.~6/19 Sun.</div>
+                                    <div className="card-title">DJ Night in PARK2 ✦ Question Mark</div>
+                                    <div className="card-text">5/21 Sat.</div>
                                     <div className="triangle-live"></div>
                                     <div className="card-label-live">現場LIVE</div>
                                 </div>
@@ -77,31 +67,31 @@ class Activity extends Component {
                         </div>
                         <div className="card">
                             <a href="#" target="_blank">
-                                <img src="/activity/img/activities/我出去一下_城市裡的戶外生活篇.jpeg" className="card-img-top"/>
+                                <img src="/activity/img/activities/id2.jpeg" className="card-img-top"/>
                                 <div className="card-info">
-                                    <div className="card-title">我出去一下_城市裡的戶外生活篇</div>
-                                    <div className="card-text">6/18 Sat.~6/19 Sun.</div>
-                                    <div className="triangle-popup"></div>
-                                    <div className="card-label-popup">快閃活動</div>
+                                    <div className="card-title">我出去一下．風格品牌出店計畫 ：生活裝飾篇</div>
+                                    <div className="card-text">5/21 Sat.~5/22 Sun.</div>
+                                    <div className="triangle-market"></div>
+                                    <div className="card-label-market">商家市集</div>
                                 </div>
                             </a>
                         </div>
                         <div className="card">
                             <a href="#" target="_blank">
-                                <img src="/activity/img/activities/我出去一下_城市裡的戶外生活篇.jpeg" className="card-img-top"/>
+                                <img src="/activity/img/activities/id3.jpeg" className="card-img-top"/>
                                 <div className="card-info">
-                                    <div className="card-title">我出去一下_城市裡的戶外生活篇</div>
-                                    <div className="card-text">6/18 Sat.~6/19 Sun.</div>
-                                    <div className="triangle-car"></div>
-                                    <div className="card-label-car">風格餐車</div>
+                                    <div className="card-title">PPK設計師交流之夜IN草悟道生活圈</div>
+                                    <div className="card-text">5/6 Fri.~5/6 Fri.</div>
+                                    <div className="triangle-forum"></div>
+                                    <div className="card-label-forum">創作者論壇</div>
                                 </div>
                             </a>
                         </div>
                         <div className="card">
-                            <a href="#" target="_blank">
-                                <img src="/activity/img/activities/我出去一下_城市裡的戶外生活篇.jpeg" className="card-img-top"/>
+                            <a href="/activity/activity1" target="_blank">
+                                <img src="/activity/img/activities/id4.jpeg" className="card-img-top"/>
                                 <div className="card-info">
-                                    <div className="card-title">我出去一下_城市裡的戶外生活篇</div>
+                                    <div className="card-title">我出去一下．城市裡的戶外生活篇</div>
                                     <div className="card-text">6/18 Sat.~6/19 Sun.</div>
                                     <div className="triangle-market"></div>
                                     <div className="card-label-market">商家市集</div>
@@ -110,12 +100,45 @@ class Activity extends Component {
                         </div>
                         <div className="card">
                             <a href="#" target="_blank">
-                                <img src="/activity/img/activities/我出去一下_城市裡的戶外生活篇.jpeg" className="card-img-top"/>
+                                <img src="/activity/img/activities/id5.jpeg" className="card-img-top"/>
                                 <div className="card-info">
-                                    <div className="card-title">我出去一下_城市裡的戶外生活篇</div>
-                                    <div className="card-text">6/18 Sat.~6/19 Sun.</div>
-                                    <div className="triangle-forum"></div>
-                                    <div className="card-label-forum">創作者論壇</div>
+                                    <div className="card-title">𝐃𝐉 𝐍𝐈𝐆𝐇𝐓 |  游璨賓 </div>
+                                    <div className="card-text">6/18 Sat.</div>
+                                    <div className="triangle-live"></div>
+                                    <div className="card-label-live">現場LIVE</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="card">
+                            <a href="#" target="_blank">
+                                <img src="/activity/img/activities/id6.jpeg" className="card-img-top"/>
+                                <div className="card-info">
+                                    <div className="card-title">劍聚 𝐢𝐧 𝐭𝐡𝐞 𝐏𝐀𝐑𝐊𝟐</div>
+                                    <div className="card-text">6/4 Sat.</div>
+                                    <div className="triangle-live"></div>
+                                    <div className="card-label-live">現場LIVE</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="card">
+                            <a href="#" target="_blank">
+                                <img src="/activity/img/activities/id7.jpeg" className="card-img-top"/>
+                                <div className="card-info">
+                                    <div className="card-title">星際大戰塔圖因模型展示</div>
+                                    <div className="card-text">5/7 Sat.</div>
+                                    <div className="triangle-popup"></div>
+                                    <div className="card-label-popup">快閃活動</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="card">
+                            <a href="#" target="_blank">
+                                <img src="/activity/img/activities/id8.jpeg" className="card-img-top"/>
+                                <div className="card-info">
+                                    <div className="card-title">我出去一下《生活裝飾篇》</div>
+                                    <div className="card-text">5/7 Sat.~5/8 Sun.</div>
+                                    <div className="triangle-market"></div>
+                                    <div className="card-label-market">商家市集</div>
                                 </div>
                             </a>
                         </div>

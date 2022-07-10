@@ -160,7 +160,7 @@
     border-radius: 50%;
 }
 .calendar-day-hover:hover{
-    background-color: #ABFF1D;
+    background-color: #B3E24D;
 }
 .calendar-days div span{
     position: absolute;
@@ -225,6 +225,7 @@
     border-radius: 0 0 20px 20px;
 }
 .activity-article .card .card-title{
+    height: 40px;
     font-size: 16px;
     font-weight: 600;
     line-height: 20px;
