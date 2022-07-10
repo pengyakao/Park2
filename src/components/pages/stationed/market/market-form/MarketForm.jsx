@@ -321,6 +321,9 @@ class MarketForm extends Component {
       formData.append("fee", this.state.form.fee);
       uploadFile(formData).then((result)=> {
         console.log(result)
+        if (window.confirm("已成功送出申請")) {
+          window.location.href='/stationed/market-apply';
+        }
       })
     }else{
       this.checkBrand(document.querySelector('input#brandName'), true)
