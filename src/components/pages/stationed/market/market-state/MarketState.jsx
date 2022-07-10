@@ -2,13 +2,19 @@ import React, { Component } from 'react';
 import './style.css'
 import Btn from '../../../../commons/btn/Btn'
 import Title from '../../../../commons/title/Title'
+import {editMarketApplyProposal, editMarketApplyPay} from '../../../../../api/stationed/marketApi'
 
 class MarketState extends Component {
   state = { 
-    currentStep: 2,
-    hasError: true,
-    moneyNotYet: true,
-    transferMoneyBtn: false
+    id: 2,
+    currentStep: 0,
+    clickState: 'toReUpload',
+    deadline: '2022/07/24',
+    count: 2,
+    pay: '',
+    file: '',
+    fileName: '',
+    fileLink: ''
   } 
   render() { 
     return (
@@ -18,7 +24,8 @@ class MarketState extends Component {
             <img src="/stationed/sad.svg" alt="" className="face" />
             <div className="msg">
             </div>
-            <Btn name="確定" transferMoney={this.state.transferMoneyBtn} onHandleTransfer={this.removeTransferPopUp}/>
+            <Btn name="確定" onHandle={this.handleClick} shouldCheck={true}/>
+            {/* <Btn name="確定" transferMoney={this.state.transferMoneyBtn} onHandleTransfer={this.removeTransferPopUp}/> */}
           </div>
         </div>
         <div className="state-container">
@@ -40,7 +47,7 @@ class MarketState extends Component {
                   STEP2<br/>
                   感謝您的報名，審核已通過，請於期限內完成繳費<br/>
                 </div>
-                <Btn name="匯款資訊" onHandle={this.showTransferPopUp} />
+                <Btn name="匯款資訊" onHandle={this.handleClick}  shouldCheck={true}/>
               </div>
               <div className="right-line"></div>
               <div className="step step3">
@@ -57,15 +64,85 @@ class MarketState extends Component {
       </div>
     );
   }
-  showTransferPopUp = () => {
-    if(this.state.moneyNotYet && this.state.currentStep === 2) {
-      this.showPopup_step2();
+
+  // 企劃書內容不符
+  showPopup_toReUpload() {
+    document.querySelector('.popup').classList.add('show-popup');
+    document.querySelector('.msg').innerHTML = '<div>企劃書內容不符，請修改上傳</div>';
+  }
+
+  // 企劃書重新上傳
+  showPopup_reUpload() {
+    document.querySelector('.msg').innerHTML = `<div class="form-group">
+      <div>請上傳活動企劃書 (參考格式)</div>
+        <label for="upload-file" class="custom-input">
+          <img src="/stationed/upload.svg" alt="">
+          <div class="file-name">點擊上傳檔案</div>
+        </label>
+        <input type="file" id="upload-file">
+      </div>`;
+    document.querySelector('#upload-file').addEventListener('change', (e) => {
+      if(e.target.files.length !== 0){
+        document.querySelector('.file-name').innerText = `${e.target.files[0].name}`;
+        this.setState({
+          file: e.target.files[0]
+        })
+        this.setState({
+          fileName: e.target.files[0].name
+        })
+      }else if(e.target.files.length == 0){
+        document.querySelector('.file-name').innerText = '點擊上傳檔案';
+        this.setState({
+          fileName: ''
+        })
+      }
+    })
+  }
+
+  handleClick = () => {
+    const that = this
+    if(this.state.currentStep == 2 && this.state.clickState === 'toReUpload'){
+      this.showPopup_reUpload();
+      this.state.clickState = 'reUpload';
+    }else if(this.state.currentStep == 2 && this.state.clickState === 'reUpload'){
+      if(this.state.fileName !== ''){
+        const formData = new FormData();
+        formData.append("id", this.state.id);
+        formData.append("state", 1);
+        formData.append("file", this.state.file);
+        // formData.append("fileName", this.state.fileName);
+        formData.append("delete", this.state.fileLink);
+        editMarketApplyProposal(formData).then((result)=>{
+          console.log(result)
+          that.removePopup()
+        })
+      }else if(this.state.fileName == ''){
+        this.removePopup()
+      }  
+    }else if(this.state.currentStep == 3){
+      this.showPopup_pay()
+      document.querySelector('#pay').addEventListener('change', (e)=>{
+        this.setState({
+          pay: e.target.value
+        })
+      })
+      if(this.state.pay.length === 5){
+        const data = {
+          id: this.state.id,
+          fee: this.state.pay,
+          state: 4
+        }
+        editMarketApplyPay(data).then((result)=>{
+          this.removePopup()
+        })
+      }
     }
   }
-  removeTransferPopUp = () => {
-    document.querySelector('.popup').classList.remove('show-popup');
-  }
-  showPopup_step2 = () => {
+
+  // 狀態2 顯示匯款資訊
+  showPopup_pay = () => {
+    const date = this.state.deadline
+    const num = this.state.count
     document.querySelector('.popup').classList.add('show-popup');
     document.querySelector('.msg').innerHTML = `
       <div class="transfer-info">
@@ -74,7 +151,7 @@ class MarketState extends Component {
           <div class="group-title">總計費用 : 
             <div class="separate"></div>
           </div>
-          <div class="price">NT$ 1600</div>
+          <div class="price">NT$ ${800*num}</div>
         </div>
         <div class="group">
           <div class="group-title">匯款帳號 : </div>
@@ -82,87 +159,67 @@ class MarketState extends Component {
         </div>
         <div class="group">
           <div class="group-title">繳費期限 : </div>
-          <div class="deadline">至 2022/07/24 為止</div>
+          <div class="deadline">至 ${date} 為止</div>
         </div>
         
         <div class="res">如匯款完成，請填寫帳號後5碼</div>
 
         <div class="column-group">
-          <label for="exampleInputPassword1">帳號後5碼*</label>
-          <input type="text" class="form-control" id="exampleInputPassword1" />
+          <label for="pay">帳號後5碼*</label>
+          <input type="text" class="form-control" id="pay"/>
         </div>
       </div>
     `;
   }
-  componentDidMount = () => {
-    // let currentStep = 3;
-    if(this.state.currentStep === 2 && this.state.moneyNotYet === true){
-      this.setState({
-        transferMoneyBtn: true
-      })
-      console.log( this.state.transferMoneyBtn)
-    }
-    let steps = document.querySelectorAll('.step');
-    steps.forEach((e, i)=>{
-      if(i+1 === this.state.currentStep){
-      e.classList.add('current-state');
-      }
+
+  // 取消popup
+  removePopup() {
+    document.querySelector('.popup').classList.remove('show-popup')
+  }
+
+  setStateAsync = (state) => {
+    return new Promise((resolve) => {
+      this.setState(state, resolve)
+    });
+  }
+
+  componentDidMount = async () => {
+    // localstorage
+    let searchData = localStorage.getItem('searchData');
+    let originData = JSON.parse(searchData);
+
+    // 將localStorage 資料放進state
+    await this.setStateAsync({
+      id: originData.mar_apply_id
     })
-    if(this.state.currentStep === 2){
-      document.querySelector('.state-block').classList.add('current-state2')
+    await this.setStateAsync({
+      currentStep: originData.mar_apply_sta
+    })
+    await this.setStateAsync({
+      count: originData.mar_apply_count
+    })
+    await this.setStateAsync({
+      fileLink: originData.mar_apply_fileurl
+    })
+
+
+    // 狀態1 企劃書有錯誤
+    if(this.state.currentStep == 2) {
+      this.showPopup_toReUpload();
     }
-    if(this.state.currentStep === 3){
+
+
+    // 依照state狀態顯示畫面
+    let steps = document.querySelectorAll('.step');
+    if(this.state.currentStep ==1 || this.state.currentStep ==2){
+      steps[0].classList.add('current-state')
+    }else if(this.state.currentStep ==3 || this.state.currentStep ==4){
+      steps[1].classList.add('current-state')
+      document.querySelector('.state-block').classList.add('current-state2')
+    }else if(this.state.currentStep >= 5){
+      steps[2].classList.add('current-state')
       document.querySelector('.state-block').classList.add('current-state3')
     }
-
-    // 彈跳視窗 -----------------
-    // let hasError = false;
-
-    if(this.state.hasError && this.state.currentStep === 1) {
-      showPopup_step1();
-    }
-    function showPopup_step1() {
-      document.querySelector('.popup').classList.add('show-popup');
-      document.querySelector('.msg').innerHTML = '<div>企劃書內容不符，請修改上傳</div>';
-    }
-
-    document.querySelector('.re-upload').addEventListener('click', ()=>{
-      document.querySelector('.msg').innerHTML = `<div class="form-group">
-        <div>請上傳活動企劃書 (參考格式)</div>
-          <label for="upload-file" class="custom-input">
-            <img src="/stationed/upload.svg" alt="">
-            <div>點擊上傳檔案</div>
-          </label>
-          <input type="file" id="upload-file">
-        </div>`;
-    })
-    document.querySelector('.re-upload').addEventListener('click', ()=>{
-      document.querySelector('.msg').innerHTML = `<div class="form-group">
-        <div>請上傳活動企劃書 (參考格式)</div>
-          <label for="upload-file" class="custom-input">
-            <img src="/stationed/upload.svg" alt="">
-            <div class="file-name">點擊上傳檔案</div>
-          </label>
-          <input type="file" id="upload-file">
-        </div>`;
-      document.querySelector('.re-upload').classList.add('close-btn');
-      document.querySelector('.re-upload').classList.remove('re-upload');
-      document.querySelector('.close-btn').addEventListener('click', removePopup)
-
-      const fileUploader = document.querySelector('#upload-file');
-      fileUploader.addEventListener('change', (e) => {
-        if(e.target.files){
-          document.querySelector('.file-name').innerText = `${e.target.files[0].name}`;
-        }
-          // File Object (Special Blob)
-      });
-    })
-
-    
-    function removePopup() {
-      document.querySelector('.popup').classList.remove('show-popup')
-    }
-
   }
 }
  
