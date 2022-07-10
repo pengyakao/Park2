@@ -27,10 +27,6 @@ class StationedEntrance extends Component {
       </div>
     );
   }
-  clickMarketApply = () => {
-    console.log('hello')
-    // window.location.href= 'https://google.com';
-  }
 }
  
 export default StationedEntrance;

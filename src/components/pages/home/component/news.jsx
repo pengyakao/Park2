@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Title from '../../../commons/title/Title'
 import $ from 'jquery';
+import { getNews } from '../../../../api/home/getNews'
 
 
 
@@ -10,19 +11,11 @@ class news extends Component {
         return (
             <div className='newsWrapper'>
                 <div id="home_newsArea">
-                    <Title title="官方公告"/>
-                    {/* <div className="home_titleBlock">
-                        <div className="home_titleBg">
-                            官方公告
-                        </div>
-                        <div className="home_customTitle" id="home_title2">
-                            官方公告
-                        </div>
-                    </div> */}
+                    <Title title="官方公告" />
                     <div id="home_news">
                         <div id="home_newsImg">
                             <img src={process.env.PUBLIC_URL + "/home/news1.jpeg"} />
-                            {/* <img src="/home/news1.jpeg" /> */}
+                            <img src="/home/news1.jpeg" />
                         </div>
                         <div id="home_newsContent">
                             <div className="flip"><span>標題+公告時間</span><img src={process.env.PUBLIC_URL + "/icon/arrow_B.gif"} />
@@ -55,6 +48,33 @@ class news extends Component {
 
     componentDidMount() {
         console.log('newsdid')
+        //         var newdata = []
+        //         getData();
+        //         async function getData() {
+        //             let newsList = await getNews().then((result) => {
+        //                 console.log(result)
+        //                 newdata = result
+        //                 let html = ''
+        //                 let container = document.querySelector('#home_newsContent')
+        //                 for (let i = 0; i < newdata.length; i++) {
+        //                     html += `<div class="flip">
+        //                     <span>${newdata[i].home_news_title}
+        //                     <p class="home_newsDateTitle">
+        //                     <span class="home_newsDate">公告時間 | ${newdata[i].home_news_Sdate.slice(0,10)}</span>
+        //                     </p></span>
+        //                     <img src="/icon/arrow_B.gif" />
+        //                     </div>
+        //                     <div class="panel${i} home_newsText">
+        //                         <p>${newdata[i].home_news_info}</p>
+        //                     </div>`
+        //                 }
+        //                 container.innerHTML = html;
+
+        //             })
+
+        //         }
+
+
 
         var newdata = [
             {
@@ -223,17 +243,8 @@ class news extends Component {
         $(".flip3").hover(function () {
             $("#home_newsImg").html(`<img src="${newdata[3].img}">`);
         });
-
-
-
-
-
-
-
-
-
     }
-
 }
-
 export default news;
+
+
