@@ -11,6 +11,7 @@ export default function StoreEach(props) {
     const preDataHandle = () => {
         getStore().then((result) => {
             setList(result)
+            console.log(result)
         })
     }
 
@@ -26,13 +27,21 @@ export default function StoreEach(props) {
                         return (
                             <EachInfo
                                 id={item.sto_id}
-                                img={item.sto_img}
+                                img={item.sto_first_img}
                                 name={item.sto_name}
                                 tag={item.sto_class}
                                 location={item.sto_location}
                                 fri={item.sto_fri}
                                 sat={item.sto_sat}
                                 tel={item.sto_tel}
+                                info={item.sto_info}
+                                img01={item.sto_img01}
+                                img02={item.sto_img02}
+                                img03={item.sto_img03}
+                                img04={item.sto_img04}
+                                img05={item.sto_img05}
+                                img06={item.sto_img06}
+                                img07={item.sto_img07}
                             />
                         )
                     }
@@ -47,8 +56,8 @@ export default function StoreEach(props) {
                                 id={item.sto_id}
                                 name={item.sto_name}
                                 info={item.sto_info}
-                                tag={item.sto_tag}
-                                img={item.sto_img}
+                                tag={item.sto_class}
+                                img={item.sto_first_img}
                                 img01={item.sto_img01}
                                 img02={item.sto_img02}
                                 img03={item.sto_img03}

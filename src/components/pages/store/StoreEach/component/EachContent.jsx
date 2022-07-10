@@ -4,7 +4,7 @@ import { getStore } from '../../../../../api/storeApi'
 import $ from 'jquery'
 import Title from '../../../../commons/title/Title'
 
-const EachContent = ({ name, info, tag, img, img01, img02, img03, img04, img05, img06, img07 }) => {
+const EachContent = ({ name, info, tag, img, sto_img_id }) => {
     const htmlWord = info
     return (
         <div className="rightContentArea">
@@ -20,50 +20,44 @@ const EachContent = ({ name, info, tag, img, img01, img02, img03, img04, img05, 
                     </div>
                     <div className="tagsContainer">
                         <div className="tags phoneHidden" id="landscape">
-                            <span>{tag}</span>
+                            <span>咖啡輕食</span>
                         </div>
                         <div className="tags phoneHidden" id="art">
-                            <span>{tag}</span>
+                            <span>餐廳</span>
                         </div>
                     </div>
                 </div>
                 <div className="storeIntro">
-                    <p>店家介紹</p>
+                    <p className="titleGreen">店家介紹</p>
                     <div id="storeContent" dangerouslySetInnerHTML={{ __html: htmlWord }} />
                 </div>
-                {/* <Lightbox
-                imgSource={this.state.lightboxImgData}
-                isOpen={this.state.lightboxIsOpen}
-                currentImage = {this.state.currentImage}
-                onClose={this.closeLightBox}
-            /> */}
-                <div className="storeImg storeIntro ">
-                    <p>店家照片</p>
+                {/* <div className="storeImg storeIntro ">
+                    <p className="titleGreen">店家照片</p>
                     <div className="storeImgGroup phoneHidden">
-                        <a href={img01} data-lightbox="store" className="width">
-                            <img src={img01} />
+                        <a href={sto_img_id} data-lightbox="store" className="width">
+                            <img src={sto_img_id} />
                         </a>
-                        <a href={img02} data-lightbox="store">
-                            <img src={img02} />
+                        <a href={sto_img_id} data-lightbox="store">
+                            <img src={sto_img_id} />
                         </a>
-                        <a href={img03} data-lightbox="store" className="height">
-                            <img src={img03} />
+                        <a href={sto_img_id} data-lightbox="store" className="height">
+                            <img src={sto_img_id} />
                         </a>
-                        <a href={img04} data-lightbox="store">
-                            <img src={img04} />
+                        <a href={sto_img_id} data-lightbox="store">
+                            <img src={sto_img_id} />
                         </a>
-                        <a href={img05} data-lightbox="store" className="big">
-                            <img src={img05} />
+                        <a href={sto_img_id} data-lightbox="store" className="big">
+                            <img src={sto_img_id} />
                         </a>
-                        <a href={img06} data-lightbox="store">
-                            <img src={img06} />
+                        <a href={sto_img_id} data-lightbox="store">
+                            <img src={sto_img_id} />
                         </a>
-                        <a href={img07} data-lightbox="store">
-                            <img src={img07} />
+                        <a href={sto_img_id} data-lightbox="store">
+                            <img src={sto_img_id} />
                         </a>
                     </div>
-                </div>
-                <div id="demo" className="storeImgGroup pcHidden carousel slide" data-ride="carousel">
+                </div> */}
+                {/* <div id="demo" className="storeImgGroup pcHidden carousel slide" data-ride="carousel">
                     <ul className="carousel-indicators">
                         <li data-target="#demo" data-slide-to="0" class="active"></li>
                         <li data-target="#demo" data-slide-to="1"></li>
@@ -94,7 +88,7 @@ const EachContent = ({ name, info, tag, img, img01, img02, img03, img04, img05, 
                     <a className="carousel-control-next" href="#demo" data-slide="next">
                         <span className="carousel-control-next-icon"></span>
                     </a>
-                </div>
+                </div> */}
             </div>
         </div>
     )

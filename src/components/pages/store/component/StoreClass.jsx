@@ -4,6 +4,7 @@ import $ from 'jquery'
 import Title from '../../../commons/title/Title'
 import StoreCard from './StoreCard'
 import { getStore } from '../../../../api/storeApi'
+import style from '../StoreEach/style.css'
 
 export default function StoreClass(props) {
     const [list, setList] = useState([])

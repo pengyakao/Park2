@@ -44,20 +44,20 @@
 
 /* 全域 */
 .container {
-    margin-top: 20px;
+    margin-top: 40px;
     display: flex;
     justify-content: flex-end;
     max-width: 1440px !important;
     padding: 0px 2.5vw;
 }
-.store-each{
-    padding: 60px 2.5vw;
-}
+/* .store-each{
+    padding: 35px 2.5vw;
+} */
 
 /* 撐高header距離 */
-.headerHight {
+/* .headerHight {
     min-height: 56px;
-}
+} */
 
 /* -----Left----- */
 
@@ -74,7 +74,7 @@
     background-color: #F2F2F3;
     border-radius: 15px;
     /* height: calc(70% - 50px); */
-    height: 100%;
+    /* height: 100%; */
     width: 30vw;
     /* left: 2.5vw; */
     width: 300px;
@@ -89,7 +89,7 @@
 }
 
 /* 綠字 */
-.titleName div p {
+.titleGreen{
     font-size: 22px;
     font-weight: 900;
     font-family: 'Noto Sans TC', sans-serif;
@@ -113,6 +113,7 @@
 /* 店家logo */
 .circleImg {
     display: flex;
+    height: 175px;
     /* flex-direction: column; */
     /* align-items: flex-start; */
     /* align-items: center; */
@@ -120,7 +121,8 @@
 }
 
 .circleImg img {
-    height: 175px;
+    /* height: 175px; */
+    width: 100%;
     overflow: hidden;
     border-radius: 50%;
 }
@@ -141,6 +143,7 @@
     flex-wrap: nowrap;
     align-items: center;
     width: calc(97.5% - 300px);
+    margin-top: 40px;
 }
 
 /* 大首圖外框容器 */
