@@ -1,16 +1,21 @@
 import React, { Component } from 'react'
 import { useState, useEffect } from 'react'
 import $ from 'jquery'
-import { getStore } from '../../../../api/storeApi'
+import { getStore } from '../../../../../api/storeApi'
+//tag
+// import { useSelector } from 'react-redux'
 
 const SideTags = ({ listData }) => {
     const [list, setList] = useState([])
 
-    const Tagscoffee = () => {
-        getStore().then((result) => {
-            setList(result.filter((e) => e.sto_class.includes(1)))
-        })
-    }
+    //tags
+    // const filter = useSelector((Store) => store.filterReducer);
+
+    // const Tagscoffee = () => {
+    //     getStore().then((result) => {
+    //         setList(result.filter((e) => e.sto_class.includes(1)))
+    //     })
+    // }
     const stoClass1 = () => {
         window.location.href = `/class/1`
     }
