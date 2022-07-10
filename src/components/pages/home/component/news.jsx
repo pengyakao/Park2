@@ -15,7 +15,7 @@ class news extends Component {
                     <div id="home_news">
                         <div id="home_newsImg">
                             <img src={process.env.PUBLIC_URL + "/home/news1.jpeg"} />
-                            <img src="/home/news1.jpeg" />
+                            {/* <img src="/home/news1.jpeg" /> */}
                         </div>
                         <div id="home_newsContent">
                             <div className="flip"><span>標題+公告時間</span><img src={process.env.PUBLIC_URL + "/icon/arrow_B.gif"} />
