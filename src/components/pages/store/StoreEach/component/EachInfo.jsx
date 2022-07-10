@@ -4,38 +4,38 @@ import { getStore } from '../../../../../api/storeApi'
 import $ from 'jquery'
 import Title from '../../../../commons/title/Title'
 
-const StoreInfo = ({ key, id, name, img, info }) => {
+const EachInfo = ({ key, id, name, first_img, info, tag, location, fri, sat, tel }) => {
     return (
         <div className="container store-each">
             <div className="circleImg pcHidden">
-                <img src={img} alt="" />
+                <img src={first_img} alt="" />
             </div>
 
             <div className="storeIntro pcHidden">
                 <div className="title-block">
-                    <div className="title-bg">酉5PM TWCAUDEX</div>
-                    <div className="custom-title">酉5PM TWCAUDEX</div>
+                    <div className="title-bg">{name}</div>
+                    <div className="custom-title">{name}</div>
                 </div>
                 <div className="tagsArea pcHidden">
                     <div className="tags" id="landscape">
-                        <span>景觀設計</span>
+                        <span>{tag}</span>
                     </div>
                     <div className="tags" id="art">
-                        <span>藝術設計</span>
+                        <span>{tag}</span>
                     </div>
                 </div>
             </div>
 
             <div className="bigImg pcHidden">
-                <a href="/store/store/酉.jpeg" data-lightbox="store">
-                    <img src="/store/store/酉.jpeg" alt="" />
+                <a href={first_img} data-lightbox="store">
+                    <img src={first_img} alt="" />
                 </a>
             </div>
 
             <div className="leftInfoArea">
                 <div id="leftInfo">
                     <div className="circleImg phoneHidden">
-                        <img src="/store/store/酉 logo.jpeg" alt="" />
+                        <img src={first_img} alt="" />
                     </div>
                     <div className="leftInfo-container titleName">
                         <div>
@@ -43,7 +43,7 @@ const StoreInfo = ({ key, id, name, img, info }) => {
                                 <p>店家名稱</p>
                             </div>
                             <div>
-                                <span>酉5PM TWCAUDEX</span>
+                                <span>{name}</span>
                             </div>
                         </div>
                         <div>
@@ -51,7 +51,7 @@ const StoreInfo = ({ key, id, name, img, info }) => {
                                 <p>店家位置</p>
                             </div>
                             <div>
-                                <span>PARK2 - 1F</span>
+                                <span>{location}</span>
                             </div>
                         </div>
                         <div>
@@ -59,19 +59,9 @@ const StoreInfo = ({ key, id, name, img, info }) => {
                                 <p>營業時間</p>
                             </div>
                             <div>
-                                <span>週一 12:00~20:00</span>
+                                <span>平日 {fri}</span>
                                 <br />
-                                <span>週二 12:00~20:00</span>
-                                <br />
-                                <span>週三 12:00~20:00</span>
-                                <br />
-                                <span>週四 12:00~20:00</span>
-                                <br />
-                                <span>週五 12:00~20:00</span>
-                                <br />
-                                <span>週六 12:00~20:00</span>
-                                <br />
-                                <span>週日 12:00~20:00</span>
+                                <span>假日 {sat}</span>
                             </div>
                         </div>
                         <div>
@@ -79,7 +69,7 @@ const StoreInfo = ({ key, id, name, img, info }) => {
                                 <p>聯絡電話</p>
                             </div>
                             <div>
-                                <span>04-2302-0269</span>
+                                <span>{tel}</span>
                             </div>
                         </div>
                         <div>
@@ -121,4 +111,4 @@ const StoreInfo = ({ key, id, name, img, info }) => {
     )
 }
 
-export default StoreInfo
+export default EachInfo

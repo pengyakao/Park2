@@ -7,6 +7,7 @@ import SideTags from './component/SideTags'
 import StoreCard from './component/StoreCard'
 import StoreHot from './component/StoreHot'
 import StoreAll from './component/StoreAll'
+import stoFunc from './component/StoreAll'
 
 class Store extends Component {
     state = {}
@@ -22,7 +23,9 @@ class Store extends Component {
         )
     }
 
-    // componentDidMount() {}
+    // componentDidMount() {
+    //     stoFunc()
+    // }
 }
 
 export default Store
