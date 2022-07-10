@@ -28,21 +28,7 @@ form{
   flex: 1;
   margin: 15px 10px;
 }
-.custom-input{
-  position: relative;
-  width: 100%;
-  height: 100px;
-  text-align: center;
-  cursor: pointer;
-  background: #f4f4f4;
-  border: dashed 3px rgb(203, 203, 203);
-  border-radius: 5px;
-  margin-top: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+
 .custom-input img{
   height: 50px;
 }
@@ -57,10 +43,10 @@ label{
   font-size: 14px;
   font-weight: 500;
 }
-.form-control:focus {
+/* .form-control:focus {
   border-color: #ABFF1D;
   box-shadow: 0px 0px 0px 4px #acff1d9b;
-}
+} */
 .submit-block{
   width: 100%;
   display: flex;
@@ -74,6 +60,12 @@ label{
 .msg{
   font-weight: 700;
   margin-bottom: 10px;
+}
+.store-form .check{
+  color: #d11507;
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: 700;
 }
 @media(max-width: 780px){
   .form-row{

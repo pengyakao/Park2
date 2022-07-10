@@ -57,6 +57,7 @@ label{
   align-items: center;
   opacity: .2;
   padding: 15px 0px;
+  pointer-events: none;
 }
 .inner-block .step-info{
   max-width: 80%;
@@ -81,6 +82,7 @@ label{
   flex: 1.5;
   opacity: 1;
   padding: 0px;
+  pointer-events: all;
 }
 .step img{
   height: 70px;
@@ -97,21 +99,6 @@ label{
   text-align: center;
   font-weight: 700;
   font-size: 14px;
-}
-.custom-input{
-  position: relative;
-  width: 100%;
-  text-align: center;
-  cursor: pointer;
-  background: #f4f4f4;
-  border: dashed 3px rgb(203, 203, 203);
-  border-radius: 5px;
-  margin-top: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 10px;
 }
 .custom-input img{
   height: 50px;
