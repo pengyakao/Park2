@@ -1,82 +1,114 @@
 export function myJS() {
-  var x = true;
+  var boolean = true;
+
+  // 樓層初始化
+  document.querySelector("#park2-1f").style.opacity = "1";
+  document.querySelector("#park2-b1").style.opacity = ".3";
+  document.querySelectorAll(".location_b1").forEach((ele) => {
+    ele.style.display = "none";
+  });
+
   // 樓層切換。
-  document.getElementById("layerSwitch").onclick = () => {
-    if (x == true) {
-      // 樓層切換半透明
-      document.querySelector("#park2-1f").style.opacity = "1";
-      document.querySelector("#park2-b1").style.opacity = ".2";
-
-      document.getElementById("park2-1f-2").style.display = "none";
-      document.getElementById("park2-1f").style.display = "block";
-      document.querySelectorAll(".location_b1").forEach((ele) => {
-        ele.style.display = "none";
-      });
-      // 樓層切換全透
-      // document.getElementById("park2-1f").style.display = "block";
-      // document.getElementById("park2-b1").style.display = "none";
-
-      x = !x;
-    } else {
-      // 樓層切換半透明
-      document.querySelector("#park2-1f-2").style.opacity = ".2";
+  var layerswitch =document.getElementById("layerSwitch")
+  layerswitch.onclick = () => {
+    if (boolean === true) {
+      // 前往b1
+      document.querySelector("#park2-1f-2").style.opacity = ".3";
       document.querySelector("#park2-b1").style.opacity = "1";
-
-      document.getElementById("park2-1f-2").style.display = "block";
       document.getElementById("park2-1f").style.display = "none";
+      document.getElementById("park2-1f-2").style.display = "block";
+      document.querySelector("#park2-1f-2").style.animationName = "anima_1f_push";
+      document.querySelector("#park2-b1").style.animationName = "anima_b1_pull";
+
       document.querySelectorAll(".location_b1").forEach((ele) => {
         ele.style.display = "block";
       });
-      // 樓層切換全透
-      // document.getElementById("park2-1f").style.display = "none";
-      // document.getElementById("park2-b1").style.display = "block";
-      x = !x;
+      boolean = !boolean;
+    } else {
+      // 前往1f
+      document.querySelector("#park2-1f").style.opacity = "1";
+      document.querySelector("#park2-b1").style.opacity = ".3";
+      document.querySelector("#park2-1f").style.animationName = "anima_1f_pull";
+      document.querySelector("#park2-b1").style.animationName = "anima_b1_push";
+      document.getElementById("park2-1f-2").style.display = "none";
+      document.getElementById("park2-1f").style.display = "block";
+
+      document.querySelectorAll(".location_b1").forEach((ele) => {
+        ele.style.display = "none";
+      });
+      boolean = !boolean;
     }
   };
 
-  // 樓層初始化
-  document.getElementById("layerSwitch").onclick();
 
-  // 顯示小卡
-  var myLocation = document.querySelectorAll(".location_1f");
+  // 點擊地標/小卡切換
+  var myLocation_1f = document.querySelectorAll(".location_1f");
+  var myLocation_b1 = document.querySelectorAll(".location_b1");
+  // var myStore_1f = document.querySelectorAll('.store_1f')
 
-  for (let i = 0; i < myLocation.length; i++) {
-    myLocation[i].onclick = function () {
-      document.getElementById("infoCard").style.display = "block";
+  for (let i = 0; i < myLocation_1f.length; i++) {
+    myLocation_1f[i].onclick = function () {
       document.getElementById("cardImg").src = myImg[i];
       document.getElementById("cardText").innerHTML = myShopText[i];
+      console.log(document.querySelectorAll('.selected'))
+      if (document.querySelector('.selected') != null){
+        document.querySelectorAll('.selected').forEach(ele => {
+          ele.classList.remove('selected');
+        });
+      }
+      myLocation_1f[i].classList.add('selected');
+      // myStore_1f[i].classList.add('selected')
     };
   }
 
+  for (let i = 0; i < myLocation_b1.length; i++) {
+    myLocation_b1[i].onclick = function () {
+      document.getElementById("cardImg").src = myImg[i];
+      document.getElementById("cardText").innerHTML = myShopText[i];
+      if (document.querySelector('.selected') != null){
+        document.querySelector('.selected').classList.remove('selected');
+      }
+      myLocation_b1[i].classList.add('selected');
+    };
+  }
+
+
+
+
   // 搜尋功能
-  // 搜尋提示初始化
   var mapSearch = document.getElementById("search");
-  // if (mapSearch.value == "") {
-  //   document.querySelector("#search").setAttribute("list", "searchInit");
-  // } else {
-  //   console.log(123);
-  //   document.querySelector("#search").setAttribute("list", "searchShop");
-  // }
 
   document.getElementById("searchBtn").onclick = function () {
-    // 搜尋店家
-    for (let i = 0; i < myShop.length; i++) {
-      if (mapSearch.value == myShop[i]) {
-        myLocation[i].onclick();
+    // note (  boolean=true:1f ; boolean=flase:b1  )
+    // 1f
+    for (let i = 0; i < myShop_1f.length; i++) {
+      if (mapSearch.value === myShop_1f[i]) {
+        myLocation_1f[i].onclick();
+        if (boolean === false){
+          layerswitch.onclick()
+        }
       }
     }
 
-    // 執行搜尋後清空input
-    mapSearch.value = "";
+    // b1
+    for (let i = 0; i < myShop_b1.length; i++) {
+      if (mapSearch.value === myShop_b1[i]) {
+        myLocation_b1[i].onclick();
+        if (boolean === true){
+          layerswitch.onclick()
+        }
+      }
   };
+      // 執行搜尋後清空input
+      mapSearch.value = "";
+}
 
-  // 小卡取消選取
-  document.getElementById("cancel").onclick = function () {
-    document.getElementById("infoCard").style.display = "none";
-  };
+//  sideBar:hover
+
+
 
   // 卡片資訊 (開發用，之後改由後台抓取)
-  var myShop = [
+  var myShop_1f = [
     "泱茶",
     "MISATO",
     "12AM",
@@ -85,6 +117,16 @@ export function myJS() {
     "正面奶酥",
     "COFFEE AND JOHN",
     "酉 5pm.twcaude",
+  ];
+
+  var myShop_b1 = [
+    "B101",
+    "B102",
+    "B103",
+    "B104",
+    "B105",
+    "B106",
+    "B107",
   ];
 
   var myImg = [
@@ -109,4 +151,5 @@ export function myJS() {
   ];
 
   // end of func
+
 }

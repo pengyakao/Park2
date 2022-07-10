@@ -81,7 +81,7 @@
 .banner-component .info-card .info .name{
   font-size: 28px;
   font-weight: 700;
-  color: #ABFF1D;
+  color: #B3E24D;
 }
 .banner-component .info-card .info .date{
   font-weight: 500;
@@ -115,7 +115,7 @@
   transition-duration: .5s;
 }
 .slider-index .index:hover{
-  background-color: #ABFF1D;
+  background-color: #B3E24D;
 }
 /* .banner-component .space{
   height: 30px;
@@ -123,7 +123,7 @@
   background-color: #000;
 } */
 .carousel-active{
-  background-color: #ABFF1D !important;
+  background-color: #B3E24D !important;
 }
 
 @media(max-width: 950px) {

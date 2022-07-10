@@ -21,8 +21,8 @@ class news extends Component {
                     </div> */}
                     <div id="home_news">
                         <div id="home_newsImg">
-                            <img src={process.env.PUBLIC_URL + "/img/news1.jpeg"} />
-                            {/* <img src="/img/news1.jpeg" /> */}
+                            <img src={process.env.PUBLIC_URL + "/home/news1.jpeg"} />
+                            {/* <img src="/home/news1.jpeg" /> */}
                         </div>
                         <div id="home_newsContent">
                             <div className="flip"><span>標題+公告時間</span><img src={process.env.PUBLIC_URL + "/icon/arrow_B.gif"} />
@@ -46,7 +46,7 @@ class news extends Component {
                     </div>
                 </div>
                 <div>
-                    <img className="home_buttom" src={process.env.PUBLIC_URL + "/img/news_bottom.svg"} />
+                    <img className="home_buttom" src={process.env.PUBLIC_URL + "/home/news_bottom.svg"} />
                 </div>
             </div>
         );
@@ -58,25 +58,25 @@ class news extends Component {
 
         var newdata = [
             {
-                img: '/img/news1.jpeg',
+                img: '/home/news1.jpeg',
                 date: '2022/05/16',
                 title: '《我出去一下．生活裝飾篇》活動取消公告',
                 text: `本週的天氣仍不穩定，期望讓參與活動的品牌主理人、和來到這裡遊逛的大家，都能夠完整體驗到活動的呈現，故審慎評估過後，決定本週《我出去一下．生活裝飾篇》活動取消。<br>但星際大戰為主題的品牌出店計畫仍會在 PARK2 B1舉行！除了會在現場販售星際大戰相關的周邊外，也邀請到重量級的星戰收藏家，在5/7活動當天帶來期間限定的精緻收藏展示！星戰迷絕對不能錯過！`
             },
             {
-                img: '/img/news2.jpeg',
+                img: '/home/news2.jpeg',
                 date: '2022/04/30',
                 title: '【新村站著吃烤肉】營業時間異動公告',
                 text: `因應疫情狀況，新村站著吃烤肉員工採取分流上班制，<br>為讓每位客人都能夠享有完整的桌邊服務，<br>故營業開放調整如下：<br>➜5/14-5/15本週末暫不開放內用，僅提供外送及外帶服務！<br>➜5/16-5/22，內用僅開放7桌部分座位！<br>➜5/23起恢復正常營業<br>.<br>造成不便，敬請見諒！`
             },
             {
-                img: '/img/news3.jpeg',
+                img: '/home/news3.jpeg',
                 date: '2022/04/13',
                 title: '【公園裡的星期天】營業時間異動公告',
                 text: `4/30(三)起 Sunday in the Park 公園裡的星期天<br>營業時間調整如下：<br>9 : 00 - 20 : 00 (最後點餐時間為 19 : 00 )<br>--------------------------------------<br>▪ 線上訂位：https://reurl.cc/XjX8W3<br>▪ 電話：04 - 2305 - 09290929<br>▪ 地點： PARK2草悟廣場 B1`
             },
             {
-                img: '/img/news4.jpeg',
+                img: '/home/news4.jpeg',
                 date: '2022/04/01',
                 title: '【Rockland】營業時間異動公告',
                 text: `【Rockland】及【Rockland PLUS 】因春酒及員工教育訓練，營業時間調整如下：<br>
@@ -86,16 +86,16 @@ class news extends Component {
         ];
 
         // 帶入arr資料
-        $(".flip>span").html(`${newdata[0].title}<p className="home_newsDateTitle">公告時間 | <span className="home_newsDate">${newdata[0].date}</span></p>
+        $(".flip>span").html(`${newdata[0].title}<p className="home_newsDateTitle"><span className="home_newsDate">公告時間 | ${newdata[0].date}</span></p>
         `);
         $(".panel>p").html(`${newdata[0].text}`);
-        $(".flip1>span").html(`${newdata[1].title}<p className="home_newsDateTitle">公告時間 | <span className="home_newsDate">${newdata[1].date}</span></p>
+        $(".flip1>span").html(`${newdata[1].title}<p className="home_newsDateTitle"><span className="home_newsDate">公告時間 | ${newdata[1].date}</span></p>
         `);
         $(".panel1>p").html(`${newdata[1].text}`);
-        $(".flip2>span").html(`${newdata[2].title}<p className="home_newsDateTitle">公告時間 | <span className="home_newsDate">${newdata[2].date}</span></p>
+        $(".flip2>span").html(`${newdata[2].title}<p className="home_newsDateTitle"><span className="home_newsDate">公告時間 | ${newdata[2].date}</span></p>
         `);
         $(".panel2>p").html(`${newdata[2].text}`);
-        $(".flip3>span").html(`${newdata[3].title}<p className="home_newsDateTitle">公告時間 | <span className="home_newsDate">${newdata[3].date}</span></p>
+        $(".flip3>span").html(`${newdata[3].title}<p className="home_newsDateTitle"><span className="home_newsDate">公告時間 | ${newdata[3].date}</span></p>
         `);
         $(".panel3>p").html(`${newdata[3].text}`);
 

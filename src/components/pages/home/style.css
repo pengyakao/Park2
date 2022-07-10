@@ -32,131 +32,9 @@
     width: 100vw;
 }
 
-/* 標題 */
-/* .home_title {
-    color: rgb(255, 255, 255);
-    font-size: 28px;
-    font-weight: 700;
-    -webkit-text-stroke: 1px black;
-    text-shadow: 2px 2px 0px #000000;
-}
-
-.home_title2 {
-    color: rgb(0, 0, 0);
-    font-size: 28px;
-    font-weight: 700;
-    -webkit-text-stroke: 1px rgb(255, 255, 255);
-    text-shadow: 2px 2px 0px #ffffff;
-}
-.home_titleBlock{
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
-  }
-.home_titleBlock .home_customTitle{
-    position: absolute;
-    text-align: center;
-    font-weight: 900;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 28px;
-    letter-spacing: 1px;
-    color: #000;
-    -webkit-text-stroke: 5px #000;
-    letter-spacing: 2px;
-    top: 0;
-    left: 0;
-    transform: translate(-2px, -2px);
-  }
-
-.home_titleBlock .home_titleBg{
-    text-align: center;
-    font-weight: 900;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 28px;
-    letter-spacing: 1px;
-    color: #000;
-    -webkit-text-stroke: 5px #000;
-    letter-spacing: 2px;
-}
-.home_titleBlock2{
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
-  }
-.home_titleBlock2 .home_customTitle2{
-    position: absolute;
-    text-align: center;
-    font-weight: 900;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 28px;
-    letter-spacing: 1px;
-    color: rgb(255, 255, 255);
-    -webkit-text-stroke: 5px rgb(255, 255, 255);
-    letter-spacing: 2px;
-    top: 0;
-    left: 0;
-    transform: translate(-2px, -2px);
-  }
-
-.home_titleBlock2 .home_titleBg2{
-    text-align: center;
-    font-weight: 900;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 28px;
-    letter-spacing: 1px;
-    color: rgb(255, 255, 255);
-    -webkit-text-stroke: 5px rgb(255, 255, 255);
-    letter-spacing: 2px;
-}
-#home_title1::before{
-    content: '關於Park2';
-    font-size: 28px;
-    position: absolute;
-    -webkit-text-stroke: 1px #000;
-    color: #fff;
-    letter-spacing: 2px;
-    z-index: 2;
-}
-#home_title2::before{
-    content: '官方公告';
-    font-size: 28px;
-    position: absolute;
-    -webkit-text-stroke: 1px #000;
-    color: #fff;
-    letter-spacing: 2px;
-    z-index: 2;
-}
-#home_title3::before{
-    content: 'FAQ';
-    font-size: 28px;
-    position: absolute;
-    -webkit-text-stroke: 1px rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    letter-spacing: 2px;
-    z-index: 2;
-}
-#home_title4::before{
-    content: '即時天氣';
-    font-size: 28px;
-    position: absolute;
-    -webkit-text-stroke: 1px #000;
-    color: #fff;
-    letter-spacing: 2px;
-    z-index: 2;
-}
-#home_title5::before{
-    content: '交通資訊';
-    font-size: 28px;
-    position: absolute;
-    -webkit-text-stroke: 1px #000;
-    color: #fff;
-    letter-spacing: 2px;
-    z-index: 2;
-} */
-
 /* 關於park2 */
 #home_aboutArea {
-    background-color: #ABFF1D;
+    background-color: #B3E24D;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -170,7 +48,7 @@
 
 #home_aboutContent {
     /* padding: 10px; */
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 700;
 }
 
@@ -196,8 +74,8 @@
 }
 
 #home_newsImg {
-    width: 400px;
-    height: 285px;
+    width: 500px;
+    height: 356px;
     /* width: 50%; */
     /* border: 1px solid #000000; */
 }
@@ -218,15 +96,22 @@
 }
 
 #home_newsContent span {
-    font-size: 18px;
-    font-weight: 400;
-    padding-top: 5px;
-    margin-bottom: -15px;
+    /* color: red; */
+    font-size: 20px;
+    font-weight: 700;
 }
 
+/* .home_newsDate {
+    color: gray!important;
+    font-size: 10px!important;
+} */
+
+
 #home_newsContent p {
-    font-size: 15px;
-    font-weight: 300;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 #home_newsContent img {
@@ -240,11 +125,11 @@
     display: flex;
     justify-content: space-between;
 }
-#home_newsContent .home_newsDateTitle,
+/* #home_newsContent .home_newsDateTitle,
 #home_newsContent .home_newsDate {
     color: gray;
     font-size: 10px;
-}
+} */
 
 @media (max-width: 750px) {
     #home_news {
@@ -278,15 +163,13 @@
     align-items: center;
     justify-content:space-between;
 }
-/* #home_FAQ_L{
-    width: 20%;
-} */
+
 #home_FAQ_R{
     /* width: 20%;  */
-    height:250px ;
-    margin-bottom: 50px;
+    height:400px ;
+    margin-bottom: 0px;
 }
-@media (max-width: 600px) {
+@media (max-width: 750px) {
     #home_FAQ_R{
         display: none;
     }
@@ -296,34 +179,35 @@
 
 }
 #home_FAQContent {
-    width: 70%;
+    width: 75%;
     padding-left: 15%;
-    /* border: 2px solid #ABFF1D; */
+    /* border: 2px solid #B3E24D; */
 }
 
 #home_FAQContent img {
-    width: 25px;
-    height: 25px;
-    /* border: 1px solid #ABFF1D; */
+    width: 30px;
+    height: 30px;
+    /* border: 1px solid #B3E24D; */
 }
 
 #home_FAQContent div:nth-child(odd) {
-    border-bottom: 1.5px solid #ABFF1D;
+    border-bottom: 1.5px solid #B3E24D;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 18px;
 }
 
 #home_FAQContent span {
     color: white;
-    font-size: 18px;
-    font-weight: 400;
-    /* border: 1px solid #ABFF1D; */
+    font-size: 20px;
+    font-weight: 700;
+    /* border: 1px solid #B3E24D; */
 }
 
 #home_FAQContent p {
     color: white;
-    font-size: 15px;
-    font-weight: 300;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 
@@ -361,16 +245,16 @@
 
 #home_weatherLoc {
     color: #333333;
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 23px;
+    font-weight: 900;
     text-align: center;
     -webkit-text-stroke: 0.5px #ffffff;
 }
 
 #home_weatherNowTem {
     color: #333333;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 23px;
+    font-weight: 600;
     text-align: center;
 }
 
@@ -382,8 +266,8 @@
 
 #home_weatherNowRain {
     color: #333333;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 600;
     text-align: center;
 }
 
@@ -396,8 +280,8 @@
 
 #home_weatherDate span {
     color: #333333;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 23px;
+    font-weight: 600;
     text-align: center;
 }
 
@@ -427,14 +311,14 @@
 
 .home_weatherTime {
     width: 10vw;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 600;
     text-align: center;
 }
 
 .home_weatherTem {
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 600;
     text-align: center;
 }
 
@@ -443,8 +327,8 @@
 }
 
 .home_weatherRain {
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 600;
     text-align: center;
 }
 
@@ -452,7 +336,7 @@
 /* 交通資訊 */
 #home_transArea {
     width: 100%;
-    background-color: #ABFF1D;
+    background-color: #B3E24D;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -469,15 +353,15 @@
 
 
 #home_transMap {
-    width: 400px;
+    max-width:500px ;
     /* border: 1px solid #000000; */
 }
 
 #home_transInfo {
-    /* width: 50%; */
     flex-grow: 1;
     margin-bottom: 20px;
     background-color: #000000;
+    margin-left: 30px;
     /* border: 1px solid #ff0000; */
 }
 
@@ -490,11 +374,11 @@
 }
 
 .home_transTitle {
-    width: 100px;
-    height: 28px;
-    background-color: #ABFF1D;
-    font-size: 15px;
-    font-weight: 500;
+    width: 130px;
+    height: 35px;
+    background-color: #B3E24D;
+    font-size: 20px;
+    font-weight: 700;
     transform: skew(-20deg);
 }
 
@@ -506,24 +390,28 @@
 #home_transInfoPub span,
 #home_transInfoCar span {
     color: #ffffff;
-    font-size: 15px;
-    font-weight: 400;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 15px;
 }
 
 .home_transCont {
     color: #ffffff;
-    font-size: 12px;
-    font-weight: 200;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0px;
 }
 
 #home_transInfoPub img,
 #home_transInfoCar img {
-    width: 20px;
+    width: 30px;
+    height: 30px;
+    margin: auto 0;
 }
 
 #home_transInfoPub div:nth-child(even),
 #home_transInfoCar div:nth-child(even) {
-    border-bottom: 1.5px solid #ABFF1D;
+    border-bottom: 1.5px solid #B3E24D;
     display: flex;
     justify-content: space-between;
 }
@@ -571,24 +459,24 @@
 
 /* 地圖 */
 #home_transMap {
-    height: 350px;
+    height: 400px;
     display: flex;
     flex-wrap: wrap;
     justify-content:center;
     align-content: flex-start;
-    /* background-color: #ABFF1D; */
+    /* background-color: #B3E24D; */
 }
 
 #home_transMapT {
-    width: 350px;
+    width: 450px;
     height: 30px;
     background-color: black;
     transform: skew(-30deg);
 }
 
 #home_transMap1 {
-    width: 350px;
-    height: 300px;
+    width: 450px;
+    height: 350px;
     background-color: #F1FFD2;
     box-sizing: border-box;
     border: 4px solid black;
@@ -598,8 +486,8 @@
 }
 
 #home_transMap2 {
-    width: 300px;
-    height: 250px;
+    width: 400px;
+    height: 300px;
     box-sizing: border-box;
     border: 4px solid black;
     background-color: #EAEAEA;
@@ -621,7 +509,7 @@
     border-style: solid;
     border-width: 4px 4px 0px 0px;
     background-color: #000000;
-    /* background-color: #ABFF1D; */
+    /* background-color: #B3E24D; */
     overflow: hidden;
 }
 
@@ -633,7 +521,7 @@
 #home_transMapR {
     margin-top: -15px;
     width: 17px;
-    height: 300px;
+    height: 350px;
     background-color: black;
     transform: skew(0, -60deg);
 }

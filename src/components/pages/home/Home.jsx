@@ -7,6 +7,9 @@ import FAQ from './component/faq';
 import Weather from './component/weather';
 import Trans from './component/trans';
 
+
+
+
 class Home extends Component {
     state = {}
     render() {

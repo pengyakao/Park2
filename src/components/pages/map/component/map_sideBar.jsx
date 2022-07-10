@@ -3,22 +3,35 @@ import React, { Component } from "react";
 class SideBar extends Component {
   render() {
     return (
-      <div id="sideBar">
+        <div id="sideBar">
         <div id="sideBarTitle">公共設施</div>
         <br />
-        <span>
-          <img src={require("./img/info.svg").default} alt="mySvgImage" />
-        </span>
-        <p>洗手間</p>
-        <br />
-        <img src={require("./img/parking.svg").default} alt="mySvgImage" />
-        <p>停車場</p>
-        <br />
-        <p>球場</p>
-        <br />
-        <p>停車場</p>
-        <br />
-      </div>
+        <div id="secondBar">
+          <span id="ctn1">
+            <div>
+              <img src="/map/icon/wc.svg" alt="wc" />
+              <p>洗手間</p>
+            </div>
+            <br />
+            <div>
+              <img src="/map/icon/parking.svg" alt="" />
+              <p>停車場</p>
+            </div>
+          </span>
+
+          <span id="ctn2">
+            <div>
+              <img src="/map/icon/basketball.svg" alt="" />
+              <p> 球場 </p>
+            </div>
+            <br />
+            <div>
+              <img src="/map/icon/elevator.svg" alt="" />
+              <p> 電梯 </p>
+            </div>
+          </span>
+        </div>
+        </div>
     );
   }
 }
