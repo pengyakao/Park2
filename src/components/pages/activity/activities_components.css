@@ -53,7 +53,7 @@
     text-align: center;
 }
 /* 類別按鈕 */
-#btnSelect{
+.btnSelect{
     text-align: center;
 }
 .type-btn{
@@ -160,7 +160,7 @@
     border-radius: 50%;
 }
 .calendar-day-hover:hover{
-    background-color: #B3E24D;
+    background-color: #ABFF1D;
 }
 .calendar-days div span{
     position: absolute;
@@ -192,11 +192,11 @@
     transition: 0.2s;
 }
 /* 活動卡片 */
-#active-card{
+.active-card{
     text-align: center;
+    display: inline-block;
 }
-/* 卡片 */
-.activity-article .card{
+.act-card{
     display: inline-block;
     margin: 10px;
     width: 220px;
@@ -205,33 +205,33 @@
     border-radius: 20px;
     transition-duration: .5s;
 }
-.activity-article .card:hover{
+.act-card:hover{
     box-shadow: none;
     transform: translate(4px, 4px);
     transition-duration: .5s;
 }
-.activity-article .card a{
+.act-card a{
     display: block;
     text-decoration: none;
     text-align: left;
 }
-.activity-article .card img{
+.act-card img{
     height: 150px;
-    border-radius: 20px 20px 0 0;
+    border-radius: 15px 15px 0 0; /* 20px -> 15px */
 }
-.activity-article .card-info{
+.act-card .card-info{
     padding: 5px 10px;
     height: 120px;
     border-radius: 0 0 20px 20px;
 }
-.activity-article .card .card-title{
+.act-card .card-info .card-title{
     height: 40px;
     font-size: 16px;
     font-weight: 600;
     line-height: 20px;
     color: #000;
 }
-.activity-article .card .card-text{
+.act-card .card-info .card-text{
     font-size: 15px;
     font-weight: 900;
     line-height: 20px;
@@ -246,7 +246,7 @@
     border-color: transparent #FD5555 transparent transparent;
     transform: translate(99.5px, 1.5px);
 }
-.activity-article .card-label-live{
+.card-info .card-label-live{
     display: inline-block;
     width: 90px;
     height: 28px;
@@ -266,7 +266,7 @@
     border-color: transparent #5570FD transparent transparent;
     transform: translate(99.5px, 1.5px);
 }
-.activity-article .card-label-popup{
+.card-info .card-label-popup{
     display: inline-block;
     width: 90px;
     height: 28px;
@@ -286,7 +286,7 @@
     border-color: transparent #FDBA55 transparent transparent;
     transform: translate(99.5px, 1.5px);
 }
-.activity-article .card-label-car{
+.card-info .card-label-car{
     display: inline-block;
     width: 90px;
     height: 28px;
@@ -306,7 +306,7 @@
     border-color: transparent #01EFBD transparent transparent;
     transform: translate(99.5px, 1.5px);
 }
-.activity-article .card-label-market{
+.card-info .card-label-market{
     display: inline-block;
     width: 90px;
     height: 28px;
@@ -326,7 +326,7 @@
     border-color: transparent #EF98F9 transparent transparent;
     transform: translate(99.5px, 1.5px);
 }
-.activity-article .card-label-forum{
+.card-info .card-label-forum{
     display: inline-block;
     width: 90px;
     height: 28px;

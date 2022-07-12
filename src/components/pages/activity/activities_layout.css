@@ -1,6 +1,24 @@
+/* 活動卡片頁 */
+.activity-aside {
+    width: 16%;
+    height: inherit;
+    margin-top: 56px;
+    margin-left: 10%;
+    padding: 20px 0 100px 0;
+    float: left;
+}
+.activity-article {
+    width: 64%;
+    height: inherit;
+    margin-top: 56px;
+    margin-right: 10%;
+    padding: 10px 3% 70px 3%;
+    float: right;
+}
+/* 活動資訊頁 */
 aside {
     width: 16%;
-    height: 400px;
+    height: inherit;
     margin-top: 56px;
     margin-left: 10%;
     padding: 20px 0 100px 0;
@@ -13,7 +31,6 @@ article {
     margin-right: 10%;
     padding: 10px 3% 70px 3%;
     float: right;
-    /* border: 1px solid #000; */
 }
 footer {
     clear: both;
