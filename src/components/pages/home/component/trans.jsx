@@ -9,7 +9,7 @@ class trans extends Component {
         return (
             <div className='transWrapper'>
                 <div id="home_transArea">
-                    <Title title="交通資訊"/>
+                    <Title title="交通資訊" />
                     {/* <div className="home_titleBlock">
                         <div className="home_titleBg">
                             交通資訊
@@ -71,38 +71,6 @@ class trans extends Component {
 
     componentDidMount() {
         console.log('transdid')
-        //  跑馬燈
-        let marqueeText = document.querySelector('.marquee p');
-
-        function getMarqueeWidth() {
-            ;
-            return document.querySelector('.marquee').offsetWidth;
-        }
-        let marqueeWidth = getMarqueeWidth();
-
-        function marquee() {
-            marqueeWidth -= 1;
-            marqueeText.style.left = marqueeWidth + 'px';
-            // if (marqueeWidth < marqueeTextWidth * -1) {
-            //   marqueeWidth = getMarqueeWidth();
-            // }
-            let marqueeTextWidth = document.querySelector('.marquee p').offsetWidth;
-            if (marqueeWidth + marqueeTextWidth === getMarqueeWidth()) {
-                addElement();
-            }
-        }
-        let marqueeEffect = setInterval(marquee, 20);
-
-
-        document.body.onload = addElement;
-
-        let marqueeContent = '';
-
-        function addElement() {
-            marqueeContent += '// PARK2，一座大人系非典型公園，探索公園與城市生活的更多可能！ '
-            let container = document.querySelector(".marquee p");
-            container.innerText = marqueeContent;
-        }
 
         //向下展開
         $(function () {

@@ -125,11 +125,11 @@
     display: flex;
     justify-content: space-between;
 }
-/* #home_newsContent .home_newsDateTitle,
-#home_newsContent .home_newsDate {
-    color: gray;
-    font-size: 10px;
-} */
+
+.home_newsDateTitle .home_newsDate {
+    color: rgb(172, 172, 172);
+    font-size: 15px !important;
+}
 
 @media (max-width: 750px) {
     #home_news {
@@ -563,86 +563,75 @@
 
 
 
-/* ALL展開收合 */
-.flip {
-    /* margin: 0px; */
-    /* padding: 0px; */
+/* News展開收合 */
+.flipNews {
     text-align: left;
-    /* background: #E09697; */
     cursor: pointer;
 }
 
-.panel {
+.panelNews0 {
     margin: 0px;
     padding: 5px;
     text-align: left;
-    /* background: #e5eecc; */
-    /* border: solid 1px #ff0000; */
-    display: none;
-}
-
-.panel0 {
-    margin: 0px;
-    padding: 5px;
-    text-align: left;
-    /* background: #e5eecc; */
-    /* border: solid 1px #ff0000; */
-    display: none;
-}
-
-.flip1 {
-    margin: 0px;
-    padding: 0px;
-    text-align: left;
-    /* background: #E09697; */
-    cursor: pointer;
-}
-
-.panel1 {
-    margin: 0px;
-    padding: 5px;
-    text-align: left;
-    /* background: #e5eecc; */
-    /* border: solid 1px #c3c3c3; */
-    display: none;
-}
-
-.flip2 {
-    margin: 0px;
-    padding: 5px;
-    text-align: left;
-    /* background: #E09697; */
-    cursor: pointer;
-}
-
-.panel2 {
-    margin: 0px;
-    padding: 5px;
-    text-align: left;
-    /* background: #e5eecc; */
-    /* border: solid 1px #c3c3c3; */
-    display: none;
-}
-
-.flip3 {
-    margin: 0px;
-    padding: 5px;
-    text-align: left;
-    /* background: #E09697; */
-    cursor: pointer;
-}
-
-.panel3 {
-    margin: 0px;
-    padding: 5px;
-    text-align: left;
-    /* background: #e5eecc; */
-    /* border: solid 1px #c3c3c3; */
     display: none;
 }
 
 
-.flipF {
+.panelNews1 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    display: none;
+}
+
+.panelNews2 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    display: none;
+}
+
+
+.panelNews3 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    display: none;
+}
+
+.panelNews4 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    display: none;
+}
+
+.panelNews5 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    display: none;
+}
+
+.panelNews6 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    display: none;
+}
+
+.panelNews7 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    display: none;
+}
+
+
+
+/* FAQ向下展開 */
+
+.flipFAQ {
     margin: 0px;
     padding: 5px;
     text-align: left;
@@ -650,7 +639,7 @@
     cursor: pointer;
 }
 
-.panelF0 {
+.panelFAQ0 {
     margin: 0px;
     padding: 5px;
     text-align: left;
@@ -659,7 +648,7 @@
     display: none;
 }
 
-.panelF1 {
+.panelFAQ1 {
     margin: 0px;
     padding: 5px;
     text-align: left;
@@ -669,7 +658,7 @@
 }
 
 
-.panelF2 {
+.panelFAQ2 {
     margin: 0px;
     padding: 5px;
     text-align: left;
@@ -678,7 +667,7 @@
     display: none;
 }
 
-.panelF3 {
+.panelFAQ3 {
     margin: 0px;
     padding: 5px;
     text-align: left;
@@ -686,7 +675,7 @@
     /* border: solid 1px #c3c3c3; */
     display: none;
 }
-.panelF4 {
+.panelFAQ4 {
     margin: 0px;
     padding: 5px;
     text-align: left;
@@ -694,7 +683,7 @@
     /* border: solid 1px #c3c3c3; */
     display: none;
 }
-.panelF5 {
+.panelFAQ5 {
     margin: 0px;
     padding: 5px;
     text-align: left;
@@ -702,7 +691,7 @@
     /* border: solid 1px #c3c3c3; */
     display: none;
 }
-.panelF6 {
+.panelFAQ6 {
     margin: 0px;
     padding: 5px;
     text-align: left;
@@ -710,6 +699,16 @@
     /* border: solid 1px #c3c3c3; */
     display: none;
 }
+.panelFAQ7 {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+    /* background: #e5eecc; */
+    /* border: solid 1px #c3c3c3; */
+    display: none;
+}
+
+
 
 
 
