@@ -27,9 +27,6 @@ class Header extends Component {
                 <a className="nav-link" href="/activity">近期活動<span className="sr-only">(current)</span></a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/map">場區地圖</a>
-              </li>
-              <li className="nav-item">
                 <a className="nav-link" href="/store">店家介紹</a>
               </li>
               <li className="nav-item dropdown">
@@ -41,6 +38,9 @@ class Header extends Component {
                     <a className="custom-item" href="/stationed/market-apply">市集進駐</a>
                   </div>
                 </div>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/map">場區地圖</a>
               </li>
             </ul>
           </div>

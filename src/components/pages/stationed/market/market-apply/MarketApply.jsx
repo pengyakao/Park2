@@ -39,9 +39,10 @@ class MarketApply extends Component {
       })
       let marketApply = await getMarketApply().then((result)=>{
         return result.filter(e => {
-          return e.mar_apply_sta == '4' || e.mar_apply_sta == '5'
+          return e.mar_apply_sta != '6' && e.mar_apply_sta != '7' && e.mar_apply_sta != '8'
         })
       })
+      console.log(marketApply)
       let newArr = marketList.map(list => {
         let total = 0
         marketApply.forEach(data => {

@@ -8,10 +8,11 @@ class SwitchBtn extends Component {
       //   <input type="checkbox" id="chkSwitch" name="chkSwitch" />
       //   <label for="chkSwitch"></label>
       // </div>
-
-      <div className="custom-btn_map remove-popup re-upload" id="layerSwitch">
-        <div className="bg_map"></div>
-        <div className="front-btn_map">樓層切換</div>
+      <div id="btnContainer">
+        <div className="custom-btn_map remove-popup re-upload" id="layerSwitch">
+          <div className="bg_map"></div>
+          <div className="front-btn_map" id="btn_text">1F</div>
+        </div>
       </div>
     );
   }

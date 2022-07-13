@@ -514,6 +514,9 @@ class StoreForm extends Component {
       formData.append("state", this.state.form.state);
       postStoreApply(formData).then((result)=> {
         console.log(result)
+        if (window.confirm("已成功送出申請")) {
+          window.location.href='/stationed/store-apply';
+        }
       })
     }else{
       this.checkBrand(document.querySelector('input#brandName'), true)
