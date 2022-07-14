@@ -64,10 +64,11 @@ class news extends Component {
                             <img src="/icon/arrow_B.gif" />
                             </div>
                             <div class="panelNews${i} home_newsText">
-                                <p>${newdata[i].home_news_info}</p>
+                                <pre>${newdata[i].home_news_info}</pre>
                             </div>`
                 }
                 container.innerHTML = html;
+                $("#home_newsImg").html(`<img src="${newdata[0].home_news_img}">`);
 
             })
 
