@@ -24,6 +24,18 @@ export default function StoreEach(props) {
             <div>
                 {list.map((item, index) => {
                     if (item.sto_id == props.match.params.storeId) {
+                        let stoClass
+                        if (item.sto_class == '1') {
+                            stoClass = '現場LIVE'
+                        } else if (item.sto_class == '2') {
+                            stoClass = '快閃活動'
+                        } else if (item.sto_class == '3') {
+                            stoClass = '快閃活動'
+                        } else if (item.sto_class == '4') {
+                            stoClass = '快閃活動'
+                        } else if (item.sto_class == '5') {
+                            stoClass = '快閃活動'
+                        }
                         return (
                             <EachInfo
                                 id={item.sto_id}
@@ -42,6 +54,7 @@ export default function StoreEach(props) {
                                 img05={item.sto_img05}
                                 img06={item.sto_img06}
                                 img07={item.sto_img07}
+                                tags={item.sto_class}
                             />
                         )
                     }

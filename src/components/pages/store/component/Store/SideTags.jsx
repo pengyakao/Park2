@@ -1,32 +1,28 @@
+import { ReactDOM } from 'react'
 import React, { Component } from 'react'
 import { useState, useEffect } from 'react'
 import $ from 'jquery'
 import { getStore } from '../../../../../api/storeApi'
-//tag
-// import { useSelector } from 'react-redux'
 
-const SideTags = ({ listData }) => {
-    const [list, setList] = useState([])
-
+const SideTags = ({ listData, hello }) => {
+    //const [list, setList] = useState([])
     //tags
     // const filter = useSelector((Store) => store.filterReducer);
-
-    // const Tagscoffee = () => {
-    //     getStore().then((result) => {
-    //         setList(result.filter((e) => e.sto_class.includes(1)))
-    //     })
-    // }
     const stoClass1 = () => {
-        window.location.href = `/class/1`
+        let filterData = listData.filter((e) => e.sto_class == 1)
+        hello(filterData)
     }
     const stoClass2 = () => {
-        window.location.href = `/class/2`
+        let filterData = listData.filter((e) => e.sto_class == 2)
+        hello(filterData)
     }
     const stoClass3 = () => {
-        window.location.href = `/class/3`
+        let filterData = listData.filter((e) => e.sto_class == 3)
+        hello(filterData)
     }
     const stoClass4 = () => {
-        window.location.href = `/class/4`
+        let filterData = listData.filter((e) => e.sto_class == 4)
+        hello(filterData)
     }
 
     return (
