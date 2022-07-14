@@ -1,5 +1,5 @@
 @media (max-width: 992px) {
-    aside {
+    .activity-aside {
         width: 80%;
         margin: 0 10%;
         padding: 76px 0 10px 0; /* '20px'改'20px 0 10px 0'*/
@@ -18,7 +18,7 @@
         visibility: visible;
         text-align: center;
     } */
-    article {
+    .activity-article {
         width: 80%;
         margin: 0 10%;
         float: none;
