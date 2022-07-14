@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import './style.css'
 import { Pagination, Navigation } from 'swiper'
@@ -10,15 +10,27 @@ import StoreAll from './component/Store/StoreAll'
 import { getStore } from '../../../api/storeApi'
 
 class Store extends Component {
-    state = {
-        list: [],
+    constructor(props) {
+        super(props)
+        this.state = {
+            list: [],
+            origin_list: [],
+            hot_list: [],
+        }
+
+        this.hello = this.hello.bind(this)
+    }
+    hello(new_state) {
+        this.setState((state) => ({
+            list: new_state,
+        }))
     }
     render() {
         return (
             <div class="store-container">
-                <SideTags />
+                <SideTags listData={this.state.origin_list} hello={this.hello} />
                 <div class="rightStoreCardArea">
-                    <StoreHot list={this.state.list} />
+                    <StoreHot list={this.state.hot_list} />
                     <StoreAll list={this.state.list} />
                 </div>
             </div>
@@ -29,18 +41,10 @@ class Store extends Component {
         const that = this
         var preDataHandle = () => {
             getStore().then((result) => {
-                that.setState({ list: result })
+                that.setState({ list: result, origin_list: result, hot_list: result })
             })
         }
         preDataHandle()
-        // preDataHandle = () => {
-        //     const that = this
-        //     getStore().then((result) => {
-        //         that.setState({
-        //             list: result,
-        //         })
-        //     })
-        // }
     }
 }
 

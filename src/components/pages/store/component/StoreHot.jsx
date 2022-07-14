@@ -6,23 +6,8 @@ import StoreCard from './StoreCard'
 import { getStore } from '../../../../api/storeApi'
 
 const StoreHot = ({ list }) => {
-    //個別頁id
-    // const stoEach = () => {
-    //     window.location.href = `/store/${id}`
-    // }
-    // const [list, setList] = useState([])
-    // const preDataHandle = () => {
-    //     getStore().then((result) => {
-    //         let isMain = result.filter((e) => e.sto_main == 1)
-    //         setList(isMain)
-    //     })
-    // }
-    // useEffect(() => {
-    //     preDataHandle()
-    // }, [])
     const [data, setData] = useState([])
     const preDataHandle = () => {
-        console.log(list)
         let filterData = list.filter((e) => e.sto_main == 1)
 
         setData(filterData)
@@ -52,13 +37,6 @@ const StoreHot = ({ list }) => {
         })
     }
 
-    // useEffect(() => {
-    //     componentDidMount()
-    // }, [])
-
-    // console.log('listData', listData)
-    // state = {}
-    // render() {
     return (
         <div class="StoreCardHotArea">
             <Title title="本月主打" />
@@ -74,6 +52,7 @@ const StoreHot = ({ list }) => {
                         {data.map((item, index) => {
                             return (
                                 <StoreCard
+                                    id={item.sto_id}
                                     img={item.sto_first_img}
                                     name={item.sto_name}
                                     info={item.sto_info.replace(/<[^>]+>/g, '')}

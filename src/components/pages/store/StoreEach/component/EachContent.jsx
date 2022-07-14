@@ -4,7 +4,7 @@ import { getStore } from '../../../../../api/storeApi'
 import $ from 'jquery'
 import Title from '../../../../commons/title/Title'
 
-const EachContent = ({ name, info, tag, img, sto_img_id }) => {
+const EachContent = ({ name, info, tag, img, sto_img_id, tags }) => {
     const htmlWord = info
     return (
         <div className="rightContentArea">
@@ -20,10 +20,10 @@ const EachContent = ({ name, info, tag, img, sto_img_id }) => {
                     </div>
                     <div className="tagsContainer">
                         <div className="tags phoneHidden" id="landscape">
-                            <span>咖啡輕食</span>
+                            <span>{tags}</span>
                         </div>
                         <div className="tags phoneHidden" id="art">
-                            <span>餐廳</span>
+                            <span>{tags}</span>
                         </div>
                     </div>
                 </div>

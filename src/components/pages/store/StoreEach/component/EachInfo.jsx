@@ -4,7 +4,7 @@ import { getStore } from '../../../../../api/storeApi'
 import $ from 'jquery'
 import Title from '../../../../commons/title/Title'
 
-const EachInfo = ({ name, img, info, tag, location, fri, sat, tel, sto_img_id }) => {
+const EachInfo = ({ name, img, info, tag, location, fri, sat, tel, sto_img_id, tags }) => {
     const htmlWord = info
     return (
         <div>
@@ -21,10 +21,10 @@ const EachInfo = ({ name, img, info, tag, location, fri, sat, tel, sto_img_id })
                     {/* </div> */}
                     <div className="tagsArea pcHidden">
                         <div className="tags" id="landscape">
-                            <span>咖啡輕食</span>
+                            <span>{tags}</span>
                         </div>
                         <div className="tags" id="art">
-                            <span>餐廳</span>
+                            <span>{tags}</span>
                         </div>
                     </div>
                 </div>
