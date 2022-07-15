@@ -207,6 +207,9 @@
     }
 
 
+
+}
+
     /* 定位點 */
     .location_1f:hover g,
     .location_b1:hover g {
@@ -214,9 +217,9 @@
         fill: #ABFF21;
     }
 
-    .selected {
+    /* .selected {
         transform: translateY(-1.5vh);
-    }
+    } */
 
 
     .facility {
@@ -224,7 +227,6 @@
         width: 3vh;
     }
 
-}
 
 /* 樓層切換 */
 
@@ -308,3 +310,8 @@
 #park2-1f-2 {
     animation-duration: 1s;
 }
+
+    /* 指標 */
+    .arrow1F , .arrowB1, .arrowPublic {
+        display: none;
+    }
