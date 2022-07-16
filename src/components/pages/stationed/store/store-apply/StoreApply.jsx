@@ -41,17 +41,17 @@ class StoreApply extends Component {
       '106': false,
       '107': false,
       '108': false,
-      'b101': false,
-      'b102': false,
-      'b103': false,
-      'b104': false,
-      'b105': false,
-      'b106': false,
-      'b107': false
+      'B101': false,
+      'B102': false,
+      'B103': false,
+      'B104': false,
+      'B105': false,
+      'B106': false,
+      'B107': false
     }
     let getData = async () => {
       let store = await getStore().then((result)=>{
-        const filter = result.filter(e=>e.sto_sta)
+        const filter = result.filter(e=>e.sto_sta == 1 || e.sto_sta == 2 )
         const newResult = filter.map(e=>e.sto_location)
         return newResult
       })

@@ -46,10 +46,10 @@ const SideTags = ({ listData }) => {
                     <button onClick={stoClass4} id="tagName" class="tag btn_shop">
                         購物
                     </button>
-                    <div id="search">
+                    {/* <div id="search">
                         <span></span>
                         <input id="leftSearch" placeholder="輸入店家名稱" />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

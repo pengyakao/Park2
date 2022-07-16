@@ -321,7 +321,7 @@ class StoreForm extends Component {
 
     let getData = async () => {
       let store = await getStore().then((result)=>{
-        const filter = result.filter(e=>e.sto_sta)
+        const filter = result.filter(e=>e.sto_sta == 1 || e.sto_sta ==2)
         const newResult = filter.map(e=>e.sto_location)
         return newResult
       })
