@@ -3,9 +3,10 @@
 - 地圖
 - 公共設施
 - 搜尋
-- 定位點
 - 資訊小卡
 - 樓層切換
+- 定位點
+- 指標
  */
 
 /*  */
@@ -211,22 +212,6 @@
 
 
 
-
-    /* 定位點 */
-    .location_1f:hover g,
-    .location_b1:hover g {
-        cursor: pointer;
-        fill: #ABFF21;
-    }
-
-    .selected {
-        transform: translateY(-1.5vh);
-    }
-
-    .facility {
-        position: absolute;
-        width: 3vh;
-    }
 
 
 }

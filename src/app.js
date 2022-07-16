@@ -22,7 +22,7 @@ class App extends Component {
                     <Switch>
                         <Route path="/" component={Home} exact />
                         <Route path="/activity" component={Activity} exact />
-                        <Route path="/activity/activity1" component={ActivityInfo} />
+                        <Route path="/activity/:activityId" component={ActivityInfo} />
                         <Route path="/map" component={Map} />
                         <Route path="/store" component={Store} exact />
                         <Route path="/store/:storeId" component={StoreEach} />
