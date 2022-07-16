@@ -62,7 +62,7 @@ export default function ActivityInfo(props) {
                                     <div>
                                         <div className="titleSG">活動時間</div>
                                         <div>{item.act_Sdate + "~" + item.act_Edate}</div>
-                                        <div>{item.act_Stime + "~" + item.act_Etime}</div>
+                                        <div>{item.act_Stime.slice(0,5) + "~" + item.act_Etime.slice(0,5)}</div>
                                     </div>
                                     <div>
                                         <div className="titleSG">活動地點</div>
@@ -100,7 +100,7 @@ export default function ActivityInfo(props) {
                                     <div>
                                         <div className="titleSG">活動時間</div>
                                         <div>{item.act_Sdate + "~" + item.act_Edate}</div>
-                                        <div>{item.act_Stime + "~" + item.act_Etime}</div>
+                                        <div>{item.act_Stime.slice(0,5) + "~" + item.act_Etime.slice(0,5)}</div>
                                     </div>
                                     <div>
                                         <div className="titleSG">活動地點</div>
