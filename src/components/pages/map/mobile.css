@@ -1,0 +1,217 @@
+/* index */
+/* 
+- 地圖
+- 公共設施
+- 搜尋
+- 資訊小卡
+- 樓層切換
+- 定位點
+- 指標
+ */
+
+/*  */
+@media screen and (max-width: 450px) {
+
+    /* 地圖 */
+    .map-container {
+        width: 100%;
+        height: 900px;
+        padding: 100px 0px 100% 0px;
+    }
+
+
+    #btnContainer {
+        position: absolute;
+        width: 100%;
+        top: 375px;
+    }
+
+    #park2-1f-2 {
+        display: none;
+    }
+
+    #mobile_bg {
+        display: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 1000px;
+        background-color: #000;
+        opacity: 0.6;
+        color: white;
+        font-weight: 500;
+        font-size: xx-large;
+        z-index: 2;
+    }
+
+    #mobile_bg p {
+        position: relative;
+        text-align: center;
+        top: 100px;
+    }
+
+    /* 公共設施 */
+    #sideBar {
+        position: absolute;
+        /* position: relative; */
+        top: 70%;
+        width: 80%;
+        margin-left: 10%;
+        background-color: white;
+        border: 3px dashed grey;
+        padding: 2vh 1vh;
+        border-radius: 5px;
+    }
+
+    #sideBarTitle {
+        font-size: 1.5em;
+        /* font-weight: 600; */
+        display: block;
+        margin-left: 2vh;
+    }
+
+    #sideBar p {
+        display: inline;
+        /* font-size: 2vh; */
+        height: 3vh;
+        margin-left: 1vh;
+    }
+
+    #sideBar img {
+        display: inline;
+        height: 3vh;
+        margin-left: 1.5vh;
+    }
+
+    #secondBar {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #ctn1 {
+        margin: 0 1vh 0 1vh;
+    }
+
+    #ctn2 {
+        margin: 0 2.5vh 0 2vh;
+    }
+
+
+    /* 搜尋 */
+    #search_container {
+        position: absolute;
+        left: 18%;
+        top: 480px;
+        z-index: 2;
+        /* display: none; */
+    }
+
+    #search {
+        background-color: white;
+        border-radius: 30px;
+        width: 100%;
+        height: 5.6vh;
+        padding: 0 2vh;
+        font-size: 1em;
+        border: 3px solid darkgrey;
+    }
+
+    #searchBtn {
+        position: absolute;
+        top: 0.8vh;
+        right: 8px;
+        text-align: center;
+        width: 6vh;
+        height: 4vh;
+        border-radius: 30px;
+        border: 0.3vh solid darkgray;
+    }
+
+
+    /* 資訊小卡 */
+    #infoCard {
+        position: absolute;
+        text-align: center;
+        left: 15%;
+        top: 190px;
+        width: 70%;
+        height: 450px;
+        background-color: whitesmoke;
+        border-radius: 30px;
+        border: 3px solid black;
+        z-index: 3;
+        display: none;
+    }
+
+    #cardImg {
+        width: 100%;
+        border-radius: 30px;
+        z-index: 9;
+    }
+
+    #storeName {
+        position: absolute;
+        bottom: 35%;
+        height: 20%;
+        width: 100%;
+        padding: 2vh 2vh 5vh 2vh;
+        background-color: whitesmoke;
+        font-weight: 800;
+        font-size: large;
+        border-top: 1px solid black;
+        text-align: center;
+        z-index: 10;
+    }
+
+    #cardText {
+        position: absolute;
+        bottom: 10%;
+        height: 30%;
+        width: 100%;
+        padding: 2vh 2vh 4vh 2vh;
+        z-index: 3;
+        background-color: whitesmoke;
+        font-weight: 600;
+        font-size: medium;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+    }
+
+    #cardAncher {
+        position: absolute;
+        bottom: 1vh;
+        right: 3vh;
+        color: black;
+        font-weight: 600;
+        font-size: larger;
+        z-index: 10;
+    }
+
+    #card_shadow {
+        position: absolute;
+        width: 102%;
+        height: 102%;
+        background-color: #000;
+        bottom: 0px;
+        border-radius: 30px;
+        z-index: -10;
+        transform: translate(1px, 9px);
+    }
+
+    #card_bg {
+        position: absolute;
+        width: 100%;
+        bottom: -1px;
+        height: 100px;
+        background-color: whitesmoke;
+        border-radius: 30px;
+        z-index: 8;
+    }
+
+
+
+
+
+}

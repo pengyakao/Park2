@@ -53,16 +53,18 @@ class FAQ extends Component {
 
         async function getData() {
             let faqList = await getFaq().then((result) => {
-                FAQdata = result
+                // FAQdata = result
+                FAQdata = result.filter(e => e.home_FAQ_sta == 1)
+                console.log(FAQdata)
                 let html = ''
                 let container = document.querySelector('#home_FAQContent')
                 for (let i = 0; i < FAQdata.length; i++) {
-                    html += ` <div class="flipF">
+                    html += ` <div class="flipFAQ">
                                 <span>Q${i + 1}.${FAQdata[i].home_FAQ_qu}</span>
                                 <img src="/icon/arrow_G.gif"/>
                             </div>
-                            <div class="panelF${i}">
-                                <p>A1${FAQdata[i].home_FAQ_ans}</p>
+                            <div class="panelFAQ${i}">
+                                <p>A${i + 1}.${FAQdata[i].home_FAQ_ans}</p>
                             </div>`
                 }
                 container.innerHTML = html;
@@ -70,11 +72,11 @@ class FAQ extends Component {
             })
 
             // 向下展開
-            console.log(document.querySelectorAll('.flip4'))
-            document.querySelectorAll('.flipF').forEach((e, i)=>{
+            // console.log(document.querySelectorAll('.flipF'))
+            document.querySelectorAll('.flipFAQ').forEach((e, i)=>{
                 e.addEventListener('click', ()=>{
                     console.log('click')
-                    $(`.panelF${i}`).slideToggle("slow");
+                    $(`.panelFAQ${i}`).slideToggle("slow");
                 })
             })
         }

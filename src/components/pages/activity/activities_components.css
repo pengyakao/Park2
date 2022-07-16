@@ -43,7 +43,7 @@
     font-size: 28px;
     position: absolute;
     -webkit-text-stroke: 1px #000;
-    color: #ABFF1D;
+    color: #b3e24d;
     letter-spacing: 2px;
     z-index: 2;
 } */
@@ -53,7 +53,7 @@
     text-align: center;
 }
 /* 類別按鈕 */
-#btnSelect{
+.btnSelect{
     text-align: center;
 }
 .type-btn{
@@ -160,7 +160,7 @@
     border-radius: 50%;
 }
 .calendar-day-hover:hover{
-    background-color: #B3E24D;
+    background-color: #b3e24d;
 }
 .calendar-days div span{
     position: absolute;
@@ -192,11 +192,11 @@
     transition: 0.2s;
 }
 /* 活動卡片 */
-#active-card{
+.active-card{
     text-align: center;
+    display: inline-block;
 }
-/* 卡片 */
-.activity-article .card{
+.act-card{
     display: inline-block;
     margin: 10px;
     width: 220px;
@@ -205,33 +205,33 @@
     border-radius: 20px;
     transition-duration: .5s;
 }
-.activity-article .card:hover{
+.act-card:hover{
     box-shadow: none;
     transform: translate(4px, 4px);
     transition-duration: .5s;
 }
-.activity-article .card a{
+.act-card a{
     display: block;
     text-decoration: none;
     text-align: left;
 }
-.activity-article .card img{
+.act-card img{
     height: 150px;
-    border-radius: 20px 20px 0 0;
+    border-radius: 15px 15px 0 0; /* 20px -> 15px */
 }
-.activity-article .card-info{
+.act-card .card-info{
     padding: 5px 10px;
     height: 120px;
     border-radius: 0 0 20px 20px;
 }
-.activity-article .card .card-title{
+.act-card .card-info .card-title{
     height: 40px;
     font-size: 16px;
     font-weight: 600;
     line-height: 20px;
     color: #000;
 }
-.activity-article .card .card-text{
+.act-card .card-info .card-text{
     font-size: 15px;
     font-weight: 900;
     line-height: 20px;
@@ -246,7 +246,7 @@
     border-color: transparent #FD5555 transparent transparent;
     transform: translate(99.5px, 1.5px);
 }
-.activity-article .card-label-live{
+.card-label-live{
     display: inline-block;
     width: 90px;
     height: 28px;
@@ -266,7 +266,7 @@
     border-color: transparent #5570FD transparent transparent;
     transform: translate(99.5px, 1.5px);
 }
-.activity-article .card-label-popup{
+.card-label-popup{
     display: inline-block;
     width: 90px;
     height: 28px;
@@ -286,7 +286,7 @@
     border-color: transparent #FDBA55 transparent transparent;
     transform: translate(99.5px, 1.5px);
 }
-.activity-article .card-label-car{
+.card-label-car{
     display: inline-block;
     width: 90px;
     height: 28px;
@@ -306,7 +306,7 @@
     border-color: transparent #01EFBD transparent transparent;
     transform: translate(99.5px, 1.5px);
 }
-.activity-article .card-label-market{
+.card-label-market{
     display: inline-block;
     width: 90px;
     height: 28px;
@@ -326,7 +326,7 @@
     border-color: transparent #EF98F9 transparent transparent;
     transform: translate(99.5px, 1.5px);
 }
-.activity-article .card-label-forum{
+.card-label-forum{
     display: inline-block;
     width: 90px;
     height: 28px;
@@ -338,11 +338,12 @@
     background-color: #EF98F9;
     transform: translate(99.5px, -9px);
 }
+
 /* 活動分頁 */
 /* 活動主圖 */
 #activeImg{
     width: 90%;
-    height: 300px;
+    height: 400px;
     margin: 10px auto;
     border: 4px solid #000;
     box-shadow: 4px 4px 0px #000;
@@ -376,7 +377,7 @@
     font-weight: 900;
     font-family: 'Noto Sans TC', sans-serif;
     letter-spacing: 1px;
-    color: #ABFF1D;
+    color: #b3e24d;
     text-shadow: 2px 2px #000;
     -webkit-text-stroke: 1.5px #000;
 }
@@ -391,4 +392,12 @@
 }
 .activePhoto img{
     height: 100%;
+}
+pre{
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.5;
+    /* letter-spacing: 1px; */
+    
 }

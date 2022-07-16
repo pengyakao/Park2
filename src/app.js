@@ -12,7 +12,6 @@ import Stationed from './components/pages/stationed/StationedMain.jsx'
 
 import ActivityInfo from './components/pages/activity/infopage/ActivityInfo.jsx'
 import StoreEach from './components/pages/store/StoreEach/StoreEach.jsx'
-import StoreClass from './components/pages/store/component/StoreClass.jsx'
 
 class App extends Component {
     render() {
@@ -23,11 +22,10 @@ class App extends Component {
                     <Switch>
                         <Route path="/" component={Home} exact />
                         <Route path="/activity" component={Activity} exact />
-                        <Route path="/activity/activity1" component={ActivityInfo} />
+                        <Route path="/activity/:activityId" component={ActivityInfo} />
                         <Route path="/map" component={Map} />
                         <Route path="/store" component={Store} exact />
                         <Route path="/store/:storeId" component={StoreEach} />
-                        <Route path="/class/:classId" component={StoreClass} />
                         <Route path="/stationed" component={Stationed} />
                     </Switch>
                     {/* <Switch>

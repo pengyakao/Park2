@@ -3,11 +3,8 @@ import $ from 'jquery'
 import Title from '../../../commons/title/Title'
 
 const StoreCard = ({ id, name, img, info }) => {
-    // state = {}
-    // render() {
     // 改掉<>標籤
     const htmlWord = info
-
     const StoEachPage = () => {
         window.location.href = `/store/${id}/`
     }
