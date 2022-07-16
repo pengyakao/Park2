@@ -4,7 +4,9 @@ import axios from 'axios'
 const reqObj = axios.create({
     // baseURL 設定的是自己測試的 IP位址:server埠號 (ex. http://192.168.0.112:3000)
     // baseURL: 'http://192.168.0.46:3001',
-    baseURL: 'http://10.0.102.113:3001',
+    // baseURL: 'http://10.0.102.113:3001',
+    // baseURL: 'http://172.20.10.4:3001',
+    baseURL: 'http://192.168.31.105:3001',
     header: {
         'Content-Type': 'application/json',
     },
@@ -20,4 +22,20 @@ function handleReq(e) {
 // api function
 export function getStore() {
     return handleReq(reqObj.get('/store/all/get'))
+}
+export function getStoreImg(id) {
+    console.log(
+        reqObj.get('/admin/store/get/file/multiple', {
+            params: {
+                id,
+            },
+        })
+    )
+    return handleReq(
+        reqObj.get('/admin/store/get/file/multiple', {
+            params: {
+                id,
+            },
+        })
+    )
 }

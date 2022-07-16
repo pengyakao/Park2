@@ -4,7 +4,6 @@ import $ from 'jquery'
 import Title from '../../../../commons/title/Title'
 import StoreCard from '../StoreCard'
 import { getStore } from '../../../../../api/storeApi'
-// import { useSelector } from 'react-redux'
 
 const StoreAll = ({ list, clicked }) => {
     const [data, setList] = useState([])
@@ -12,7 +11,6 @@ const StoreAll = ({ list, clicked }) => {
     useEffect(() => {
         preDataHandle()
     }, [list])
-
     return (
         <div class="StoreCardAllArea">
             <Title title="所有店家" />
