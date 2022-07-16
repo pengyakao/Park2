@@ -2,7 +2,7 @@
     .activity-aside {
         width: 80%;
         margin: 0 10%;
-        padding: 76px 0 10px 0; /* '20px'改'20px 0 10px 0'*/
+        padding: 76px 0 10px 0;
         position: relative;
         /* overflow: auto; */
         float: none;

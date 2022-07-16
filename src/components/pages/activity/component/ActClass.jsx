@@ -31,13 +31,14 @@ const ActClass = ({ listData, hello }) => {
                 <button onClick={actClass2} className="type-btn btn-popup"><a href="#">快閃活動</a></button>
                 <button onClick={actClass3} className="type-btn btn-car"><a href="#">風格餐車</a></button>
                 <button onClick={actClass4} className="type-btn btn-market"><a href="#">商家市集</a></button>
-                <button onClick={actClass4} className="type-btn btn-forum"><a href="#">創作者論壇</a></button>
+                <button onClick={actClass5} className="type-btn btn-forum"><a href="#">創作者論壇</a></button>
             </div>
         </div>
     )
 }
 
 export default ActClass;
+
 
 // 方法一：
 // class ActClass extends Component {

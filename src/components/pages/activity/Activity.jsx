@@ -48,6 +48,7 @@ class Activity extends Component {
 
 export default Activity;
 
+
 // 方法二：
 // class Activity extends Component {
 //     state = {}

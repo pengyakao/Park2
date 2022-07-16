@@ -15,7 +15,7 @@ export default function ActivityInfo(props) {
             console.log(result)
         })
     }
-
+    
     useEffect(() => {
         preDataHandle()
     }, [])
@@ -72,7 +72,7 @@ export default function ActivityInfo(props) {
                                 <div id="activeForthInfo" className="mobileHidden">
                                     <div>
                                         <div className="titleSW">活動嘉賓</div>
-                                        <div>{item.act_guests}</div>
+                                        <div><pre>{item.act_guests}</pre></div>
                                     </div>
                                     <div>
                                         <div className="titleSW">主辦單位</div>
@@ -110,13 +110,13 @@ export default function ActivityInfo(props) {
                                 <div id="activeThirdInfo">
                                     <div>
                                         <div className="titleSG">活動介紹</div>
-                                        <div>{item.act_info}</div>
+                                        <div><pre>{item.act_info}</pre></div>
                                     </div>
                                 </div>
                                 <div id="activeForthInfo" className="pcHidden">
                                     <div>
                                         <div className="titleSW">活動嘉賓</div>
-                                        <div>{item.act_guests}</div>
+                                        <div><pre>{item.act_guests}</pre></div>
                                     </div>
                                     <div>
                                         <div className="titleSW">主辦單位</div>

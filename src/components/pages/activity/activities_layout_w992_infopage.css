@@ -6,7 +6,7 @@
         width: 80%;
         height: inherit;
         margin: 56px 10% 0 10%;
-        padding: 10px 3% 70px 3%; /* 修改寬3% */
+        padding: 10px 3% 70px 3%;
         float: none;
         place-items: center;
     }
@@ -18,7 +18,6 @@
     .mobileHidden{
         height: 0;
         visibility: hidden;
-        
     }
     .pcHidden{
         height: inherit;

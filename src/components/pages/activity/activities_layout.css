@@ -15,6 +15,7 @@
     padding: 10px 3% 70px 3%;
     float: right;
 }
+
 /* 活動資訊頁 */
 aside {
     width: 16%;
@@ -35,6 +36,7 @@ article {
 footer {
     clear: both;
 }
+
 /* 活動分頁 */
 .pcHidden{
     height: 0;

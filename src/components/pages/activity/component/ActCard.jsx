@@ -5,7 +5,7 @@ import Title from '../../../commons/title/Title';
 import '../activities_components.css';
 
 const ActCard = ({ list, clicked }) => {
-
+    
     const [data, setList] = useState([])
     const preDataHandle = () => {
         // getActivity().then((result) => {
@@ -75,6 +75,7 @@ const ActCard = ({ list, clicked }) => {
 }
 
 export default ActCard;
+
 
 // const ActCard = ({ listData }) => {
 
