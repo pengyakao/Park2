@@ -3,5 +3,5 @@
 // 家裡
 // export var url = "http://192.168.0.101:3001"
 //臨時
-export var url = "http://192.168.31.114:3001"
+export var url = "http://192.168.0.161:3001"
 
