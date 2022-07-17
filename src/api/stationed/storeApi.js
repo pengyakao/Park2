@@ -1,7 +1,8 @@
 import axios from 'axios';
+import {url}  from '../url'
+
 const reqObj = axios.create({
-	// baseURL: 'http://10.0.102.59:3001',
-    baseURL: 'http://192.168.0.161:3001',
+	baseURL: url,
     header: {
         'Content-Type': 'application/json'
 		// 'Content-Type': 'multipart/form-data'

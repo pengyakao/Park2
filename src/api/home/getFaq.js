@@ -1,5 +1,6 @@
 import axios from "axios"
-import {url}  from './url.js'
+import {url}  from '../url'
+
 
 
 // 引入 Axios

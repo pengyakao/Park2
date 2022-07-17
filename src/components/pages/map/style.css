@@ -154,8 +154,8 @@
 
     #storeName {
         position: absolute;
-        bottom: 19vh;
-        height: 5vh;
+        bottom: 20vh;
+        height: 8vh;
         width: 100%;
         padding: 2vh 2vh 5vh 2vh;
         z-index: 2;

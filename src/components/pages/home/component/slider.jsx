@@ -92,7 +92,7 @@ class Slider extends Component {
             margeData[index].text = item.home_act_title
             margeData[index].date = `${data[0].act_Sdate} ~ ${data[0].act_Edate}`
             margeData[index].time = `${data[0].act_Stime.slice(0,5)} ~ ${data[0].act_Etime.slice(0,5)}`
-            margeData[index].href = `/activity/activity${data[0].act_id}`
+            margeData[index].href = `/activity/${data[0].act_id}`
           })
           console.log(margeData)
           this.setState({
@@ -115,7 +115,7 @@ class Slider extends Component {
     let htmlString = ''
     if(slides!= this.state.slides){
     for (let i = 0; i < this.state.slides.length; i++) {
-      htmlString += `<div class="slider-item" id="${i}"><div class="box"><img src="${this.state.slides[i].img}"></div></div>`
+      htmlString += `<a href="${this.state.slides[i].href}"><div class="slider-item" id="${i}"><div class="box"><img src="${this.state.slides[i].img}"></div></div></a>`
     }
     document.querySelector('.slider-container').innerHTML = htmlString
     document.querySelector('.info .name').innerHTML = `<p>${that.state.slides[0].text}</p>`

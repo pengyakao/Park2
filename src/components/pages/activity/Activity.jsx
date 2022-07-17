@@ -39,7 +39,8 @@ class Activity extends Component {
         const that = this
         var preDataHandle = () => {
             getActivity().then((result) => {
-                that.setState({ list: result, origin_list: result })
+                var newdata = result.filter(e => e.act_sta == 1)
+                that.setState({ list: newdata, origin_list: newdata })
             })
         }
         preDataHandle()
