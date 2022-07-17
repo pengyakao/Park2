@@ -62,7 +62,7 @@ export function myJS(data) {
         document.querySelectorAll(".location_b1").forEach((ele) => {
           ele.style.display = "block";
         });
-                // 切換樓層隱藏店家提示
+        // 切換樓層隱藏店家提示
         document.querySelectorAll(".selected").forEach((e) => {
           e.style.display = "none";
         });
@@ -98,7 +98,7 @@ export function myJS(data) {
     for (let i = 0; i < myLocation_1f.length; i++) {
       myLocation_1f[i].onclick = function () {
         // 圖片及內文
-        document.getElementById("cardImg").src = myImg[i];
+        document.getElementById("cardImg").src = myImg_1f[i];
         document.getElementById("storeName").innerHTML = myStore_1f[i];
         document.getElementById("cardText").innerHTML = myStoreText_1f[i];
 
@@ -130,7 +130,7 @@ export function myJS(data) {
     // b1商家點擊功能
     for (let i = 0; i < myLocation_b1.length; i++) {
       myLocation_b1[i].onclick = function () {
-        document.getElementById("cardImg").src = myImg[i];
+        document.getElementById("cardImg").src = myImg_b1[i];
         document.getElementById("storeName").innerHTML = myStore_b1[i];
         document.getElementById("cardText").innerHTML = myStoreText_b1[i];
 
@@ -176,7 +176,7 @@ export function myJS(data) {
           if (boolean === true) {
             layerswitch.onclick();
           }
-        }else if (mapSearch.value === "暫無店家") {
+        } else if (mapSearch.value === "暫無店家") {
         }
       }
       // 執行搜尋後清空input
@@ -241,6 +241,8 @@ export function myJS(data) {
     var myStore_b1 = [];
     var myStoreText_1f = [];
     var myStoreText_b1 = [];
+    let myImg_1f = [];
+    let myImg_b1 = [];
     var tempCardText = "";
     var tempOption;
 
@@ -275,79 +277,72 @@ export function myJS(data) {
         if (myData[i].sto_location === `10${i + 1}`) {
           myStore_1f.push(myData[i].sto_name);
           myStoreText_1f.push(tempCardText);
+          myImg_1f.push(myData[i].sto_first_img);
         } else {
           myStore_1f.push("");
           myStoreText_1f.push("暫無店家");
+          myImg_1f.push("/map/noStore.jpg");
         }
       } else if (myData[i].sto_floor === "b1") {
         if (myData[i].sto_location === `B10${i - 7}`) {
           console.log(i);
           myStore_b1.push(myData[i].sto_name);
           myStoreText_b1.push(tempCardText);
+          myImg_b1.push(myData[i].sto_first_img);
         } else {
           myStore_b1.push("");
           myStoreText_b1.push("暫無店家");
+          myImg_b1.push("/map/noStore.jpg");
         }
       }
     }
 
     // 開發用
     // classList:arrow1F, arrowB1, arrowPublic, location_1f, location_b1
-    // console.log(document.querySelector("#searchShop"));
+    // console.log(myImg_1f);
     // console.log(myStore_1f);
     // console.log(myStore_b1);
     // console.log(myStoreText_1f);
 
     // 公設
     document.getElementById("toilet_icon").addEventListener("mouseover", () => {
-      document.getElementById('wcArrow').style.display = "block"
+      document.getElementById("wcArrow").style.display = "block";
     });
     document.getElementById("toilet_icon").addEventListener("mouseout", () => {
-      document.getElementById('wcArrow').style.display = "none"
+      document.getElementById("wcArrow").style.display = "none";
     });
     document
       .getElementById("basketball_icon")
       .addEventListener("mouseover", () => {
-        document.getElementById('basketballArrow').style.display = "block"
+        document.getElementById("basketballArrow").style.display = "block";
       });
     document
       .getElementById("basketball_icon")
       .addEventListener("mouseout", () => {
-        document.getElementById('basketballArrow').style.display = "none"
+        document.getElementById("basketballArrow").style.display = "none";
       });
     document
       .getElementById("parking_icon")
       .addEventListener("mouseover", () => {
-        document.querySelectorAll("#parkingArrow path").forEach((e)=>{
+        document.querySelectorAll("#parkingArrow path").forEach((e) => {
           e.style.fill = "#FCFF55";
-        })
+        });
       });
     document.getElementById("parking_icon").addEventListener("mouseout", () => {
-      document.querySelectorAll("#parkingArrow path").forEach((e)=>{
+      document.querySelectorAll("#parkingArrow path").forEach((e) => {
         e.style.fill = "#B8F4D4";
-      })
+      });
     });
     document
       .getElementById("elevator_icon")
       .addEventListener("mouseover", () => {
-        document.getElementById('elevatorArrow').style.display = "block"
+        document.getElementById("elevatorArrow").style.display = "block";
       });
     document
       .getElementById("elevator_icon")
       .addEventListener("mouseout", () => {
-        document.getElementById('elevatorArrow').style.display = "none"
+        document.getElementById("elevatorArrow").style.display = "none";
       });
-
-    var myImg = [
-      "/map/店家/1F/泱茶.jpg",
-      "/map/店家/1F/MISATO.jpg",
-      "/map/店家/1F/12AM.jpg",
-      "/map/店家/1F/每果發光.jpg",
-      "/map/店家/1F/para coffee.jpg",
-      "/map/店家/1F/正面奶酥.png",
-      "/map/店家/1F/COFFEE AND JOHN.png",
-      "/map/店家/1F/酉 5pm.twcaudex.jpg",
-    ];
 
     // end of func
   }
