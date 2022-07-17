@@ -393,7 +393,14 @@
 .activePhoto img{
     height: 100%;
 }
-pre{
+aside div div div pre{
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.5;
+    /* letter-spacing: 1px; */
+}
+article div div div pre{
     font-size: 16px;
     font-weight: 700;
     font-family: 'Noto Sans TC', sans-serif;
