@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { useState, useEffect } from 'react';
 import { getActivity } from '../../../../api/activity';
-import Title from '../../../commons/title/Title'
-import '../activities_layout.css'
-import '../activities_layout_w992_infopage.css'
+import Title from '../../../commons/title/Title';
+import GoToTop from '../component/GoToTop';
+import '../activities_layout.css';
+import '../activities_layout_w992_infopage.css';
 import '../activities_components.css';
 
 export default function ActivityInfo(props) {
@@ -124,6 +125,7 @@ export default function ActivityInfo(props) {
                                     </div>
                                 </div>
                             </article>
+                            <GoToTop />
                         </div>
                     )
                 }
