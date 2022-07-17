@@ -6,11 +6,11 @@ import {editMarketApplyProposal, editMarketApplyPay} from '../../../../../api/st
 
 class MarketState extends Component {
   state = { 
-    id: 2,
-    currentStep: 0,
+    id: '',
+    currentStep: '',
     clickState: 'toReUpload',
-    deadline: '2022/07/24',
-    count: 2,
+    deadline: '',
+    count: '',
     pay: '',
     file: '',
     fileName: '',
@@ -107,6 +107,12 @@ class MarketState extends Component {
     }else if(this.state.currentStep == 2 && this.state.clickState === 'reUpload'){
       if(this.state.fileName !== ''){
         const formData = new FormData();
+        console.log({
+          "id": this.state.id,
+          "state": 1,
+          "file": this.state.file,
+          "delete": this.state.fileLink
+        })
         formData.append("id", this.state.id);
         formData.append("state", 1);
         formData.append("file", this.state.file);
@@ -187,6 +193,7 @@ class MarketState extends Component {
     // localstorage
     let searchData = localStorage.getItem('searchData');
     let originData = JSON.parse(searchData);
+    console.log(originData.mar_apply_file)
 
     // 將localStorage 資料放進state
     await this.setStateAsync({
@@ -199,8 +206,12 @@ class MarketState extends Component {
       count: originData.mar_apply_count
     })
     await this.setStateAsync({
-      fileLink: originData.mar_apply_fileurl
+      fileLink: originData.mar_apply_file
     })
+    await this.setStateAsync({
+      deadline: originData.mar_apply_deadline
+    })
+    
 
 
     // 狀態1 企劃書有錯誤

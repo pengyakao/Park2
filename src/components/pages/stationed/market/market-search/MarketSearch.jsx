@@ -21,7 +21,7 @@ class MarketSearch extends Component {
           <div className="popup-box">
             <img src="./img/smile.svg" alt="" className="face" />
             <div className="msg">
-              查無此訂單編號或申請人手機號碼，請查明後再試！
+              查無此申請信箱或電話，請查明後再試！
             </div>
             <Btn name="確定" shouldCheck={false} onHandle={this.removePopup}/>
           </div>
@@ -29,13 +29,13 @@ class MarketSearch extends Component {
         <div className="search-container">
           <Title title="《我出去一下》風格品牌出店計畫報名查詢" />
           <div className="form-group">
-            <label htmlFor="search-number">請輸入申請編號*</label>
+            <label htmlFor="search-number">請輸入申請信箱*</label>
             <input type="text" className="form-control" id="search-number" value={this.state.number}
               onChange={(event)=>this.setState({number: event.target.value})}
             />
           </div>
           <div className="form-group">
-            <label htmlFor="search-phone">請輸入申請人手機*</label>
+            <label htmlFor="search-phone">請輸入申請電話*</label>
             <input type="text" className="form-control" id="search-phone" value={this.state.phone}
               onChange={(event)=>this.setState({phone: event.target.value})}
             />
@@ -46,7 +46,9 @@ class MarketSearch extends Component {
     );
   }
   handleCheck = () => {
+    console.log(this.state.number,this.state.phone)
     getMarketSearch(this.state.number,this.state.phone).then((result)=>{
+      console.log(result.length)
       if(result.length !== 0){
         console.log(result[0])
         localStorage.setItem('searchData', JSON.stringify(result[0]));
