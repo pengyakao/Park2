@@ -210,7 +210,9 @@ class StoreForm extends Component {
                             ...prevState.form,
                             time: e.target.value
                           }
-                        }))
+                        }), ()=>{
+                          console.log(typeof(this.state.form.time))
+                        })
                       }
                     }>
                     {this.state.dateList.map((item) =>
@@ -346,13 +348,14 @@ class StoreForm extends Component {
       this.setState(prevState => ({
         form: {
           ...prevState.form,
-          time: options[0]
+          time: dateData[0].startAt
         }
       }))
+
       this.setState(prevState => ({
         form: {
           ...prevState.form,
-          location: optionDefault[0]
+          location: optionDefault[0].key
         }
       }))
     }
@@ -514,9 +517,6 @@ class StoreForm extends Component {
       formData.append("state", this.state.form.state);
       postStoreApply(formData).then((result)=> {
         console.log(result)
-        if (window.confirm("已成功送出申請")) {
-          window.location.href='/stationed/store-apply';
-        }
       })
     }else{
       this.checkBrand(document.querySelector('input#brandName'), true)
@@ -526,7 +526,7 @@ class StoreForm extends Component {
       this.checkMail(document.querySelector('input#email'), true)
       this.checkFile(true)
     }
-    // document.querySelector('.popup').classList.add('show-popup')
+    document.querySelector('.popup').classList.add('show-popup')
   }
 
 }
