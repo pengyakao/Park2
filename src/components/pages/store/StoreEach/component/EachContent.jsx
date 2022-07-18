@@ -14,7 +14,7 @@ const EachContent = ({ name, info, tag, sto_first_img, sto_img_url }) => {
                 <img src={sto_first_img} alt="" />
             </div>
 
-            <div>
+            <div className="IntroContainer">
                 <div className="storeIntro phoneHidden">
                     <div className="title-block phoneHidden">
                         <div className="title-bg">{name}</div>
@@ -29,7 +29,9 @@ const EachContent = ({ name, info, tag, sto_first_img, sto_img_url }) => {
                 <div className="storeIntro">
                     <p className="titleGreen">店家介紹</p>
                     {/* <div id="storeContent" dangerouslySetInnerHTML={{ __html: htmlWord }} /> */}
-                    <pre>{info}</pre>
+                    <div className="textArea">
+                        <pre>{info}</pre>
+                    </div>
                 </div>
                 <div className="storeImg storeIntro ">
                     <p className="titleGreen">店家照片</p>
@@ -38,73 +40,48 @@ const EachContent = ({ name, info, tag, sto_first_img, sto_img_url }) => {
                             // console.log(item)
                             if (index == 0) {
                                 return (
-                                    <a href={item} data-lightbox="store" className="width">
+                                    <a data-lightbox="store" className="width">
                                         <img src={item} />
                                     </a>
                                 )
                             } else if (index == 1) {
                                 return (
-                                    <a href={item} data-lightbox="store">
+                                    <a data-lightbox="store">
                                         <img src={item} />
                                     </a>
                                 )
                             } else if (index == 2) {
                                 return (
-                                    <a href={item} data-lightbox="store" className="height">
+                                    <a data-lightbox="store" className="height">
                                         <img src={item} />
                                     </a>
                                 )
                             } else if (index == 3) {
                                 return (
-                                    <a href={item} data-lightbox="store">
+                                    <a data-lightbox="store">
                                         <img src={item} />
                                     </a>
                                 )
                             } else if (index == 4) {
                                 return (
-                                    <a href={item} data-lightbox="store" className="big">
+                                    <a data-lightbox="store" className="big">
                                         <img src={item} />
                                     </a>
                                 )
                             } else if (index == 5) {
                                 return (
-                                    <a href={item} data-lightbox="store">
+                                    <a data-lightbox="store">
                                         <img src={item} />
                                     </a>
                                 )
                             } else if (index == 6) {
                                 return (
-                                    <a href={item} data-lightbox="store">
+                                    <a data-lightbox="store">
                                         <img src={item} />
                                     </a>
                                 )
                             }
-                            // else if (index == 7) {
-                            //     return (
-                            //         <a href={item} data-lightbox="store">
-                            //             <img src={item} />
-                            //         </a>
-                            //     )
-                            // }
                         })}
-                        {/* <a href={sto_img_id} data-lightbox="store">
-                            <img src={sto_img_id} />
-                        </a>
-                        <a href={sto_img_id} data-lightbox="store" className="height">
-                            <img src={sto_img_id} />
-                        </a>
-                        <a href={sto_img_id} data-lightbox="store">
-                            <img src={sto_img_id} />
-                        </a>
-                        <a href={sto_img_id} data-lightbox="store" className="big">
-                            <img src={sto_img_id} />
-                        </a>
-                        <a href={sto_img_id} data-lightbox="store">
-                            <img src={sto_img_id} />
-                        </a>
-                        <a href={sto_img_id} data-lightbox="store">
-                            <img src={sto_img_id} />
-                        </a> */}
                     </div>
                 </div>
                 <div className="carouselContainer">

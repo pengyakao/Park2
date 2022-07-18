@@ -28,7 +28,7 @@ export default function StoreEach(props) {
 
     return (
         <div id="storeEach" className="stoContainer">
-            <div>
+            <div id="leftOuter">
                 {list.map((item, index) => {
                     let tagClass
                     if (item.sto_class == '1') {
@@ -68,7 +68,7 @@ export default function StoreEach(props) {
                 })}
             </div>
 
-            <div>
+            <div id="rightOuter">
                 {list.map((item, index) => {
                     if (item.sto_id == props.match.params.storeId) {
                         let tagClass

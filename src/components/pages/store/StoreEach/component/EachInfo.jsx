@@ -22,7 +22,7 @@ const EachInfo = ({
 }) => {
     const htmlWord = info
     return (
-        <div>
+        <div className="leftOuterInfo">
             <div className="circleImg pcHidden">
                 <img src={sto_img} alt="" />
             </div>
@@ -39,8 +39,8 @@ const EachInfo = ({
             </div>
 
             <div className="bigImg pcHidden">
-                <a href={sto_first_img} data-lightbox="store">
-                    {/* <img src={sto_first_img} alt="" /> */}
+                <a data-lightbox="store">
+                    <img src={sto_first_img} alt="" />
                 </a>
             </div>
 

@@ -72,6 +72,7 @@ class Slider extends Component {
       //get home_act
       await getCarousel().then((result) => {
         console.log(result)
+        result = result.reverse()
         let home_act = result.filter(checkSta)
         function checkSta(item) {
           console.log(item)
