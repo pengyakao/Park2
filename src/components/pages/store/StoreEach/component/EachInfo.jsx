@@ -23,14 +23,14 @@ const EachInfo = ({
     const htmlWord = info
     return (
         <div className="leftOuterInfo">
-            <div className="circleImg pcHidden">
-                <img src={sto_img} alt="" />
+            <div className="pcCircleImg pcHidden">
+                <div className="circleImg ">
+                    <img src={sto_img} alt="" />
+                </div>
             </div>
 
             <div className="storeIntro pcHidden">
-                <div className="title-block">
-                    <Title title={name} />
-                </div>
+                <Title title={name} />
                 <div className="tagsArea pcHidden">
                     <div className="tags" id="landscape">
                         <span>{tag}</span>
