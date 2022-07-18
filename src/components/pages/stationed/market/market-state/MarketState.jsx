@@ -6,11 +6,11 @@ import {editMarketApplyProposal, editMarketApplyPay} from '../../../../../api/st
 
 class MarketState extends Component {
   state = { 
-    id: 2,
-    currentStep: 0,
+    id: '',
+    currentStep: '',
     clickState: 'toReUpload',
-    deadline: '2022/07/24',
-    count: 2,
+    deadline: '',
+    count: '',
     pay: '',
     file: '',
     fileName: '',
@@ -208,6 +208,10 @@ class MarketState extends Component {
     await this.setStateAsync({
       fileLink: originData.mar_apply_file
     })
+    await this.setStateAsync({
+      deadline: originData.mar_apply_deadline
+    })
+    
 
 
     // 狀態1 企劃書有錯誤

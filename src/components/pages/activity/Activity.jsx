@@ -3,6 +3,7 @@ import { getActivity } from '../../../api/activity';
 import ActClass from './component/ActClass';
 // import ActCalendar from './component/ActCalendar';
 import ActCard from './component/ActCard';
+import GoToTop from './component/GoToTop';
 import './activities_layout.css';
 import './activities_layout_w992_mainpage.css';
 import './activities_components.css';
@@ -30,6 +31,7 @@ class Activity extends Component {
                 </div>
                 <div className="activity-article">
                     <ActCard list={this.state.list} />
+                    <GoToTop />
                 </div>
             </div>
 
@@ -39,7 +41,8 @@ class Activity extends Component {
         const that = this
         var preDataHandle = () => {
             getActivity().then((result) => {
-                that.setState({ list: result, origin_list: result })
+                var newdata = result.filter(e => e.act_sta == 1)
+                that.setState({ list: newdata, origin_list: newdata })
             })
         }
         preDataHandle()

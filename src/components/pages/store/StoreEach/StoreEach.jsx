@@ -14,7 +14,7 @@ export default function StoreEach(props) {
             console.log(result)
         })
     }
-    const [img, setImg] = useState([])
+    const [img, setImg] = useState("")
     const preDataHandle2 = () => {
         getStoreImg(props.match.params.storeId).then((result) => {
             setImg(result[0].sto_img_url)

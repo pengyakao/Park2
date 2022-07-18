@@ -9,7 +9,7 @@
 }
 .activity-article {
     width: 64%;
-    height: inherit;
+    min-height: calc(100vh - 190px);
     margin-top: 56px;
     margin-right: 10%;
     padding: 10px 3% 70px 3%;

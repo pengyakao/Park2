@@ -1,10 +1,10 @@
 import axios from 'axios'
+import { url } from './url'
 
 // 設定 baseUrl
 const reqObj = axios.create({
     // baseURL 設定的是自己測試的 IP位址:server埠號 (ex. http://192.168.0.112:3000)
-    // baseURL: 'http://172.20.10.4:3001',
-    baseURL: 'http://192.168.31.105:3001',
+    baseURL: url,
     header: {
         'Content-Type': 'application/json',
     },
