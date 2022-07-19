@@ -1,5 +1,5 @@
 
-#storeEach.stoContainer {
+#storeEach {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -34,7 +34,7 @@
 
 /* 資訊欄 */
 #storeEach #leftInfo {
-    padding: 5vw;
+    padding: 2.5vw 5vw 100vw 5vw;
     background-color: #F2F2F3;
     border-radius: 15px;
     /* height: calc(70% - 50px); */
@@ -66,6 +66,10 @@
     -webkit-text-stroke: 1.5px #000;
 }
 
+#storeEach .titleGreen p {
+    margin: 1vh 0 0.5vh 0;
+}
+
 #storeEach .leftInfo-stoContainer .titleGreen {
     margin-top: 20px;
 }
@@ -80,8 +84,8 @@
 
 /* 店家logo */
 #storeEach .circleImg {
-    min-height: 100px;
-    min-width: 100px;
+    height: 190px;
+    width: 190px;
     margin: 20px 0;
     border-radius: 50%;
     overflow: hidden;
@@ -113,7 +117,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    /* align-items: center; */
+    align-items: center;
     /* width: calc(97.5% - 300px); */
     margin-top: 20px;
 }
@@ -128,42 +132,46 @@
     border: 5px solid #000000;
     box-shadow: 4px 4px 0px 4px #0E0E0D;
     border-radius: 20px;
-    /* max-width: 695px; */
-    /* max-height: 370px; */
+    /* max-width: 695px;
+    max-height: 370px; */
     width: 60vw;
-    height: 40vw;
+    height: 30vw;
     overflow: hidden;
     object-fit: cover;
+    justify-content: center;
+        align-items: center;
 }
 
 #storeEach .bigImg img {
-    width: 100%;
+    width: 100vw;
+    height: auto;
     /* height: 100%; */
     border-radius: 15px;
-    object-fit: cover;
+    
 }
 /* 店家介紹內容 */
 #storeEach .IntroContainer{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    /* max-width: 60vw; */
+    max-width: 60vw;
 
 }
 
 #storeEach .storeIntro {
     display: flex;
     flex-direction: column;
-    margin: 20px;
-    width: 60vw;
+    margin: 20px 0;
+    max-width: 590px;
+    /* width: 60vw; */
     /* max-width: 720px; */
     /* min-height: 50px; */
 }
 
 #storeEach .textArea {
     display: flex;
-    max-width: 720px;
-    min-height: 50px;
+    /* width: 90vw; */
+    /* min-height: 50px; */
 }
 
 /* tag標籤 */
@@ -262,31 +270,54 @@
     }
 }  */
 
-@media (max-width: 440px) {
+@media (max-width: 660px) {
 
     /* 全域 */
-    #storeEach .stoContainer {
-        display:inline !important;
+    #storeEach {
+        /* display:grid; */
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
         padding: 0px;
-
     }
-    /* #storeEach .leftOuterInfo{
-        display: inline;
+    #storeEach .leftOuterInfo{
+        display: block;
+        align-items: center;
+        justify-content: center;
     }
     #storeEach #rightOuter{
         display:inline;
+    }
+    #storeEach #leftOuter{
+        align-items: center;
+        justify-content: center;
+        /* background-color: aqua; */
+    }
 
-    } */
+    #storeEach .rightContentArea {
+        align-items: center;
+    }
+
+    #storeEach .storeIntro{
+        align-items: center;
+        justify-content: center;
+        max-width: 660px;
+        padding: 0;
+        margin: 0;
+    }
 
     /* 店家圓形logo */
-    #storeEach .circleImg{
-        width: 50vw;
-        height: 50vw;
-        border: #000 solid 2px;
-        margin-top: 10vh;
+    #storeEach  .pcCircleImg{
+        /* width: 50vw; */
+        /* height: 50vw; */
+        /* border: #000 solid 2px; */
+        margin-top: 10vw;
+        /* padding: 10vw; */
+        /* background-color: #BCFD55; */
+        align-items: center;
+        justify-content: center;
+
+   
     }
 
     #storeEach  .circleImg img {
@@ -295,18 +326,35 @@
         /* overflow: hidden; */
         /* align-items: center; */
     }
+    #storeEach .circleImg {
+        align-items: center;
+        justify-content: center;
+        background-color: bisque;
+    }
 
     /*  標籤 */
     #storeEach  .tags {
         float: none;
     }
 
-    /* 大首圖外框容器 */
-    #storeEach .bigImg {
-        margin: 30px 50px;
-        width: 50vw;
+    #storeEach .pcHidden.title-block{
+        margin: 200px;
     }
 
+    /* 大首圖外框容器 */
+    
+    #storeEach .bigImg {
+        margin: 30px 10px;
+        width: 90vw;
+        margin: 5vw;
+        max-width: 650px;
+        max-height: 270px;
+        /* height: 30vw; */
+    }
+    #storeEach .bigImg img{
+        width: 100vw;
+        height: auto;
+    }
     /* 資訊欄 */
     #storeEach #leftInfo {
         width: 100vw;
@@ -326,11 +374,14 @@
         width: 100%;
         display: flex;
     }
+    #storeEach .textArea {
+        width: 90vw;
+    }
 
     /* 手機版顯現 */
     #storeEach .pcHidden {
         display: flex;
-        display: block;
+        /* display: block; */
     }
 
     /* 桌機版顯現 */

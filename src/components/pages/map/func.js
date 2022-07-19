@@ -166,6 +166,7 @@ export function myJS(data) {
             layerswitch.onclick();
           }
         } else if (mapSearch.value === "暫無店家") {
+          console.log("搜尋失敗")
         }
       }
 
@@ -177,6 +178,7 @@ export function myJS(data) {
             layerswitch.onclick();
           }
         } else if (mapSearch.value === "暫無店家") {
+          console.log("搜尋失敗")
         }
       }
       // 執行搜尋後清空input
@@ -186,7 +188,8 @@ export function myJS(data) {
     //// 卡片、搜尋選項資訊
 
     // 篩選有效資料(根據sto_sta)，並將缺少的店家物件填入myData
-    let myData = data.filter((e) => e.sto_sta == 1);
+    let myData = data.filter((e) => e.sto_location != null);
+    let lostStore =[]
     let lostFloor = [];
     let lostLocation = [];
     let detectArray = [
@@ -207,18 +210,38 @@ export function myJS(data) {
       "B107",
     ];
 
-    for (let i = 0; i < detectArray.length; i++) {
-      myData.forEach((e) => {
-        if (detectArray[i] === e.sto_location) {
-          detectArray.splice(i, 1);
-        }
-      });
-    }
+    // for (let i = 0; i < detectArray.length; i++) {
+    //   myData.forEach((e) => {
+    //     if (detectArray[i] === e.sto_location) {
+    //       detectArray.splice(i, 1);
+    //     }
+    //   });
+    // }
 
-    detectArray.forEach((e) => {
+    lostStore = detectArray.filter((e) => {
+      return myData.every((ele) => {
+        console.log(ele);
+        return ele.sto_location != e;
+      });
+    });
+
+    // lostStore = ["108", "B106"]
+
+    lostStore.forEach((e) => {
       lostFloor.push(e.slice(0, 1));
       lostLocation.push(Number(e.slice(e.length - 1, e.length)));
     });
+
+    // detectArray.forEach((e) => {
+    // lostFloor.push(e.slice(0, 1));
+    // lostLocation.push(Number(e.slice(e.length - 1, e.length)));
+    // });
+
+    // console.log(lostStore);
+    // console.log(lostFloor);
+    // console.log(lostLocation);
+
+
 
     for (let i = 0; i < lostFloor.length; i++) {
       if (lostFloor[i] === "1") {
@@ -268,8 +291,7 @@ export function myJS(data) {
       tempOption.value = `${myData[i].sto_name}`;
       document.querySelector("#searchShop").appendChild(tempOption);
 
-      // myData
-      // console.log(myData)
+      console.log(myData)
 
       // 資料分類(根據樓層)
 
@@ -285,7 +307,6 @@ export function myJS(data) {
         }
       } else if (myData[i].sto_floor === "b1") {
         if (myData[i].sto_location === `B10${i - 7}`) {
-          console.log(i);
           myStore_b1.push(myData[i].sto_name);
           myStoreText_b1.push(tempCardText);
           myImg_b1.push(myData[i].sto_first_img);
