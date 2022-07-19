@@ -117,7 +117,7 @@ export function myJS(data) {
         // 資訊小卡連結
         document.getElementById(
           "cardAncher"
-        ).href = `http://localhost:3000/store/${i + 1}`;
+        ).href = `/store/${i + 1}`;
 
         // monile功能(資訊小卡顯示切換)
         if (infoCard.style.display === "none") {
@@ -166,6 +166,7 @@ export function myJS(data) {
             layerswitch.onclick();
           }
         } else if (mapSearch.value === "暫無店家") {
+          console.log("搜尋失敗")
         }
       }
 
@@ -177,6 +178,7 @@ export function myJS(data) {
             layerswitch.onclick();
           }
         } else if (mapSearch.value === "暫無店家") {
+          console.log("搜尋失敗")
         }
       }
       // 執行搜尋後清空input
@@ -186,7 +188,8 @@ export function myJS(data) {
     //// 卡片、搜尋選項資訊
 
     // 篩選有效資料(根據sto_sta)，並將缺少的店家物件填入myData
-    let myData = data.filter((e) => e.sto_sta == 1);
+    let myData = data.filter((e) => e.sto_location != null);
+    let lostStore =[]
     let lostFloor = [];
     let lostLocation = [];
     let detectArray = [
@@ -207,18 +210,94 @@ export function myJS(data) {
       "B107",
     ];
 
-    for (let i = 0; i < detectArray.length; i++) {
-      myData.forEach((e) => {
-        if (detectArray[i] === e.sto_location) {
-          detectArray.splice(i, 1);
-        }
-      });
-    }
+    // for (let i = 0; i < detectArray.length; i++) {
+    //   myData.forEach((e) => {
+    //     if (detectArray[i] === e.sto_location) {
+    //       detectArray.splice(i, 1);
+    //     }
+    //   });
+    // }
 
-    detectArray.forEach((e) => {
+    lostStore = detectArray.filter((e) => {
+      return myData.every((ele) => {
+        console.log(ele);
+        return ele.sto_location != e;
+      });
+    });
+
+
+    let test = detectArray.map(e=>{
+      let result = data.filter(j=>{
+        if(j.sto_location == e){
+          return j
+        }else{
+          return false
+        }
+      })
+      return result 
+    })
+
+
+    let mapData = test.map(e=>{
+      if(e.length != 0){
+        return e[0]
+      }else{
+        return {
+          // sto_floor: "1f",
+          sto_name: "暫無店家",
+          sto_class: "",
+        }
+      }
+    })
+
+    
+    mapData.forEach(e=>{
+      console.log(e.sto_class)
+      if(e.sto_class == 1){
+        e.sto_class = "咖啡輕食"
+      }else if(e.sto_class == 2){
+        e.sto_class = "藝術設計"
+      }else if(e.sto_class == 3){
+        e.sto_class = "餐廳"
+      }else if(e.sto_class == 4){
+        e.sto_class = "購物"
+      }
+    })
+    
+    // let mapData = mapTest.map(e=>{
+    //   if(e.length != 0){
+    //     return e[0]
+    //   }else{
+    //     return {
+    //       // sto_floor: "1f",
+    //       sto_name: "暫無店家",
+    //       sto_class: "",
+    //     }
+    //   }
+    // })
+    console.log('test', test)
+
+    console.log('mapData', mapData)
+    // console.log('mapData', mapData)
+
+
+    // lostStore = ["108", "B106"]
+
+    lostStore.forEach((e) => {
       lostFloor.push(e.slice(0, 1));
       lostLocation.push(Number(e.slice(e.length - 1, e.length)));
     });
+
+    // detectArray.forEach((e) => {
+    // lostFloor.push(e.slice(0, 1));
+    // lostLocation.push(Number(e.slice(e.length - 1, e.length)));
+    // });
+
+    // console.log(lostStore);
+    // console.log(lostFloor);
+    // console.log(lostLocation);
+
+
 
     for (let i = 0; i < lostFloor.length; i++) {
       if (lostFloor[i] === "1") {
@@ -249,52 +328,77 @@ export function myJS(data) {
     for (let i = 0; i < 15; i++) {
       // 小卡內容
       tempCardText = "";
-      if (myData[i].sto_class.includes("1")) {
-        tempCardText = tempCardText + "咖啡輕食、";
-      }
-      if (myData[i].sto_class.includes("2")) {
-        tempCardText = tempCardText + "藝術設計、";
-      }
-      if (myData[i].sto_class.includes("3")) {
-        tempCardText = tempCardText + "餐廳、";
-      }
-      if (myData[i].sto_class.includes("4")) {
-        tempCardText = tempCardText + "購物、";
-      }
-      tempCardText = tempCardText.substring(0, tempCardText.length - 1);
+    //   if(mapData[i].sto_class) {
+    //   if (mapData[i].sto_class.includes("1")) {
+    //     tempCardText = tempCardText + "咖啡輕食";
+    //   }
+    //   if (mapData[i].sto_class.includes("2")) {
+    //     tempCardText = tempCardText + "藝術設計";
+    //   }
+    //   if (mapData[i].sto_class.includes("3")) {
+    //     tempCardText = tempCardText + "餐廳";
+    //   }
+    //   if (mapData[i].sto_class.includes("4")) {
+    //     tempCardText = tempCardText + "購物";
+    //   }
+    //   tempCardText = tempCardText.substring(0, tempCardText.length - 1);
+    // }
 
       // 搜尋選項
       tempOption = document.createElement("option");
-      tempOption.value = `${myData[i].sto_name}`;
+      tempOption.value = `${mapData[i].sto_name}`;
       document.querySelector("#searchShop").appendChild(tempOption);
 
-      // myData
-      // console.log(myData)
+     
 
       // 資料分類(根據樓層)
 
-      if (myData[i].sto_floor === "1f") {
-        if (myData[i].sto_location === `10${i + 1}`) {
-          myStore_1f.push(myData[i].sto_name);
-          myStoreText_1f.push(tempCardText);
-          myImg_1f.push(myData[i].sto_first_img);
-        } else {
-          myStore_1f.push("");
-          myStoreText_1f.push("暫無店家");
+      // console.log('floor', mapData[0][0].sto_floor)
+
+      for(let i=0; i<8; i++){
+        myStore_1f.push(mapData[i].sto_name);
+        if(mapData[i].sto_first_img){
+          myImg_1f.push(mapData[i].sto_first_img);
+          myStoreText_1f.push(mapData[i].sto_class)
+        }else{
           myImg_1f.push("/map/noStore.jpg");
+          myStoreText_1f.push("暫無店家"); 
         }
-      } else if (myData[i].sto_floor === "b1") {
-        if (myData[i].sto_location === `B10${i - 7}`) {
-          console.log(i);
-          myStore_b1.push(myData[i].sto_name);
-          myStoreText_b1.push(tempCardText);
-          myImg_b1.push(myData[i].sto_first_img);
-        } else {
-          myStore_b1.push("");
-          myStoreText_b1.push("暫無店家");
-          myImg_b1.push("/map/noStore.jpg");
-        }
+        
       }
+      for(let i=8; i<15; i++){
+        myStore_b1.push(mapData[i].sto_name);
+        if(mapData[i].sto_first_img){
+          myImg_b1.push(mapData[i].sto_first_img);
+          myStoreText_b1.push(mapData[i].sto_class);
+        }else{
+          myImg_b1.push("/map/noStore.jpg");
+          myStoreText_b1.push("暫無店家"); 
+        }
+        
+      }
+
+      // if (mapData[i].sto_floor === "1f") {
+      //   if (mapData[i].sto_location === `10${i + 1}`) {
+      //     myStore_1f.push(mapData[i].sto_name);
+      //     myStoreText_1f.push(tempCardText);
+      //     myImg_1f.push(mapData[i].sto_first_img);
+      //   } else {
+      //     myStore_1f.push("");
+      //     myStoreText_1f.push("暫無店家");
+      //     myImg_1f.push("/map/noStore.jpg");
+      //   }
+      // } else if (mapData[i].sto_floor === "b1") {
+      //   if (mapData[i].sto_location === `B10${i - 7}`) {
+      //     myStore_b1.push(mapData[i].sto_name);
+      //     myStoreText_b1.push(tempCardText);
+      //     myImg_b1.push(mapData[i].sto_first_img);
+      //   } else {
+      //     myStore_b1.push("");
+      //     myStoreText_b1.push("暫無店家");
+      //     myImg_b1.push("/map/noStore.jpg");
+      //   }
+      // }
     }
 
     // 開發用
