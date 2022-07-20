@@ -21,7 +21,7 @@ const StoreAll = ({ list, clicked }) => {
                             id={item.sto_id}
                             img={item.sto_first_img}
                             name={item.sto_name}
-                            info={item.sto_info.replace(/<[^>]+>/g, '')}
+                            info={item.sto_info}
                         />
                     )
                 })}
