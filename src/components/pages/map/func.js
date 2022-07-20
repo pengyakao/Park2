@@ -117,7 +117,7 @@ export function myJS(data) {
         // 資訊小卡連結
         document.getElementById(
           "cardAncher"
-        ).href = `/store/${i + 1}`;
+        ).href = myAncher_1f[i];
 
         // monile功能(資訊小卡顯示切換)
         if (infoCard.style.display === "none") {
@@ -143,7 +143,7 @@ export function myJS(data) {
         // 資訊小卡連結
         document.getElementById(
           "cardAncher"
-        ).href = `http://localhost:3000/store/${i + 1 + myLocation_1f.length}`;
+        ).href = myAncher_b1[i];
 
         // monile功能(資訊小卡顯示切換)
         if (infoCard.style.display === "none") {
@@ -210,14 +210,6 @@ export function myJS(data) {
       "B107",
     ];
 
-    // for (let i = 0; i < detectArray.length; i++) {
-    //   myData.forEach((e) => {
-    //     if (detectArray[i] === e.sto_location) {
-    //       detectArray.splice(i, 1);
-    //     }
-    //   });
-    // }
-
     lostStore = detectArray.filter((e) => {
       return myData.every((ele) => {
         console.log(ele);
@@ -237,7 +229,7 @@ export function myJS(data) {
       return result 
     })
 
-
+    // 不存在店家的物件
     let mapData = test.map(e=>{
       if(e.length != 0){
         return e[0]
@@ -250,9 +242,8 @@ export function myJS(data) {
       }
     })
 
-    
+    // 資訊卡文字
     mapData.forEach(e=>{
-      console.log(e.sto_class)
       if(e.sto_class == 1){
         e.sto_class = "咖啡輕食"
       }else if(e.sto_class == 2){
@@ -276,9 +267,8 @@ export function myJS(data) {
     //   }
     // })
     console.log('test', test)
-
     console.log('mapData', mapData)
-    // console.log('mapData', mapData)
+
 
 
     // lostStore = ["108", "B106"]
@@ -322,47 +312,29 @@ export function myJS(data) {
     var myStoreText_b1 = [];
     let myImg_1f = [];
     let myImg_b1 = [];
-    var tempCardText = "";
+    let myAncher_1f = []
+    let myAncher_b1 = []
     var tempOption;
 
     for (let i = 0; i < 15; i++) {
-      // 小卡內容
-      tempCardText = "";
-    //   if(mapData[i].sto_class) {
-    //   if (mapData[i].sto_class.includes("1")) {
-    //     tempCardText = tempCardText + "咖啡輕食";
-    //   }
-    //   if (mapData[i].sto_class.includes("2")) {
-    //     tempCardText = tempCardText + "藝術設計";
-    //   }
-    //   if (mapData[i].sto_class.includes("3")) {
-    //     tempCardText = tempCardText + "餐廳";
-    //   }
-    //   if (mapData[i].sto_class.includes("4")) {
-    //     tempCardText = tempCardText + "購物";
-    //   }
-    //   tempCardText = tempCardText.substring(0, tempCardText.length - 1);
-    // }
-
       // 搜尋選項
       tempOption = document.createElement("option");
       tempOption.value = `${mapData[i].sto_name}`;
       document.querySelector("#searchShop").appendChild(tempOption);
-
-     
-
+    }
+    
       // 資料分類(根據樓層)
-
-      // console.log('floor', mapData[0][0].sto_floor)
-
       for(let i=0; i<8; i++){
         myStore_1f.push(mapData[i].sto_name);
+        console.log(1)
         if(mapData[i].sto_first_img){
           myImg_1f.push(mapData[i].sto_first_img);
           myStoreText_1f.push(mapData[i].sto_class)
+          myAncher_1f.push(`/store/${mapData[i].sto_id}`)
         }else{
           myImg_1f.push("/map/noStore.jpg");
           myStoreText_1f.push("暫無店家"); 
+          myAncher_1f.push("*")
         }
         
       }
@@ -371,9 +343,11 @@ export function myJS(data) {
         if(mapData[i].sto_first_img){
           myImg_b1.push(mapData[i].sto_first_img);
           myStoreText_b1.push(mapData[i].sto_class);
+          myAncher_b1.push(`/store/${mapData[i].sto_id}`)
         }else{
           myImg_b1.push("/map/noStore.jpg");
           myStoreText_b1.push("暫無店家"); 
+          myAncher_b1.push("*")
         }
         
       }
@@ -399,14 +373,15 @@ export function myJS(data) {
       //     myImg_b1.push("/map/noStore.jpg");
       //   }
       // }
-    }
+    
 
     // 開發用
     // classList:arrow1F, arrowB1, arrowPublic, location_1f, location_b1
     // console.log(myImg_1f);
     // console.log(myStore_1f);
     // console.log(myStore_b1);
-    // console.log(myStoreText_1f);
+    // console.log(myAncher_1f);
+    console.log(myAncher_b1);
 
     // 公設
     document.getElementById("toilet_icon").addEventListener("mouseover", () => {
