@@ -115,9 +115,7 @@ export function myJS(data) {
         arrow1F[i].style.display = "block";
 
         // 資訊小卡連結
-        document.getElementById(
-          "cardAncher"
-        ).href = myAncher_1f[i];
+        document.getElementById("cardAncher").href = myAncher_1f[i];
 
         // monile功能(資訊小卡顯示切換)
         if (infoCard.style.display === "none") {
@@ -141,9 +139,7 @@ export function myJS(data) {
         arrowB1[i].style.display = "block";
 
         // 資訊小卡連結
-        document.getElementById(
-          "cardAncher"
-        ).href = myAncher_b1[i];
+        document.getElementById("cardAncher").href = myAncher_b1[i];
 
         // monile功能(資訊小卡顯示切換)
         if (infoCard.style.display === "none") {
@@ -161,24 +157,28 @@ export function myJS(data) {
       // 1f
       for (let i = 0; i < myStore_1f.length; i++) {
         if (mapSearch.value === myStore_1f[i]) {
-          myLocation_1f[i].onclick();
           if (boolean === false) {
             layerswitch.onclick();
+            myLocation_1f[i].onclick();
+          } else {
+            myLocation_1f[i].onclick();
           }
         } else if (mapSearch.value === "暫無店家") {
-          console.log("搜尋失敗")
+          console.log("搜尋失敗");
         }
       }
 
       // b1
       for (let i = 0; i < myStore_b1.length; i++) {
         if (mapSearch.value === myStore_b1[i]) {
-          myLocation_b1[i].onclick();
           if (boolean === true) {
             layerswitch.onclick();
+            myLocation_b1[i].onclick();
+          } else {
+            myLocation_b1[i].onclick();
           }
         } else if (mapSearch.value === "暫無店家") {
-          console.log("搜尋失敗")
+          console.log("搜尋失敗");
         }
       }
       // 執行搜尋後清空input
@@ -189,7 +189,7 @@ export function myJS(data) {
 
     // 篩選有效資料(根據sto_sta)，並將缺少的店家物件填入myData
     let myData = data.filter((e) => e.sto_location != null);
-    let lostStore =[]
+    let lostStore = [];
     let lostFloor = [];
     let lostLocation = [];
     let detectArray = [
@@ -217,44 +217,43 @@ export function myJS(data) {
       });
     });
 
-
-    let test = detectArray.map(e=>{
-      let result = data.filter(j=>{
-        if(j.sto_location == e){
-          return j
-        }else{
-          return false
+    let test = detectArray.map((e) => {
+      let result = data.filter((j) => {
+        if (j.sto_location == e) {
+          return j;
+        } else {
+          return false;
         }
-      })
-      return result 
-    })
+      });
+      return result;
+    });
 
     // 不存在店家的物件
-    let mapData = test.map(e=>{
-      if(e.length != 0){
-        return e[0]
-      }else{
+    let mapData = test.map((e) => {
+      if (e.length != 0) {
+        return e[0];
+      } else {
         return {
           // sto_floor: "1f",
           sto_name: "暫無店家",
           sto_class: "",
-        }
+        };
       }
-    })
+    });
 
     // 資訊卡文字
-    mapData.forEach(e=>{
-      if(e.sto_class == 1){
-        e.sto_class = "咖啡輕食"
-      }else if(e.sto_class == 2){
-        e.sto_class = "藝術設計"
-      }else if(e.sto_class == 3){
-        e.sto_class = "餐廳"
-      }else if(e.sto_class == 4){
-        e.sto_class = "購物"
+    mapData.forEach((e) => {
+      if (e.sto_class == 1) {
+        e.sto_class = "咖啡輕食";
+      } else if (e.sto_class == 2) {
+        e.sto_class = "藝術設計";
+      } else if (e.sto_class == 3) {
+        e.sto_class = "餐廳";
+      } else if (e.sto_class == 4) {
+        e.sto_class = "購物";
       }
-    })
-    
+    });
+
     // let mapData = mapTest.map(e=>{
     //   if(e.length != 0){
     //     return e[0]
@@ -266,10 +265,8 @@ export function myJS(data) {
     //     }
     //   }
     // })
-    console.log('test', test)
-    console.log('mapData', mapData)
-
-
+    console.log("test", test);
+    console.log("mapData", mapData);
 
     // lostStore = ["108", "B106"]
 
@@ -286,8 +283,6 @@ export function myJS(data) {
     // console.log(lostStore);
     // console.log(lostFloor);
     // console.log(lostLocation);
-
-
 
     for (let i = 0; i < lostFloor.length; i++) {
       if (lostFloor[i] === "1") {
@@ -312,8 +307,8 @@ export function myJS(data) {
     var myStoreText_b1 = [];
     let myImg_1f = [];
     let myImg_b1 = [];
-    let myAncher_1f = []
-    let myAncher_b1 = []
+    let myAncher_1f = [];
+    let myAncher_b1 = [];
     var tempOption;
 
     for (let i = 0; i < 15; i++) {
@@ -322,58 +317,55 @@ export function myJS(data) {
       tempOption.value = `${mapData[i].sto_name}`;
       document.querySelector("#searchShop").appendChild(tempOption);
     }
-    
-      // 資料分類(根據樓層)
-      for(let i=0; i<8; i++){
-        myStore_1f.push(mapData[i].sto_name);
-        console.log(1)
-        if(mapData[i].sto_first_img){
-          myImg_1f.push(mapData[i].sto_first_img);
-          myStoreText_1f.push(mapData[i].sto_class)
-          myAncher_1f.push(`/store/${mapData[i].sto_id}`)
-        }else{
-          myImg_1f.push("/map/noStore.jpg");
-          myStoreText_1f.push("暫無店家"); 
-          myAncher_1f.push("*")
-        }
-        
-      }
-      for(let i=8; i<15; i++){
-        myStore_b1.push(mapData[i].sto_name);
-        if(mapData[i].sto_first_img){
-          myImg_b1.push(mapData[i].sto_first_img);
-          myStoreText_b1.push(mapData[i].sto_class);
-          myAncher_b1.push(`/store/${mapData[i].sto_id}`)
-        }else{
-          myImg_b1.push("/map/noStore.jpg");
-          myStoreText_b1.push("暫無店家"); 
-          myAncher_b1.push("*")
-        }
-        
-      }
 
-      // if (mapData[i].sto_floor === "1f") {
-      //   if (mapData[i].sto_location === `10${i + 1}`) {
-      //     myStore_1f.push(mapData[i].sto_name);
-      //     myStoreText_1f.push(tempCardText);
-      //     myImg_1f.push(mapData[i].sto_first_img);
-      //   } else {
-      //     myStore_1f.push("");
-      //     myStoreText_1f.push("暫無店家");
-      //     myImg_1f.push("/map/noStore.jpg");
-      //   }
-      // } else if (mapData[i].sto_floor === "b1") {
-      //   if (mapData[i].sto_location === `B10${i - 7}`) {
-      //     myStore_b1.push(mapData[i].sto_name);
-      //     myStoreText_b1.push(tempCardText);
-      //     myImg_b1.push(mapData[i].sto_first_img);
-      //   } else {
-      //     myStore_b1.push("");
-      //     myStoreText_b1.push("暫無店家");
-      //     myImg_b1.push("/map/noStore.jpg");
-      //   }
-      // }
-    
+    // 資料分類(根據樓層)
+    for (let i = 0; i < 8; i++) {
+      myStore_1f.push(mapData[i].sto_name);
+      console.log(1);
+      if (mapData[i].sto_first_img) {
+        myImg_1f.push(mapData[i].sto_first_img);
+        myStoreText_1f.push(mapData[i].sto_class);
+        myAncher_1f.push(`/store/${mapData[i].sto_id}`);
+      } else {
+        myImg_1f.push("/map/noStore.jpg");
+        myStoreText_1f.push("暫無店家");
+        myAncher_1f.push("*");
+      }
+    }
+    for (let i = 8; i < 15; i++) {
+      myStore_b1.push(mapData[i].sto_name);
+      if (mapData[i].sto_first_img) {
+        myImg_b1.push(mapData[i].sto_first_img);
+        myStoreText_b1.push(mapData[i].sto_class);
+        myAncher_b1.push(`/store/${mapData[i].sto_id}`);
+      } else {
+        myImg_b1.push("/map/noStore.jpg");
+        myStoreText_b1.push("暫無店家");
+        myAncher_b1.push("*");
+      }
+    }
+
+    // if (mapData[i].sto_floor === "1f") {
+    //   if (mapData[i].sto_location === `10${i + 1}`) {
+    //     myStore_1f.push(mapData[i].sto_name);
+    //     myStoreText_1f.push(tempCardText);
+    //     myImg_1f.push(mapData[i].sto_first_img);
+    //   } else {
+    //     myStore_1f.push("");
+    //     myStoreText_1f.push("暫無店家");
+    //     myImg_1f.push("/map/noStore.jpg");
+    //   }
+    // } else if (mapData[i].sto_floor === "b1") {
+    //   if (mapData[i].sto_location === `B10${i - 7}`) {
+    //     myStore_b1.push(mapData[i].sto_name);
+    //     myStoreText_b1.push(tempCardText);
+    //     myImg_b1.push(mapData[i].sto_first_img);
+    //   } else {
+    //     myStore_b1.push("");
+    //     myStoreText_b1.push("暫無店家");
+    //     myImg_b1.push("/map/noStore.jpg");
+    //   }
+    // }
 
     // 開發用
     // classList:arrow1F, arrowB1, arrowPublic, location_1f, location_b1
