@@ -24,7 +24,9 @@ const Map = () => {
   }, []);
 
   useEffect(() => {
-    myJS(data);
+    if(data[0]){
+      myJS(data);
+    }
   },[data]);
 
   return (

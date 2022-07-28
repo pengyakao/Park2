@@ -1,6 +1,4 @@
 export function myJS(data) {
-  // 資料載入完成才執行
-  if (data[0]) {
     // 判定使用者是否為行動裝置
     function isMobileDevice() {
       var mobileDevices = [
@@ -179,11 +177,7 @@ export function myJS(data) {
 
     //// 卡片、搜尋選項資訊
 
-    // 篩選有效資料(根據sto_sta)，並將缺少的店家物件填入myData
-    let myData = data.filter((e) => e.sto_location != null);
-    let lostStore = [];
-    let lostFloor = [];
-    let lostLocation = [];
+    // 篩選有效資料，並將缺少的店家物件填入store
     let detectArray = [
       "101",
       "102",
@@ -202,14 +196,7 @@ export function myJS(data) {
       "B107",
     ];
 
-    lostStore = detectArray.filter((e) => {
-      return myData.every((ele) => {
-        console.log(ele);
-        return ele.sto_location != e;
-      });
-    });
-
-    let test = detectArray.map((e) => {
+    let store = detectArray.map((e) => {
       let result = data.filter((j) => {
         if (j.sto_location == e) {
           return j;
@@ -220,8 +207,10 @@ export function myJS(data) {
       return result;
     });
 
+
+
     // 不存在店家的物件
-    let mapData = test.map((e) => {
+    let mapData = store.map((e) => {
       if (e.length != 0) {
         return e[0];
       } else {
@@ -232,6 +221,8 @@ export function myJS(data) {
         };
       }
     });
+
+    console.log(mapData)
 
     // 資訊卡文字
     mapData.forEach((e) => {
@@ -245,52 +236,6 @@ export function myJS(data) {
         e.sto_class = "購物";
       }
     });
-
-    // let mapData = mapTest.map(e=>{
-    //   if(e.length != 0){
-    //     return e[0]
-    //   }else{
-    //     return {
-    //       // sto_floor: "1f",
-    //       sto_name: "暫無店家",
-    //       sto_class: "",
-    //     }
-    //   }
-    // })
-    console.log("test", test);
-    console.log("mapData", mapData);
-
-    // lostStore = ["108", "B106"]
-
-    lostStore.forEach((e) => {
-      lostFloor.push(e.slice(0, 1));
-      lostLocation.push(Number(e.slice(e.length - 1, e.length)));
-    });
-
-    // detectArray.forEach((e) => {
-    // lostFloor.push(e.slice(0, 1));
-    // lostLocation.push(Number(e.slice(e.length - 1, e.length)));
-    // });
-
-    // console.log(lostStore);
-    // console.log(lostFloor);
-    // console.log(lostLocation);
-
-    for (let i = 0; i < lostFloor.length; i++) {
-      if (lostFloor[i] === "1") {
-        myData.splice(lostLocation[i] - 1, 0, {
-          sto_floor: "1f",
-          sto_name: "暫無店家",
-          sto_class: "",
-        });
-      } else if (lostFloor[i] === "B") {
-        myData.splice(lostLocation[i] + 7, 0, {
-          sto_floor: "b1",
-          sto_name: "暫無店家",
-          sto_class: "",
-        });
-      }
-    }
 
     // 宣告資料變數、格式
     var myStore_1f = [];
@@ -313,7 +258,6 @@ export function myJS(data) {
     // 資料分類(根據樓層)
     for (let i = 0; i < 8; i++) {
       myStore_1f.push(mapData[i].sto_name);
-      console.log(1);
       if (mapData[i].sto_first_img) {
         myImg_1f.push(mapData[i].sto_first_img);
         myStoreText_1f.push(mapData[i].sto_class);
@@ -336,36 +280,6 @@ export function myJS(data) {
         myAncher_b1.push("*");
       }
     }
-
-    // if (mapData[i].sto_floor === "1f") {
-    //   if (mapData[i].sto_location === `10${i + 1}`) {
-    //     myStore_1f.push(mapData[i].sto_name);
-    //     myStoreText_1f.push(tempCardText);
-    //     myImg_1f.push(mapData[i].sto_first_img);
-    //   } else {
-    //     myStore_1f.push("");
-    //     myStoreText_1f.push("暫無店家");
-    //     myImg_1f.push("/map/noStore.jpg");
-    //   }
-    // } else if (mapData[i].sto_floor === "b1") {
-    //   if (mapData[i].sto_location === `B10${i - 7}`) {
-    //     myStore_b1.push(mapData[i].sto_name);
-    //     myStoreText_b1.push(tempCardText);
-    //     myImg_b1.push(mapData[i].sto_first_img);
-    //   } else {
-    //     myStore_b1.push("");
-    //     myStoreText_b1.push("暫無店家");
-    //     myImg_b1.push("/map/noStore.jpg");
-    //   }
-    // }
-
-    // 開發用
-    // classList:arrow1F, arrowB1, arrowPublic, location_1f, location_b1
-    // console.log(myImg_1f);
-    // console.log(myStore_1f);
-    // console.log(myStore_b1);
-    // console.log(myAncher_1f);
-    console.log(myAncher_b1);
 
     // 公設
     document.getElementById("toilet_icon").addEventListener("mouseover", () => {
@@ -408,5 +322,4 @@ export function myJS(data) {
       });
 
     // end of func
-  }
 }
