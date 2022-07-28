@@ -63,7 +63,7 @@ export function myJS(data) {
           ele.style.display = "block";
         });
         // 切換樓層隱藏店家提示
-        document.querySelectorAll(".selected").forEach((e) => {
+        document.querySelectorAll(".arrow1F").forEach((e) => {
           e.style.display = "none";
         });
         boolean = !boolean;
@@ -82,7 +82,7 @@ export function myJS(data) {
           ele.style.display = "none";
         });
         // 切換樓層隱藏店家提示
-        document.querySelectorAll(".selected").forEach((e) => {
+        document.querySelectorAll(".arrowB1").forEach((e) => {
           e.style.display = "none";
         });
         boolean = !boolean;
@@ -97,21 +97,14 @@ export function myJS(data) {
 
     for (let i = 0; i < myLocation_1f.length; i++) {
       myLocation_1f[i].onclick = function () {
-        // 圖片及內文
+        // 資訊欄圖片及文字
         document.getElementById("cardImg").src = myImg_1f[i];
         document.getElementById("storeName").innerHTML = myStore_1f[i];
         document.getElementById("cardText").innerHTML = myStoreText_1f[i];
 
-        // svg商店圖示變化
-        // if (document.querySelector(".selected") != null) {
-        //   document.querySelectorAll(".selected").forEach((ele) => {
-        //     ele.classList.remove("selected");
-        //   });
-        // }
-        document.querySelectorAll(".selected").forEach((e) => {
+        document.querySelectorAll(".arrow1F").forEach((e) => {
           e.style.display = "none";
         });
-        arrow1F[i].classList.add("selected");
         arrow1F[i].style.display = "block";
 
         // 資訊小卡連結
@@ -132,10 +125,9 @@ export function myJS(data) {
         document.getElementById("storeName").innerHTML = myStore_b1[i];
         document.getElementById("cardText").innerHTML = myStoreText_b1[i];
 
-        document.querySelectorAll(".selected").forEach((e) => {
+        document.querySelectorAll(".arrowB1").forEach((e) => {
           e.style.display = "none";
         });
-        arrowB1[i].classList.add("selected");
         arrowB1[i].style.display = "block";
 
         // 資訊小卡連結

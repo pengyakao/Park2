@@ -219,11 +219,6 @@
         fill: #ABFF21;
     }
 
-    /* .selected {
-        transform: translateY(-1.5vh);
-    } */
-
-
     .facility {
         position: absolute;
         width: 3vh;
